@@ -11,12 +11,12 @@
 	- **Device Communication**: Berhubungan dengan instruksi, data, dan status dari *peripheral* I/O
 	- **Data Buffering**: Mengatasi masalah perbedaan kecepatan transfer data antara prosesor/memori dengan *peripheral* I/O
 	- **Error Detection**: Mendeteksi *error* yang terjadi saat proses transfer data, serta mendeteksi dan mengirimkan informasi *error* yang lebih detail untuk dilaporkan ke sistem komputer
-- I/O Interface: Parallel vs. Serial]]
+- ## 4. [[I/O Interface: Parallel vs. Serial]]
 	- **Parallel Interface**: Menggunakan banyak jalur kabel (*multiple wires*) untuk proses transmisi data
 	- **Serial Interface**: Menggunakan kabel tunggal (*single wire*) untuk transmisi data, di mana pengiriman dilakukan 1 bit pada satu waktu
 		- **Asynchronous**: Tidak menggunakan *clock* sebagai referensi, melainkan menggunakan kecepatan data yang sudah disepakati sebelumnya (*pre-decided baudrate*). Contoh implementasi: RS-232, RS-422, RS-485, 1-wire, Firewire, USB, dll
 		- **Synchronous**: Disinkronisasi menggunakan *clock* yang sama, biasanya dibangkitkan oleh *transmitter* dan dikirimkan ke *receiver*. Contoh implementasi: I2C, SPI, microwire, CAN, dll
-- **Teknik Organisasi I/O**
+- ## 5. [[Teknik Organisasi I/O]]
 	- **Programmed I/O**:
 		- Kontrol CPU (*CPU-Controlled*): Sepenuhnya (*Fully*)
 		- Transfer data via CPU: Ya.
