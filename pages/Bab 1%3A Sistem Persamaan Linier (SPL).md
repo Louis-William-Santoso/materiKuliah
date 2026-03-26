@@ -1,29 +1,28 @@
--
-	- [cite_start]## 1. Definisi Dasar [cite: 1, 2, 8]
-		- **Persamaan Linier**: Persamaan yang melibatkan $n$ peubah (variabel) $x_1, x_2, \dots, x_n$ dan dapat dinyatakan dalam bentuk matematis:
-			- [cite_start]$a_1x_1 + a_2x_2 + \dots + a_nx_n = b$ [cite: 1, 8]
-			- [cite_start]*Keterangan*: $a_1, a_2, \dots, a_n$ dan $b$ adalah konstanta bilangan real[cite: 1, 8].
-		- **Sistem Persamaan Linier (SPL)**: Kumpulan dari beberapa persamaan linier. [cite_start]Solusi dari persamaan linier adalah urutan $n$ bilangan $s_1, s_2, \dots, s_n$ sehingga persamaan dipenuhi jika disubstitusikan terhadap $x_1 = s_1, x_2 = s_2, \dots, x_n = s_n$[cite: 2, 9].
-	- [cite_start]## 2. Klasifikasi Solusi SPL [cite: 2, 9]
-		- Sebuah SPL tidak selalu memiliki satu jawaban tunggal. Terdapat 3 kemungkinan solusi untuk sebuah SPL:
-		  1. [cite_start]**Ada Satu Penyelesaian (Tunggal)**: Kondisi ini disebut sebagai **SPL Konsisten**[cite: 2, 9].
-		  2. **Tak Hingga Banyaknya Penyelesaian**: Terdapat banyak solusi yang memungkinkan. [cite_start]Ini juga masuk kategori **SPL Konsisten**[cite: 2, 9].
-		  3. **Tidak Ada Penyelesaian**: Kondisi di mana sistem saling berlawanan atau sejajar. [cite_start]Disebut sebagai **SPL Tak Konsisten**[cite: 2, 9].
-	- [cite_start]## 3. Representasi dan Penulisan SPL [cite: 3, 10, 47]
-		- [cite_start]Ada tiga cara umum untuk merepresentasikan atau menuliskan Sistem Persamaan Linier[cite: 3, 10, 47]:
-		- **a. [cite_start]Bentuk Persamaan** [cite: 3, 10, 47]
-			- Merupakan bentuk aljabar seperti pada umumnya. [cite_start]Contoh penulisan[cite: 3, 10]:
-				- [cite_start]$x + y + 2z = 9$ [cite: 3, 10, 48]
-				- [cite_start]$2x + 4y - 3z = 1$ [cite: 3, 10, 48]
-				- [cite_start]$3x + 6y - 5z = 0$ [cite: 3, 10, 48]
-		- **b. [cite_start]Bentuk Matriks ($A \vec{x} = b$)** [cite: 2, 9]
-			- Memisahkan koefisien, variabel, dan hasil ke dalam matriks berbeda.
-			- [cite_start]Matriks koefisien $A$ dikalikan dengan vektor variabel $x$, menghasilkan vektor konstanta $b$[cite: 2, 9, 46].
-		- **c. [cite_start]Matriks Augmented (Matriks Diperluas)** [cite: 3, 10, 47]
-			- [cite_start]Menggabungkan matriks koefisien $A$ dan vektor konstanta $b$ ke dalam satu kesatuan matriks[cite: 2, 9, 46]. Bentuk ini sangat memudahkan penyelesaian komputasi menggunakan metode eliminasi.
-				- [cite_start]## 4. Operasi Baris Elementer (OBE) & Ekivalensi Matriks [cite: 4, 5, 11, 12, 49, 50]
-		- [cite_start]**Operasi Baris Elementer (OBE)**: Dengan suatu aturan tertentu, elemen-elemen suatu baris dari suatu matriks dapat berubah[cite: 4, 11, 49]. Aturan ini digunakan sebagai teknik untuk mencari solusi SPL.
-		- [cite_start]**Ekivalensi Dua Matriks**: Dua matriks $A$ dan $B$ di sebut ekivalen (ditulis $A \sim B$) jika matriks $B$ diperoleh dari matriks $A$ dengan cara operasi elementer[cite: 5, 12, 50].
+## 1. Definisi Dasar [cite: 1, 2, 8]
+	- **Persamaan Linier**: Persamaan yang melibatkan $n$ peubah (variabel) $x_1, x_2, \dots, x_n$ dan dapat dinyatakan dalam bentuk matematis:
+		- [cite_start]$a_1x_1 + a_2x_2 + \dots + a_nx_n = b$ [cite: 1, 8]
+		- [cite_start]*Keterangan*: $a_1, a_2, \dots, a_n$ dan $b$ adalah konstanta bilangan real[cite: 1, 8].
+	- **Sistem Persamaan Linier (SPL)**: Kumpulan dari beberapa persamaan linier. [cite_start]Solusi dari persamaan linier adalah urutan $n$ bilangan $s_1, s_2, \dots, s_n$ sehingga persamaan dipenuhi jika disubstitusikan terhadap $x_1 = s_1, x_2 = s_2, \dots, x_n = s_n$[cite: 2, 9].
+- ## 2. Klasifikasi Solusi SPL [cite: 2, 9]
+	- Sebuah SPL tidak selalu memiliki satu jawaban tunggal. Terdapat 3 kemungkinan solusi untuk sebuah SPL:
+	  1. [cite_start]**Ada Satu Penyelesaian (Tunggal)**: Kondisi ini disebut sebagai **SPL Konsisten**[cite: 2, 9].
+	  2. **Tak Hingga Banyaknya Penyelesaian**: Terdapat banyak solusi yang memungkinkan. [cite_start]Ini juga masuk kategori **SPL Konsisten**[cite: 2, 9].
+	  3. **Tidak Ada Penyelesaian**: Kondisi di mana sistem saling berlawanan atau sejajar. [cite_start]Disebut sebagai **SPL Tak Konsisten**[cite: 2, 9].
+- [cite_start]## 3. Representasi dan Penulisan SPL [cite: 3, 10, 47]
+	- [cite_start]Ada tiga cara umum untuk merepresentasikan atau menuliskan Sistem Persamaan Linier[cite: 3, 10, 47]:
+	- **a. [cite_start]Bentuk Persamaan** [cite: 3, 10, 47]
+		- Merupakan bentuk aljabar seperti pada umumnya. [cite_start]Contoh penulisan[cite: 3, 10]:
+			- [cite_start]$x + y + 2z = 9$ [cite: 3, 10, 48]
+			- [cite_start]$2x + 4y - 3z = 1$ [cite: 3, 10, 48]
+			- [cite_start]$3x + 6y - 5z = 0$ [cite: 3, 10, 48]
+	- **b. [cite_start]Bentuk Matriks ($A \vec{x} = b$)** [cite: 2, 9]
+		- Memisahkan koefisien, variabel, dan hasil ke dalam matriks berbeda.
+		- [cite_start]Matriks koefisien $A$ dikalikan dengan vektor variabel $x$, menghasilkan vektor konstanta $b$[cite: 2, 9, 46].
+	- **c. [cite_start]Matriks Augmented (Matriks Diperluas)** [cite: 3, 10, 47]
+		- [cite_start]Menggabungkan matriks koefisien $A$ dan vektor konstanta $b$ ke dalam satu kesatuan matriks[cite: 2, 9, 46]. Bentuk ini sangat memudahkan penyelesaian komputasi menggunakan metode eliminasi.
+			- [cite_start]## 4. Operasi Baris Elementer (OBE) & Ekivalensi Matriks [cite: 4, 5, 11, 12, 49, 50]
+	- [cite_start]**Operasi Baris Elementer (OBE)**: Dengan suatu aturan tertentu, elemen-elemen suatu baris dari suatu matriks dapat berubah[cite: 4, 11, 49]. Aturan ini digunakan sebagai teknik untuk mencari solusi SPL.
+	- [cite_start]**Ekivalensi Dua Matriks**: Dua matriks $A$ dan $B$ di sebut ekivalen (ditulis $A \sim B$) jika matriks $B$ diperoleh dari matriks $A$ dengan cara operasi elementer[cite: 5, 12, 50].
 	- [cite_start]## 5. Sistem Persamaan Linier (SPL) Homogen [cite: 6, 13, 51]
 		- [cite_start]**Definisi**: SPL disebut homogen jika seluruh persamaan menghasilkan nilai nol (ruas kanan bernilai $0$)[cite: 6, 13, 51].
 			- [cite_start]Bentuk matematis: $a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = 0$[cite: 6, 13, 51].
