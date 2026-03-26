@@ -11,18 +11,18 @@
 - ## 3. Representasi dan Penulisan SPL
 	- Ada tiga cara umum untuk merepresentasikan atau menuliskan Sistem Persamaan Linier:
 	- **a. Bentuk Persamaan**
-		- Merupakan bentuk aljabar seperti pada umumnya. Contoh penulisan
+		- Merupakan bentuk aljabar seperti pada umumnya. Contoh penulisan:
 			- $x + y + 2z = 9$
 			- $2x + 4y - 3z = 1$
 			- $3x + 6y - 5z = 0$
 	- **b. Bentuk Matriks** ($A \vec{x} = b$)
 		- Memisahkan koefisien, variabel, dan hasil ke dalam matriks berbeda.
 		- Matriks koefisien $A$ dikalikan dengan vektor variabel $x$, menghasilkan vektor konstanta $b$.
-	- **c. [cite_start]Matriks Augmented (Matriks Diperluas)**
-		- [cite_start]Menggabungkan matriks koefisien $A$ dan vektor konstanta $b$ ke dalam satu kesatuan matriks[cite: 2, 9, 46]. Bentuk ini sangat memudahkan penyelesaian komputasi menggunakan metode eliminasi.
-- ## 4. Operasi Baris Elementer (OBE) & Ekivalensi Matriks [cite: 4, 5, 11, 12, 49, 50]
-	- **Operasi Baris Elementer (OBE)**: Dengan suatu aturan tertentu, elemen-elemen suatu baris dari suatu matriks dapat berubah[cite: 4, 11, 49]. Aturan ini digunakan sebagai teknik untuk mencari solusi SPL.
-	- [cite_start]*[]*Ekivalensi Dua Matriks**: Dua matriks $A$ dan $B$ di sebut ekivalen (ditulis $A \sim B$) jika matriks $B$ diperoleh dari matriks $A$ dengan cara operasi elementer[cite: 5, 12, 50].
+	- **c. Matriks Augmented (Matriks Diperluas)**
+		- [cite_start]Menggabungkan matriks koefisien $A$ dan vektor konstanta $b$ ke dalam satu kesatuan matriks. Bentuk ini sangat memudahkan penyelesaian komputasi menggunakan metode eliminasi.
+- ## 4. Operasi Baris Elementer (OBE) & Ekivalensi Matriks
+	- **Operasi Baris Elementer (OBE)**: Dengan suatu aturan tertentu, elemen-elemen suatu baris dari suatu matriks dapat berubah. Aturan ini digunakan sebagai teknik untuk mencari solusi SPL.
+	- *[]*Ekivalensi Dua Matriks**: Dua matriks $A$ dan $B$ di sebut ekivalen (ditulis $A \sim B$) jika matriks $B$ diperoleh dari matriks $A$ dengan cara operasi elementer[cite: 5, 12, 50].
 - ## 5. Sistem Persamaan Linier (SPL) Homogen [cite: 6, 13, 51]
 	- [cite_start]**Definisi**: SPL disebut homogen jika seluruh persamaan menghasilkan nilai nol (ruas kanan bernilai $0$)[cite: 6, 13, 51].
 		- [cite_start]Bentuk matematis: $a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = 0$[cite: 6, 13, 51].
