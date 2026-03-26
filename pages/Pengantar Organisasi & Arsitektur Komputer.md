@@ -1,0 +1,47 @@
+## 1. [[Konsep Dasar Komputer]]
+	- **Definisi:** Komputer adalah perangkat elektronik yang memproses data (*Input*) berdasarkan instruksi yang diberikan oleh program komputer (*Process/Instruction*) untuk menghasilkan sebuah informasi (*Output*).
+	- Agar sebuah perangkat lunak (seperti file PowerPoint) dapat dibuka, diperlukan interaksi yang erat antara:
+		- **Hardware (Perangkat Keras):** Fisik mesin komputernya.
+		- **Software (Perangkat Lunak):** Aplikasi pembaca file (contoh: MS PowerPoint).
+		- **Data:** File dokumen itu sendiri.
+	- ## 2. [[Arsitektur Komputer vs Organisasi Komputer]]
+	- Seringkali kedua istilah ini dianggap sama, padahal memiliki fokus yang sangat berbeda dalam desain sistem komputer.
+	- ### **Arsitektur Komputer (Computer Architecture)**
+		- **Fokus:** Atribut-atribut sistem yang tampak secara logis oleh seorang *programmer*. Ini berkaitan dengan *apa* yang bisa dilakukan oleh komputer.
+		- **Dampak:** Berdampak langsung pada eksekusi logis sebuah program.
+		- **Contoh Atribut Arsitektur:**
+			- **Set Instruksi (Instruction Set):** Kumpulan perintah dasar yang dipahami prosesor (misal: instruksi `ADD`, `SUB`, `LOAD`).
+			- **Representasi Data:** Jumlah bit yang digunakan untuk merepresentasikan tipe data tertentu (misal: 32-bit vs 64-bit untuk angka *integer*).
+			- **Mekanisme I/O:** Bagaimana CPU meminta dan menerima data dari perangkat luar.
+			- **Teknik Pengalamatan Memori (Memory Addressing):** Cara prosesor menunjuk lokasi spesifik di dalam memori.
+	- ### **Organisasi Komputer (Computer Organization)**
+		- **Fokus:** Unit-unit operasional secara fisik dan interkoneksinya (bagaimana mereka terhubung) untuk merealisasikan spesifikasi arsitektur tersebut. Ini berkaitan dengan *bagaimana* komputer melakukannya.
+		- **Dampak:** Berdampak pada kinerja, harga, dan efisiensi daya, tanpa mengubah logika program.
+		- **Contoh Atribut Organisasi:**
+			- **Sinyal Kontrol (Control Signals):** Sinyal listrik yang mengatur aliran data antar komponen.
+			- **Teknologi Memori:** Keputusan apakah akan menggunakan DDR4 atau DDR5, seberapa besar ukuran *Cache* yang ditanamkan.
+			- **Desain Fisik:** Penggunaan unit adder (penjumlah) khusus untuk perkalian atau menggunakan perulangan penjumlahan biasa di dalam perangkat kerasnya.
+	- **[Info Tambahan] Analogi:**
+		- **Arsitektur** ibarat *blueprint* atau desain cetak biru sebuah rumah (menentukan ada berapa kamar, letak pintu, dan fungsi ruangan).
+		- **Organisasi** ibarat kontraktor yang membangun rumah tersebut (menentukan jenis batu bata yang dipakai, kualitas kabel listrik, dan merk pipa air).
+	- ## 3. [[Evolusi Sistem Komputer (Tren Modern)]]
+	- Komputer tidak lagi hanya berbentuk PC atau laptop (komputer *general-purpose*). Penggunaannya telah berevolusi menjadi beberapa bentuk komputasi spesifik:
+	- ### A. Embedded Systems (Sistem Tertanam)
+		- **Definisi:** Sistem komputer yang didedikasikan untuk satu atau beberapa fungsi spesifik, dan biasanya ditanamkan sebagai bagian kecil dari sebuah sistem/produk mekanis atau elektris yang lebih besar.
+		- **Karakteristik:** Tidak dirancang untuk diprogram ulang oleh pengguna akhir, sangat efisien, tahan lama, dan seringkali beroperasi secara *real-time*.
+		- **Contoh Aplikasi:** - *Antilock Braking System (ABS)* pada mobil.
+			- Sirkuit elektronik pengontrol pada printer, *microwave*, atau mesin cuci.
+	- ### B. Internet of Things (IoT)
+		- **Definisi:** Merupakan evolusi lebih lanjut dari *Embedded Systems*. IoT adalah interkoneksi perangkat-perangkat pintar (*smart devices* / benda sehari-hari) yang saling terhubung melalui jaringan internet.
+		- **Cara Kerja:** Interkoneksi ini memungkinkan perangkat berkomunikasi secara mandiri (Mesin ke Mesin / M2M) atau antara pengguna dengan perangkat untuk mengirim dan menerima data.
+		- **Komponen Utama IoT:**
+			- *Information Technology (IT):* Pengolahan data dan perangkat lunak.
+			- *Operational Technology (OT):* Perangkat keras yang mengontrol aksi fisik.
+			- *Personal Technology:* Perangkat antarmuka pengguna (seperti *smartphone*).
+			- *Sensor/Actuator Technology:* Sensor untuk mendeteksi lingkungan (suhu, cahaya) dan aktuator untuk melakukan tindakan (menyalakan lampu, memutar motor).
+	- ### C. Cloud Computing (Komputasi Awan)
+		- **Definisi:** Konsep komputasi terpusat di mana jaringan, *server*, penyimpanan (*storage*), aplikasi, dan layanan (*services*) disediakan melalui internet.
+		- **Keunggulan:** Memudahkan pengguna (termasuk mesin IoT) untuk memiliki kekuatan komputasi berskala raksasa secara *on-demand* (sesuai kebutuhan) tanpa harus membeli perangkat keras fisik yang mahal.
+		- **Bentuk Layanan:**
+			- *Cloud Storage:* Google Drive, Dropbox (penyimpanan data).
+			- *Cloud Services:* Pengolahan AI, *hosting* aplikasi, *database as a service*.
