@@ -1,5 +1,4 @@
--
-- ## 1. Definisi dan Konsep Dasar
+## 1. Definisi dan Konsep Dasar
 	- **Determinan** adalah sebuah nilai skalar (bilangan real) yang secara unik dikaitkan dengan sebuah **matriks bujur sangkar** (jumlah baris dan kolom sama, misal 2x2, 3x3, dst.).
 	- Notasi determinan untuk matriks $A$ ditulis sebagai $\det(A)$ atau $|A|$.
 	- **Penting**: Matriks yang bukan bujur sangkar (misal 2x3 atau 3x4) **tidak memiliki determinan**.
@@ -44,12 +43,12 @@
 		- Digunakan untuk mencari solusi SPL. Jika sistem $Ax = b$ memiliki $\det(A) \neq 0$, maka solusi untuk variabel $x_j$ adalah:
 		- $$x_j = \frac{\det(A_j)}{\det(A)}$$
 		- *Penjelasan*: Matriks $A_j$ adalah matriks $A$ di mana kolom ke-$j$ diganti dengan vektor konstanta $b$.
-	- ## 🧠 6. Mini Quiz: Uji Pemahaman Bab 2
-		- **Soal 1**: Jika diketahui matriks $A$ berukuran 3x3 memiliki determinan 5, berapakah nilai determinan dari matriks transposenya ($A^T$)?
-			- *Jawaban*: 5. (Sifat determinan: $\det(A) = \det(A^T)$).
-		- **Soal 2**: Anda diberikan matriks 4x4, namun baris ke-2 dan baris ke-4 memiliki angka yang persis sama. Tanpa menghitung panjang, berapakah determinannya dan mengapa?
-			- *Jawaban*: 0. Berdasarkan sifat determinan, jika ada dua baris atau kolom yang sama persis (atau berkelipatan), maka determinannya dipastikan bernilai 0.
-		- **Soal 3**: Mengapa metode Aturan Cramer tidak bisa digunakan jika determinan matriks koefisien utama ($A$) bernilai 0?
-			- *Jawaban*: Karena rumus Aturan Cramer adalah membagi determinan matriks modifikasi ($A_j$) dengan determinan matriks utama ($\det(A)$). Dalam matematika, pembagian dengan 0 tidak terdefinisi, yang juga berarti SPL tersebut mungkin tidak memiliki solusi tunggal (bisa tak konsisten atau solusinya tak hingga).
-		- **Soal 4**: Apa bedanya Minor dan Kofaktor?
-			- *Jawaban*: Minor adalah nilai determinan dari sub-matriks setelah menghilangkan baris dan kolom tertentu. Kofaktor adalah nilai Minor yang sudah dikalikan dengan tanda tempatnya (plus atau minus) berdasarkan rumus $(-1)^{i+j}$.
+- ## 🧠 6. Mini Quiz: Uji Pemahaman Bab 2
+	- **Soal 1**: Jika diketahui matriks $A$ berukuran 3x3 memiliki determinan 5, berapakah nilai determinan dari matriks transposenya ($A^T$)?
+		- *Jawaban*: 5. (Sifat determinan: $\det(A) = \det(A^T)$).
+	- **Soal 2**: Anda diberikan matriks 4x4, namun baris ke-2 dan baris ke-4 memiliki angka yang persis sama. Tanpa menghitung panjang, berapakah determinannya dan mengapa?
+		- *Jawaban*: 0. Berdasarkan sifat determinan, jika ada dua baris atau kolom yang sama persis (atau berkelipatan), maka determinannya dipastikan bernilai 0.
+	- **Soal 3**: Mengapa metode Aturan Cramer tidak bisa digunakan jika determinan matriks koefisien utama ($A$) bernilai 0?
+		- *Jawaban*: Karena rumus Aturan Cramer adalah membagi determinan matriks modifikasi ($A_j$) dengan determinan matriks utama ($\det(A)$). Dalam matematika, pembagian dengan 0 tidak terdefinisi, yang juga berarti SPL tersebut mungkin tidak memiliki solusi tunggal (bisa tak konsisten atau solusinya tak hingga).
+	- **Soal 4**: Apa bedanya Minor dan Kofaktor?
+		- *Jawaban*: Minor adalah nilai determinan dari sub-matriks setelah menghilangkan baris dan kolom tertentu. Kofaktor adalah nilai Minor yang sudah dikalikan dengan tanda tempatnya (plus atau minus) berdasarkan rumus $(-1)^{i+j}$.
