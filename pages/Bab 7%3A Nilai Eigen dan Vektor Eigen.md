@@ -1,11 +1,11 @@
-## 1. Konsep Dasar Nilai dan Vektor Eigen
+## 1. [[Konsep Dasar Nilai dan Vektor Eigen]]
 	- **Pengantar**: Transformasi linier (perkalian matriks) umumnya akan mengubah panjang dan arah dari sebuah vektor. Namun, untuk suatu matriks tertentu, ada vektor-vektor khusus yang arahnya **tidak berubah** setelah dikalikan dengan matriks tersebut; vektor-vektor ini hanya mengalami penyusutan atau perpanjangan.
 	- **Definisi Formal**:
 		- Misalkan $A$ adalah matriks bujur sangkar berukuran $n \times n$.
 		- Sebuah vektor tak nol $x$ di dalam $R^n$ disebut sebagai **Vektor Eigen** (vektor karakteristik) dari matriks $A$ jika terdapat persamaan matematis:
 		- $$Ax = \lambda x$$
 		- *Keterangan*: Skalar $\lambda$ (lambda) disebut sebagai **Nilai Eigen** (nilai karakteristik) dari matriks $A$, dan $x$ dikatakan sebagai vektor eigen yang bersesuaian dengan $\lambda$.
-- ## 2. Proses Menghitung Nilai dan Vektor Eigen
+- ## 2. [[Proses Menghitung Nilai dan Vektor Eigen]]
 	- Langkah-langkah untuk mencari $\lambda$ dan $x$ harus dilakukan secara berurutan. Kita tidak bisa mencari vektor eigen sebelum nilai eigennya diketahui.
 	- ### A. Menghitung Nilai Eigen ($\lambda$)
 		- Dari persamaan $Ax = \lambda x$, kita bisa memanipulasinya dengan menyisipkan matriks identitas ($I$):
@@ -19,14 +19,14 @@
 		- Setelah mendapatkan nilai-nilai $\lambda$ dari langkah A, kita substitusikan kembali satu per satu nilai $\lambda$ tersebut ke dalam persamaan:
 		- $$(\lambda I - A)x = 0$$
 		- Vektor eigen diperoleh dengan mencari **basis dari ruang solusi** (ruang nol / null space) untuk sistem persamaan homogen di atas. Ruang solusi ini sering juga disebut sebagai **Ruang Eigen**.
-- ## 3. Sifat-sifat Penting Nilai & Vektor Eigen
+- ## 3. [[Sifat-sifat Penting Nilai & Vektor Eigen]]
 	- Sifat-sifat ini sangat sering dijadikan jalan pintas dalam menjawab soal, jadi sangat penting untuk dihafal:
 	- **1. Matriks Segitiga**: Jika $A$ adalah matriks segitiga (atas, bawah, atau matriks diagonal), maka nilai-nilai eigen dari matriks $A$ adalah **unsur-unsur yang terletak tepat pada diagonal utamanya**.
 	- **2. Pangkat Matriks**: Jika $\lambda$ adalah nilai eigen dari $A$ dan $x$ adalah vektor eigen yang bersesuaian, maka untuk bilangan bulat positif $k$:
 		- $\lambda^k$ adalah nilai eigen dari $A^k$.
 		- $x$ tetap menjadi vektor eigen untuk $A^k$.
 	- **3. Syarat Matriks Memiliki Invers (Invertibility)**: Sebuah matriks bujur sangkar $A$ berukuran $n \times n$ dapat diinvers (non-singular) **jika dan hanya jika** $\lambda = 0$ **bukan** merupakan salah satu dari nilai eigennya.
-- ## 4. Bedah Contoh Kasus & Penyelesaian Masalah
+- ## 4. [[Bedah Contoh Kasus & Penyelesaian Masalah]]
 	- ### Menentukan Nilai dan Vektor Eigen
 		- *Soal*: Diketahui matriks $A = \begin{pmatrix} 3 & 0 \\ 8 & -1 \end{pmatrix}$. Tentukan nilai eigen dan vektor eigennya!
 		- *Penyelesaian*:
