@@ -5,7 +5,7 @@
 	- **Tujuan Penggunaan:**
 		- Membantu programmer/mahasiswa memahami bagaimana prosesor mengeksekusi instruksi dari bahasa tingkat rendah (*Assembly*).
 		- Menyimulasikan desain algoritma sederhana menjadi kode program dan melihat perubahan nilai memori serta register di tiap siklus *clock*.
-	- ## 2. [[Spesifikasi Arsitektur MARIE]]
+- ## 2. [[Spesifikasi Arsitektur MARIE]]
 	- **Karakteristik Utama:**
 		- Menggunakan sistem bilangan biner berformat **Two's Complement** (untuk representasi bilangan positif dan negatif).
 		- Menggunakan konsep *Stored Program* dengan panjang *word* yang tetap (*Fixed word length*).
@@ -17,14 +17,14 @@
 		- **Format Instruksi:** Setiap instruksi memiliki panjang **16-bit**, yang dipecah menjadi dua bagian:
 			- **4 bit** pertama digunakan untuk **Opcode** (*Operation Code*, kode perintah seperti LOAD, ADD, STORE). (Maksimal bisa memiliki $2^4 = 16$ jenis instruksi berbeda).
 			- **12 bit** sisanya digunakan untuk **Address** (alamat memori dari data yang akan diproses).
-	- ## 3. [[Register Utama pada MARIE]]
+- ## 3. [[Register Utama pada MARIE]]
 	- Di dalam CPU MARIE, terdapat beberapa register krusial untuk mengeksekusi instruksi:
 		- **AC (Accumulator) - 16-bit:** Register data utama. Digunakan untuk menyimpan data sementara, menampung nilai *operand*, dan menyimpan hasil akhir dari operasi aritmatika (ALU).
 		- **PC (Program Counter) - 12-bit:** Register penunjuk alamat. Menyimpan alamat memori dari instruksi *selanjutnya* yang akan dieksekusi.
 		- **MAR (Memory Address Register) - 12-bit:** Menyimpan alamat memori spesifik yang datanya sedang di- *fetch* (diambil) atau di- *store* (ditulis) ke dalam memori utama.
 		- **MBR (Memory Buffer Register) - 16-bit:** Register *buffer*. Menyimpan data utuh yang baru saja diambil dari memori, atau data yang bersiap untuk disalin ke dalam memori.
 		- **IR (Instruction Register) - 16-bit:** Menahan/menyimpan instruksi lengkap (Opcode + Address) yang saat ini sedang dieksekusi oleh prosesor.
-	- ## 4. [[Siklus Instruksi Dasar (Instruction Cycle)]]
+- ## 4. [[Siklus Instruksi Dasar (Instruction Cycle)]]
 	- **1. Fetch (Mengambil Instruksi):**
 		- Prosesor melihat nilai pada `PC` untuk mengetahui di mana letak instruksi.
 		- Alamat dari `PC` disalin ke `MAR`.
@@ -35,7 +35,7 @@
 		- Prosesor memecah 16-bit di `IR` menjadi dua bagian: 4-bit *Opcode* dikirim ke unit kontrol (*Control Unit*) untuk diterjemahkan, dan 12-bit sisanya (alamat) dikirim ke `MAR` jika instruksi tersebut butuh mengambil data tambahan.
 	- **3. Execute (Mengeksekusi):**
 		- CPU menjalankan perintah sesuai terjemahan *Opcode* (misal: mengambil data dari memori dan menambahkannya dengan nilai di `AC`).
-	- ## 5. [[Masalah & Penyelesaian (Studi Kasus MARIE)]]
+- ## 5. [[Masalah & Penyelesaian (Studi Kasus MARIE)]]
 	- ### Kasus: Mengeksekusi Operasi Matematika $Y = Y + Z$
 		- **Masalah:** Bagaimana kita menginstruksikan CPU MARIE untuk menyelesaikan persamaan aritmatika $Y = Y + Z$ menggunakan bahasa *Assembly*?
 		- **Penyelesaian Algoritma & Assembly:**

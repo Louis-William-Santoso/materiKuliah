@@ -1,21 +1,8 @@
-- **I/O Organization**
-- **Mengapa Harus Ada Modul I/O?**
-	- Adanya batasan kecepatan transfer data dari dan ke *peripheral* I/O yang disebabkan oleh keterbatasan *hardware* dari *peripheral* I/O tersebut<!---->.
-	  
-	  <!----><!----><!----><!----><!----><!---->
-	  
-	  <!----><!----><!----><!----><!----><!----><!----><!----><!---->
-	- Penggunaan metode operasi dari berbagai macam *peripheral* I/O yang berlainan (contoh: *human readable*, *machine readable*, *communication purposes*, maupun kebutuhan *real-time process*)<!---->.
-	  
-	  <!----><!----><!----><!----><!----><!---->
-	  
-	  <!----><!----><!----><!----><!----><!----><!----><!----><!---->
-	- Penggunaan format dan panjang data yang berbeda-beda antara *peripheral* I/O yang satu dengan yang lainnya (contoh: *serial data transfer*, *parallel data transfer*, *single byte*, *packet data*)<!---->.
-	  
-	  <!----><!----><!----><!----><!----><!---->
-	  
-	  <!----><!----><!----><!----><!----><!----><!----><!----><!---->
-- **Fungsi Utama Modul I/O**
+## 1. [[Mengapa Harus Ada Modul I/O?]]
+	- Adanya batasan kecepatan transfer data dari dan ke *peripheral* I/O yang disebabkan oleh keterbatasan *hardware* dari *peripheral* I/O tersebut
+	- Penggunaan metode operasi dari berbagai macam *peripheral* I/O yang berlainan (contoh: *human readable*, *machine readable*, *communication purposes*, maupun kebutuhan *real-time process*)
+	- Penggunaan format dan panjang data yang berbeda-beda antara *peripheral* I/O yang satu dengan yang lainnya (contoh: *serial data transfer*, *parallel data transfer*, *single byte*, *packet data*)
+- Fungsi Utama Modul I/O
 	- Sebagai *interface* dari *peripheral* I/O ke prosesor dan memori melalui *system bus*<!---->.
 	  
 	  <!----><!----><!----><!----><!----><!---->
