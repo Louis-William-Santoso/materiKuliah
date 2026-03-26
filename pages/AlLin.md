@@ -1,4 +1,5 @@
-## [[Bab 1: Sistem Persamaan Linier (SPL)]]
+- #[[ALJABAR LINIER]]
+- ## [[Bab 1: Sistem Persamaan Linier (SPL)]]
 	- **Definisi Dasar**
 		- Persamaan linier dalam $n$ peubah $x_1, x_2, \dots, x_n$ adalah persamaan yang dinyatakan dalam bentuk $a_1x_1 + a_2x_2 + \dots + a_nx_n = b$ di mana $a_i$ dan $b$ adalah konstanta real.
 	- **Bentuk Representasi SPL**
