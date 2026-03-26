@@ -1,0 +1,48 @@
+## 1. Konsep Dasar Transformasi Linier
+	- **Definisi**: Transformasi linier adalah sebuah fungsi matematika yang memetakan (memindahkan/mengubah) vektor dari suatu ruang vektor ke ruang vektor lainnya sedemikian rupa sehingga operasi penjumlahan vektor dan perkalian skalar tetap dipertahankan.
+	- **Notasi**: Ditulis sebagai $T: R^n \rightarrow R^m$. Ini berarti transformasi $T$ mengambil vektor dari ruang berdimensi $n$ (domain) dan memetakannya ke ruang berdimensi $m$ (kodomain).
+	- **Operator Linier**: Jika ruang asal dan ruang tujuannya sama (misal dari $R^2$ ke $R^2$, atau $T: R^n \rightarrow R^n$), maka transformasi linier ini secara khusus disebut sebagai **Operator Linier**.
+	- **Matriks Standar**: Setiap transformasi linier dapat direpresentasikan oleh sebuah matriks. Jika inputnya adalah vektor $x$, maka hasil transformasinya (vektor $w$) didapat dengan mengalikan matriks standar $A$ dengan $x$.
+		- Rumus: $w = Ax$ atau $T(x) = Ax$.
+- ## 2. Jenis-jenis Operator Linier Dasar (Geometris)
+	- Transformasi linier sangat berguna dalam grafika komputer untuk memanipulasi objek. Berikut adalah operator dasar di $R^2$:
+	- ### A. Pencerminan (Reflection)
+		- Memetakan titik ke bayangan cerminnya terhadap suatu sumbu atau garis.
+		- *Matriks Refleksi terhadap sumbu x*: $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$ (Nilai y menjadi negatif).
+		- *Matriks Refleksi terhadap sumbu y*: $\begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$ (Nilai x menjadi negatif).
+		- *Matriks Refleksi terhadap garis y = x*: $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ (Menukar nilai x dan y).
+	- ### B. Proyeksi Ortogonal
+		- Memetakan (menjatuhkan) titik secara tegak lurus ke sebuah sumbu, sehingga meratakan objek ke dimensi yang lebih rendah.
+		- *Proyeksi ke sumbu x*: $\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}$ (Nilai y menjadi 0).
+	- ### C. Rotasi (Perputaran)
+		- Memutar titik terhadap titik asal $(0,0)$ sejauh sudut $\theta$. Sudut bernilai positif jika berlawanan arah jarum jam.
+		- *Matriks Rotasi standar*: $[T] = \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix}$
+	- ### D. Dilatasi (Pelebaran) & Kontraksi (Penyempitan)
+		- Mengubah skala objek searah dengan sumbu koordinat berdasarkan faktor $k$.
+		- *Matriks Skala*: $\begin{pmatrix} k & 0 \\ 0 & k \end{pmatrix}$
+		- Jika $k > 1$ disebut Dilatasi (diperbesar), jika $0 < k < 1$ disebut Kontraksi (diperkecil).
+	- ## 3. Komposisi Transformasi Linier
+		- **Definisi**: Melakukan dua atau lebih transformasi secara berurutan pada satu objek. Dinotasikan dengan lingkaran kecil, misalnya $(T_2 \circ T_1)(x)$, yang dibaca "Transformasi 1 dilakukan lebih dulu, lalu dilanjutkan Transformasi 2".
+		- **Aturan Matriks Komposisi**: Jika $T_1$ memiliki matriks standar $A$ dan $T_2$ memiliki matriks standar $B$, maka matriks standar untuk komposisi $(T_2 \circ T_1)$ adalah hasil kali matriks **dari kanan ke kiri**.
+			- Rumus: $T(x) = BAx$.
+			- *Peringatan*: Perkalian matriks tidak komutatif ($BA \neq AB$). Urutan terbalik sangat fatal! Matriks dari transformasi pertama harus berada di paling kanan (paling dekat dengan vektor $x$).
+- ## 4. Invers Transformasi Linier
+	- Jika sebuah transformasi $T$ memetakan vektor $x$ ke vektor $w$ ($w = Ax$), maka **Invers Transformasi** (dinotasikan $T^{-1}$) memetakan kembali vektor $w$ ke vektor asalnya $x$.
+	- **Syarat Utama**: Transformasi memiliki invers jika dan hanya jika matriks standarnya ($A$) memiliki invers (yaitu $\det(A) \neq 0$).
+	- Rumus Invers: $T^{-1}(w) = A^{-1}w$.
+- ## 5. Bedah Kasus & Penyelesaian Masalah
+	- ### Kasus: Mencari Matriks Komposisi
+		- *Soal*: Tentukan matriks standar untuk operator linier $T: R^2 \rightarrow R^2$ yang pertama-tama memproyeksikan vektor secara ortogonal ke sumbu x, kemudian merotasikannya sejauh $90^\circ$ ($\pi/2$) berlawanan arah jarum jam!
+		- *Penyelesaian*:
+			- Langkah 1: Tentukan matriks $T_1$ (Proyeksi sumbu x). $A = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}$.
+			- Langkah 2: Tentukan matriks $T_2$ (Rotasi $90^\circ$). Karena $\cos(90^\circ)=0$ dan $\sin(90^\circ)=1$, maka $B = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$.
+			- Langkah 3: Kalikan $B \times A$ (Urutan: Transformasi terakhir di sebelah kiri).
+			- $$BA = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} = \begin{pmatrix} (0)(1)+(-1)(0) & (0)(0)+(-1)(0) \\ (1)(1)+(0)(0) & (1)(0)+(0)(0) \end{pmatrix} = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}$$
+			- Matriks akhirnya adalah $\begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}$.
+- ## 🧠 6. Mini Quiz: Uji Pemahaman Bab 6
+	- **Soal 1**: Sebuah transformasi memetakan vektor dari ruang $R^3$ ke ruang $R^5$. Berapakah ukuran matriks standar yang merepresentasikan transformasi tersebut?
+		- *Jawaban*: Ukurannya adalah $5 \times 3$ (5 baris, 3 kolom). Aturan umumnya, pemetaan dari $R^n \rightarrow R^m$ diwakili oleh matriks berukuran $m \times n$.
+	- **Soal 2**: Anda memiliki matriks rotasi $60^\circ$ ($R_{60}$) dan matriks refleksi sumbu y ($M_y$). Anda ingin sebuah titik direfleksikan dulu, baru dirotasi. Bagaimana penulisan persamaan matriksnya?
+		- *Jawaban*: Penulisannya adalah $w = R_{60} M_y x$. Transformasi yang dieksekusi pertama kali diletakkan paling dekat dengan vektor $x$ (paling kanan).
+	- **Soal 3**: Mengapa operator "Proyeksi Ortogonal ke sumbu x" tidak memiliki invers transformasi linier?
+		- *Jawaban*: Karena saat objek diproyeksikan ke sumbu x, nilai y-nya berubah menjadi 0 (dimensinya hancur). Matriks standarnya $\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}$ memiliki determinan 0. Jika determinan 0, matriks tidak memiliki invers, yang artinya secara matematis kita tidak bisa melacak kembali di mana posisi persis awal titik tersebut sebelum diproyeksikan (karena banyak titik y berbeda yang akan jatuh ke titik proyeksi yang sama).
