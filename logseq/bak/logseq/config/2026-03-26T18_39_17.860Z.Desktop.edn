@@ -421,5 +421,5 @@
  :file/name-format :triple-lowbar
  :graph/settings {:journal? false
  :builtin-pages? false
- :orphan-pages? true}
+ :orphan-pages? false}
  :graph/forcesettings {:link-dist 160}}
