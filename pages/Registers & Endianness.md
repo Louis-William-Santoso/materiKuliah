@@ -1,0 +1,56 @@
+## 1. [[Konsep Dasar Register]]
+	- **Definisi Inti:**
+		- Register adalah lokasi memori internal kecil dan sangat cepat yang letaknya tepat berada di dalam *Central Processing Unit* (CPU).
+		- **Tujuan Utama:** Tujuan *programmer* mengoptimalkan penggunaan register adalah untuk mengurangi akses ke memori utama (RAM) yang jauh lebih lambat, sehingga proses eksekusi instruksi bisa berjalan jauh lebih cepat.
+	- **Kategori Register Utama:**
+		- Register umumnya dikelompokkan menjadi dua tipe besar: **User-Visible Registers** dan **Control & Status Registers**.
+	- ## 2. [[User-Visible Registers]]
+	- **Definisi:** Register yang dapat diakses (dibaca/ditulis) secara langsung oleh programmer (biasanya menggunakan bahasa *Assembly*).
+	- **Jenis-jenis User-Visible Registers:**
+		- **General Purpose Registers:** Register serbaguna yang bisa digunakan untuk menyimpan data sementara maupun alamat (tergantung desain arsitektur prosesor).
+		- **Data Registers:** Digunakan khusus untuk menahan data (menampung nilai komputasi). Nilainya akan diproses oleh ALU (*Arithmetic Logic Unit*) atau digunakan dalam proses transfer data. *Contoh: Accumulator (AC).*
+		- **Address Registers:** Digunakan khusus untuk mengkalkulasi alamat memori pada mode pengalamatan (*addressing mode*) tertentu (seperti offset, index, atau displacement). *Contoh: Base address register, Stack Pointer.*
+		- **Condition Codes (Flags) Registers:** Register yang bit-bitnya diatur oleh perangkat keras CPU sebagai hasil dari suatu operasi. Menyimpan status operasi sebelumnya (misal: apakah hasilnya nol, negatif, atau terjadi *overflow*).
+	- ## 3. [[Memory Addressing & Word Alignment]]
+	- **Konsep Inti:**
+		- Memori komputer diatur dalam bentuk sel-sel berurutan. Setiap alamat (*address*) merepresentasikan ukuran terkecil yang bisa dialamatkan secara independen (umumnya 1 *byte* atau 8-bit).
+		- **Word Alignment:** Aturan "penyelarasan" lokasi data di dalam memori berdasarkan ukuran *Word* prosesor.
+			- Pada prosesor 32-bit, ukuran 1 *word* adalah 32-bit (atau 4-byte).
+			- Dalam sistem yang "selaras" (*aligned*), data tipe *word* akan diletakkan di alamat memori yang merupakan kelipatan dari ukuran *word* tersebut (Contoh: diletakkan secara presisi di alamat 0, 4, 8, 12, dst).
+		- **[Info Tambahan]:** Sebenarnya tidak ada aturan wajib bahwa data *harus* diletakkan sejajar (*aligned*). Namun, jika sebuah data 32-bit diletakkan melintasi batas memori (misal mulai dari alamat 3), CPU harus melakukan dua kali siklus pembacaan untuk mengambil 1 data tersebut secara utuh. Oleh karena itu, *Word Alignment* membuat akses memori jauh lebih efisien.
+	- ## 4. [[Endianness (Byte Order)]]
+	- **Definisi Inti:**
+		- Endianness adalah cara (urutan) sistem komputer menyimpan data *multi-byte* (data yang ukurannya lebih besar dari 1 byte, seperti tipe data 16-bit atau 32-bit) ke dalam sel-sel memori.
+	- **Jenis Endianness:**
+		- **Big-Endian:** Menyimpan byte yang paling besar nilainya / paling signifikan (*Most Significant Byte / MSB*) pada alamat memori yang **paling kecil (paling awal)**. (Logikanya seperti cara manusia membaca teks dari kiri ke kanan).
+		- **Little-Endian:** Menyimpan byte yang paling kecil nilainya / paling tidak signifikan (*Least Significant Byte / LSB*) pada alamat memori yang **paling kecil (paling awal)**.
+	- ## 5. [[Masalah & Penyelesaian (Studi Kasus Endianness)]]
+	- ### Kasus 1: Menyimpan data 16-bit (2-Byte)
+		- **Masalah:** Anda memiliki angka heksadesimal 16-bit `0xABCD`. Sistem menggunakan arsitektur 16-bit (1 word = 2 byte). Simpan nilai ini ke dalam memori mulai dari alamat `300` menggunakan format Big-Endian dan Little-Endian!
+		- **Analisis Data:**
+			- Nilai utuh: `ABCD`
+			- MSB (Byte terkiri/paling signifikan): `AB`
+			- LSB (Byte terkanan/paling kecil): `CD`
+		- **Penyelesaian:**
+			- **Format Big-Endian (MSB di alamat terkecil):**
+				- Alamat `300` = `AB`
+				- Alamat `301` = `CD`
+			- **Format Little-Endian (LSB di alamat terkecil):**
+				- Alamat `300` = `CD`
+				- Alamat `301` = `AB`
+	- ### Kasus 2: Menyimpan data 32-bit (4-Byte)
+		- **Masalah:** Anda memiliki program `void main() { int i = 0x12F23C48; }`. Simpan angka ini di memori berformat 32-bit mulai dari alamat `200`!
+		- **Analisis Data:**
+			- Nilai utuh: `12F23C48` (dibagi per blok 2 digit heksa = 1 byte).
+			- Urutan Byte dari MSB ke LSB: `12`, `F2`, `3C`, `48`.
+		- **Penyelesaian:**
+			- **Format Big-Endian:**
+				- Alamat `200` = `12`
+				- Alamat `201` = `F2`
+				- Alamat `202` = `3C`
+				- Alamat `203` = `48`
+			- **Format Little-Endian:**
+				- Alamat `200` = `48` (LSB masuk duluan di alamat terkecil)
+				- Alamat `201` = `3C`
+				- Alamat `202` = `F2`
+				- Alamat `203` = `12` (MSB masuk paling akhir)
