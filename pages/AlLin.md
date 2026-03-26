@@ -58,22 +58,22 @@
 	  4. **Operator Rotasi**: Memutar vektor atau titik terhadap suatu sumbu rotasi dengan sudut tertentu.
 	- **Info Tambahan & Penyelesaian Masalah**
 		- *Matriks Transformasi*: Semua operator ini memiliki bentuk matriks standar yang disimbolkan $[T]$. Cara mencari bayangan titik/vektor $v$ setelah ditransformasi adalah mengalikannya dengan matriks standar tersebut ($v_{baru} = [T]v$).
-	- ## [[Bab 7: Nilai Eigen dan Vektor Eigen]]
-		- **Konsep Nilai dan Vektor Eigen**
-			- Diketahui matriks $A$ berukuran $n \times n$. Sebuah vektor tak nol $x$ disebut **vektor eigen** jika terdapat persamaan $Ax = \lambda x$, di mana bilangan $\lambda$ (lambda) adalah **nilai eigen**[cite: 8, 9].
-		- **Proses Perhitungan** [cite: 9]
-			- *Menghitung Nilai Eigen*: Ditemukan dengan memecahkan akar dari persamaan karakteristik: $\det(\lambda I - A) = 0$.
-			- *Menghitung Vektor Eigen*: Diperoleh dengan mensubstitusikan nilai $\lambda$ yang sudah didapat dan mencari basis untuk ruang solusi sistem homogen $(\lambda I - A)x = 0$.
-		- **Sifat-sifat Penting** [cite: 9, 58]
-			- Pada matriks segitiga, nilai eigen adalah unsur-unsur yang terletak langsung di diagonal utamanya[cite: 9].
-			- Jika $\lambda$ dan $x$ adalah pasangan nilai dan vektor eigen dari $A$, maka untuk pangkat $k$, $\lambda^k$ dan $x$ akan menjadi pasangan untuk matriks $A^k$[cite: 9].
-			- Matriks bujur sangkar $A_{n \times n}$ dapat memiliki invers **jika dan hanya jika** $\lambda = 0$ BUKAN merupakan salah satu dari nilai eigennya[cite: 58].
-	- ## 🧠 [[Mini Quiz Uji Pemahaman]]
-		- **Soal 1 (Bab 1)**: Mengapa sebuah Sistem Persamaan Linier (SPL) dikatakan "tak konsisten"?
-			- *Jawaban*: SPL dikatakan tak konsisten jika setelah diselesaikan, didapatkan keadaan yang secara matematis tidak mungkin, seperti $0 = 1$. Ini mengartikan kurva/garis dalam sistem saling sejajar dan tidak pernah memiliki titik potong.
-		- **Soal 2 (Bab 2 & 7)**: Jika determinan suatu matriks $A$ ukuran $n \times n$ adalah 0 ($\det(A)=0$), apa dampaknya terhadap eksistensi Invers Matriks dan Nilai Eigen?
-			- *Jawaban*: Jika $\det(A) = 0$, matriks tersebut tidak memiliki invers (singular). Selain itu, ini menandakan bahwa salah satu **nilai eigen** ($\lambda$) dari matriks tersebut adalah 0.
-		- **Soal 3 (Bab 4)**: Mengapa Sistem Persamaan Linier Homogen ($Ax = 0$) tidak mungkin termasuk kategori SPL "tak konsisten"?
-			- *Jawaban*: Karena dalam SPL homogen, kita selalu bisa memberikan nilai $x_i = 0$ untuk setiap variabel. Hasilnya akan selalu valid ($0 = 0$). Oleh karena itu, SPL Homogen selalu memiliki minimal satu penyelesaian (solusi trivial).
-		- **Soal 4 (Bab 5)**: Misalkan ada vektor $u$ dan $v$ dalam ruang berdimensi 3. Jika $\langle u, v \rangle = 0$, apa interpretasi geometris dari kedua vektor tersebut?
-			- *Jawaban*: Kedua vektor tersebut saling ortogonal (tegak lurus satu sama lain) sehingga membentuk sudut siku-siku (90 derajat).
+- ## [[Bab 7: Nilai Eigen dan Vektor Eigen]]
+	- **Konsep Nilai dan Vektor Eigen**
+		- Diketahui matriks $A$ berukuran $n \times n$. Sebuah vektor tak nol $x$ disebut **vektor eigen** jika terdapat persamaan $Ax = \lambda x$, di mana bilangan $\lambda$ (lambda) adalah **nilai eigen**[cite: 8, 9].
+	- **Proses Perhitungan** [cite: 9]
+		- *Menghitung Nilai Eigen*: Ditemukan dengan memecahkan akar dari persamaan karakteristik: $\det(\lambda I - A) = 0$.
+		- *Menghitung Vektor Eigen*: Diperoleh dengan mensubstitusikan nilai $\lambda$ yang sudah didapat dan mencari basis untuk ruang solusi sistem homogen $(\lambda I - A)x = 0$.
+	- **Sifat-sifat Penting** [cite: 9, 58]
+		- Pada matriks segitiga, nilai eigen adalah unsur-unsur yang terletak langsung di diagonal utamanya[cite: 9].
+		- Jika $\lambda$ dan $x$ adalah pasangan nilai dan vektor eigen dari $A$, maka untuk pangkat $k$, $\lambda^k$ dan $x$ akan menjadi pasangan untuk matriks $A^k$[cite: 9].
+		- Matriks bujur sangkar $A_{n \times n}$ dapat memiliki invers **jika dan hanya jika** $\lambda = 0$ BUKAN merupakan salah satu dari nilai eigennya[cite: 58].
+- ## 🧠 [[Mini Quiz Uji Pemahaman]]
+	- **Soal 1 (Bab 1)**: Mengapa sebuah Sistem Persamaan Linier (SPL) dikatakan "tak konsisten"?
+		- *Jawaban*: SPL dikatakan tak konsisten jika setelah diselesaikan, didapatkan keadaan yang secara matematis tidak mungkin, seperti $0 = 1$. Ini mengartikan kurva/garis dalam sistem saling sejajar dan tidak pernah memiliki titik potong.
+	- **Soal 2 (Bab 2 & 7)**: Jika determinan suatu matriks $A$ ukuran $n \times n$ adalah 0 ($\det(A)=0$), apa dampaknya terhadap eksistensi Invers Matriks dan Nilai Eigen?
+		- *Jawaban*: Jika $\det(A) = 0$, matriks tersebut tidak memiliki invers (singular). Selain itu, ini menandakan bahwa salah satu **nilai eigen** ($\lambda$) dari matriks tersebut adalah 0.
+	- **Soal 3 (Bab 4)**: Mengapa Sistem Persamaan Linier Homogen ($Ax = 0$) tidak mungkin termasuk kategori SPL "tak konsisten"?
+		- *Jawaban*: Karena dalam SPL homogen, kita selalu bisa memberikan nilai $x_i = 0$ untuk setiap variabel. Hasilnya akan selalu valid ($0 = 0$). Oleh karena itu, SPL Homogen selalu memiliki minimal satu penyelesaian (solusi trivial).
+	- **Soal 4 (Bab 5)**: Misalkan ada vektor $u$ dan $v$ dalam ruang berdimensi 3. Jika $\langle u, v \rangle = 0$, apa interpretasi geometris dari kedua vektor tersebut?
+		- *Jawaban*: Kedua vektor tersebut saling ortogonal (tegak lurus satu sama lain) sehingga membentuk sudut siku-siku (90 derajat).
