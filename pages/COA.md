@@ -1,0 +1,69 @@
+# [[Computer Organization and Architecture (COA)]]
+	- **Deskripsi:** Rangkuman komprehensif materi Organisasi dan Arsitektur Komputer mulai dari konsep dasar, sistem memori, prosesor, set instruksi (MARIE), hingga sistem I/O.
+	- **Tags:** #coa #arsitekturkomputer #networking #kuliah #semester1
+	- ---
+	- ## 1. [[Pengantar Organisasi & Arsitektur Komputer]]
+		- **Konsep Inti:**
+			- **Arsitektur Komputer:** Atribut-atribut sistem yang tampak oleh *programmer* (memiliki dampak langsung pada eksekusi logis sebuah program). Contoh: Set instruksi, jumlah bit yang digunakan untuk merepresentasikan data, mekanisme I/O, teknik pengalamatan memori.
+			- **Organisasi Komputer:** Unit operasional dan interkoneksinya yang merealisasikan spesifikasi arsitektur. Contoh: Sinyal kontrol, antarmuka komputer dan peripheral, teknologi memori yang digunakan.
+			- **Evolusi Sistem:** Berangkat dari sistem komputer konvensional, merambah ke *Embedded Systems* (sistem tertanam untuk fungsi spesifik seperti rem ABS), *Internet of Things* (interkoneksi antar perangkat pintar via internet), dan *Cloud Computing* (komputasi terpusat via jaringan).
+		- **Masalah & Penyelesaian:**
+			- **Masalah:** Mengapa kita tidak menggunakan komputer serbaguna (PC) untuk mengontrol mesin cuci?
+			- **Penyelesaian:** Terlalu mahal dan memakan banyak daya. Kita menggunakan *Embedded System* yang diorganisasikan khusus secara perangkat keras untuk mengeksekusi satu set instruksi yang statis dan efisien.
+	- ## 2. [[Sistem Bilangan & Organisasi Data Digital]]
+		- **Konsep Inti:**
+			- **Analog vs Digital:** Analog bersifat kontinu (suhu, suara), sedangkan Digital bersifat diskret (0 dan 1). Sistem digital lebih efisien disimpan, tahan noise, dan mudah diprogram, namun butuh energi untuk proses konversi (ADC/DAC) dan rentan rusak jika satu *bit* vital hilang.
+			- **Gerbang Logika Dasar:** AND, OR, Inverter (NOT), NAND, NOR, EXOR (Exclusive OR).
+		- **Masalah & Penyelesaian:**
+			- **Masalah:** Bagaimana komputer menyimpan karakter abjad padahal hanya mengerti angka 0 dan 1?
+			- **Penyelesaian:** Menggunakan pengkodean standar seperti **ASCII** (American Standard Code for Information Interchange) di mana setiap karakter direpresentasikan oleh susunan spesifik 7 atau 8 bit biner (misal: 'A' adalah 65 dalam desimal, atau `01000001` dalam biner).
+	- ## 3. [[CPU dan Arsitektur Komputer (Harvard vs Von Neumann)]]
+		- **Konsep Inti:**
+			- **Von Neumann Architecture:** Data dan instruksi disimpan di satu blok memori yang sama. Jalur akses sama. Kelemahan: Terjadi antrean (bottleneck) karena memori hanya bisa diakses satu per satu. Kelebihan: Implementasi perangkat keras lebih sederhana.
+			- **Harvard Architecture:** Data dan instruksi memiliki blok memori dan jalur (*bus*) yang terpisah secara fisik. Kelebihan: Eksekusi lebih cepat karena instruksi dan data bisa diambil bersamaan.
+			- **Interrupts:** Mekanisme penghentian sementara kerja normal CPU oleh modul I/O.
+		- **Masalah & Penyelesaian:**
+			- **Masalah:** Saat CPU menunggu data dari keyboard yang sangat lambat, CPU menjadi *idle* (menganggur) dan membuang siklus pemrosesan.
+			- **Penyelesaian:** Menggunakan **Interrupt**. CPU tetap mengeksekusi program lain. Saat keyboard ditekan, modul mengirim sinyal INTR (*Interrupt Request*). CPU merespons dengan INTA, menyimpan status (*state*) saat ini, menjalankan *Interrupt Service Routine (ISR)*, dan kembali lagi ke program awal.
+	- ## 4. [[Memory System & RAM (Random Access Memory)]]
+		- **Konsep Inti:**
+			- **Karakteristik Memori:** Dilihat dari lokasi (Internal/Eksternal), volatilitas (Volatile: hilang saat mati, Non-Volatile: permanen), dan akses memori.
+			- **SRAM vs DRAM:** - *SRAM (Static RAM):* Cepat, mahal, tidak butuh *refresh*, biasa dipakai untuk Cache.
+				- *DRAM (Dynamic RAM):* Lebih lambat, lebih murah, butuh proses *refresh* berkala untuk mempertahankan muatan listrik, biasa dipakai untuk Main Memory (RAM komputer).
+			- **Varian RAM:** DDR, LPDDR (Low Power untuk mobile), GDDR (Graphics DDR untuk GPU).
+		- **[Info Tambahan] Memory Hierarchy:**
+			- Semakin dekat ke prosesor (Registers, Cache), kapasitasnya makin kecil, aksesnya makin cepat, dan harganya makin mahal per byte. Semakin jauh (Magnetic Disk, Optical Drive), kapasitas makin besar, lambat, dan murah.
+	- ## 5. [[Cache Memory]]
+		- **Konsep Inti:**
+			- Cache berada di antara Registers CPU dan Main Memory. Tujuannya memberi ilusi memori yang kecepatannya setara prosesor dengan kapasitas setara main memory.
+			- **Mapping Function:** Menentukan blok mana di main memory yang akan diletakkan di slot cache mana (Direct Mapping, Associative Mapping, Set-Associative Mapping).
+			- **Write Policy:** - *Write Through:* Menulis ke Cache dan Main Memory bersamaan (aman, tapi lambat).
+				- *Write Back:* Menulis hanya ke Cache. Main memory baru di-update jika blok di cache tersebut mau diganti (*replaced*). Menggunakan *DIRTY bit* sebagai penanda.
+	- ## 6. [[Registers & Endianness]]
+		- **Konsep Inti:**
+			- **Register Utama:** PC (Program Counter), IR (Instruction Register), MAR (Memory Address Register), MBR (Memory Buffer Register), AC (Accumulator).
+			- **Endianness:** Cara komputer mengurutkan *byte* di dalam memori untuk tipe data yang lebih besar dari 1 byte (misal 1 word = 32-bit/4-byte).
+				- *Big-Endian:* Byte paling signifikan (Most Significant Byte/MSB) disimpan di alamat paling kecil.
+				- *Little-Endian:* Byte paling tidak signifikan (Least Significant Byte/LSB) disimpan di alamat paling kecil.
+		- **Masalah & Penyelesaian:**
+			- **Masalah:** Simpan data heksadesimal `0xABCD` (16-bit / 2-byte) pada alamat memori mulai `300`.
+			- **Penyelesaian:**
+				- **Big-Endian:** Alamat `300` = `AB`, Alamat `301` = `CD`.
+				- **Little-Endian:** Alamat `300` = `CD`, Alamat `301` = `AB`.
+	- ## 7. [[Simulasi Set Instruksi dengan MARIE]]
+		- **Konsep Inti:**
+			- **MARIE** (*Machine Architecture that is Really Intuitive and Easy*) adalah arsitektur mesin sederhana untuk edukasi.
+			- Karakteristik: panjang instruksi 16-bit (4-bit Opcode, 12-bit Address).
+			- **Siklus Instruksi Dasar:**
+			  1. *Fetch:* Membawa instruksi dari memori (berdasarkan alamat di PC) ke dalam IR.
+			  2. *Decode:* Memecah instruksi di IR menjadi *Opcode* dan *Address*.
+			  3. *Execute:* CPU menjalankan instruksi.
+		- **Masalah & Penyelesaian:**
+			- **Masalah:** Programmer ingin menjumlahkan dua angka dari memori.
+			- **Penyelesaian via MARIE Assembly:**
+				- `LOAD X` (Muat nilai dari memori X ke Accumulator AC)
+				- `ADD Y` (Jumlahkan isi AC dengan nilai dari memori Y)
+				- `STORE Z` (Simpan hasil dari AC ke alamat memori Z)
+	- ## 8. [[Graphics Processing Unit (GPU)]]
+		- **Konsep Inti:**
+			- GPU didesain khusus untuk **Pemrosesan
