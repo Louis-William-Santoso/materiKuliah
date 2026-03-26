@@ -5,9 +5,9 @@
 	- **Sistem Persamaan Linier (SPL)**: Kumpulan dari beberapa persamaan linier. [cite_start]Solusi dari persamaan linier adalah urutan $n$ bilangan $s_1, s_2, \dots, s_n$ sehingga persamaan dipenuhi jika disubstitusikan terhadap $x_1 = s_1, x_2 = s_2, \dots, x_n = s_n$.
 - ## 2. Klasifikasi Solusi SPL
 	- Sebuah SPL tidak selalu memiliki satu jawaban tunggal. Terdapat 3 kemungkinan solusi untuk sebuah SPL:
-	  1. [cite_start]**Ada Satu Penyelesaian (Tunggal)**: Kondisi ini disebut sebagai **SPL Konsisten**[cite: 2, 9].
-	  2. **Tak Hingga Banyaknya Penyelesaian**: Terdapat banyak solusi yang memungkinkan. [cite_start]Ini juga masuk kategori **SPL Konsisten**[cite: 2, 9].
-	  3. **Tidak Ada Penyelesaian**: Kondisi di mana sistem saling berlawanan atau sejajar. [cite_start]Disebut sebagai **SPL Tak Konsisten**[cite: 2, 9].
+	  1. **Ada Satu Penyelesaian (Tunggal)**: Kondisi ini disebut sebagai **SPL Konsisten**.
+	  2. **Tak Hingga Banyaknya Penyelesaian**: Terdapat banyak solusi yang memungkinkan. Ini juga masuk kategori **SPL Konsisten**.
+	  3. **Tidak Ada Penyelesaian**: Kondisi di mana sistem saling berlawanan atau sejajar. Disebut sebagai **SPL Tak Konsisten**
 - ## 3. Representasi dan Penulisan SPL [cite: 3, 10, 47]
 	- Ada tiga cara umum untuk merepresentasikan atau menuliskan Sistem Persamaan Linier[cite: 3, 10, 47]:
 	- **a. [cite_start]Bentuk Persamaan** [cite: 3, 10, 47]
