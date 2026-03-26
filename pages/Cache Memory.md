@@ -1,0 +1,63 @@
+## 1. [[Konsep Dasar dan Posisi Cache]]
+	- **Konsep Inti:**
+		- Cache memory dirancang untuk memberikan ilusi kepada komputer bahwa ia memiliki memori dengan kecepatan sangat tinggi (mendekati kecepatan prosesor) dengan kapasitas yang besar dan harga yang murah.
+		- Dalam **Memory Hierarchy** (Hierarki Memori), Cache berada persis di antara **Registers** (di dalam CPU) dan **Main Memory** (RAM).
+		- Karakteristik: Lebih cepat dari RAM, tetapi kapasitasnya jauh lebih kecil dan harganya lebih mahal.
+		-
+	- **[Info Tambahan] Tingkatan Cache (L1, L2, L3):**
+		- Prosesor modern (seperti Intel Core atau ARM) membagi cache menjadi beberapa level.
+		- **L1 Cache:** Paling kecil dan paling cepat, tertanam langsung di inti (*core*) prosesor. Biasanya dipisah menjadi *L1 Data* dan *L1 Instruction* (menggunakan arsitektur Harvard).
+		- **L2 & L3 Cache:** Lebih besar namun sedikit lebih lambat dari L1. L3 biasanya merupakan *Unified Cache* (arsitektur Von Neumann) yang dibagi rata dan bisa diakses oleh seluruh *core* prosesor.
+	- ## 2. [[Prinsip Kerja Cache Memory]]
+	- **Konsep Inti:**
+		- CPU bekerja jauh lebih cepat daripada Main Memory (RAM). Jika CPU mengambil data satu per satu langsung dari RAM, CPU akan sering menganggur (*bottleneck*).
+		- **Siklus Kerja Cache:**
+		  1. Ketika prosesor ingin membaca (*read*) sebuah data/word, ia akan mengecek terlebih dahulu di dalam Cache.
+		  2. **Cache Hit:** Jika data yang dicari ADA di dalam cache, prosesor langsung mengambil data tersebut (akses sangat cepat).
+		  3. **Cache Miss:** Jika data TIDAK ADA di cache, maka sistem akan mengambil **satu blok data** (bukan cuma satu kata, melainkan beserta data-data tetangganya) dari Main Memory, menyalinnya ke dalam Cache, lalu mengirimkannya ke prosesor.
+	- **[Info Tambahan] Mengapa menyalin "Satu Blok"? (Locality of Reference):**
+		- Komputer bekerja berdasarkan prinsip lokalitas. Jika Anda membaca baris kode ke-10, kemungkinan besar Anda akan segera membaca baris ke-11 dan ke-12. Dengan memindahkan satu blok secara utuh ke Cache, akses data berikutnya akan dipastikan mengalami *Cache Hit*.
+	- ## 3. [[Mapping Function (Fungsi Pemetaan)]]
+	- **Konsep Inti:**
+		- Karena ukuran Cache jauh lebih kecil dari Main Memory, kita memerlukan aturan/cara untuk menentukan blok data dari Main Memory mana yang akan diletakkan di baris (*line/slot*) Cache yang mana. Ini disebut *Mapping Function*.
+	- **Tiga Teknik Mapping Utama:**
+		- **1. Direct Mapping:** Setiap blok di Main Memory hanya memiliki SATU lokasi baris tertentu yang diizinkan di dalam Cache.
+			- *Kelebihan:* Sangat sederhana dan murah untuk diimplementasikan secara perangkat keras.
+			- *Kekurangan:* Rentan tabrakan data (*thrashing*). Jika dua blok yang sering diakses ternyata memiliki "alamat paksa" baris cache yang sama, mereka akan terus-menerus saling menimpa.
+		- **2. Associative Mapping:** Setiap blok dari Main Memory bebas diletakkan di baris Cache MANA SAJA yang kosong.
+			- *Kelebihan:* Sangat fleksibel, meminimalisir tabrakan data.
+			- *Kekurangan:* Sangat lambat dan mahal saat pencarian, karena CPU harus mengecek *Tag* (label identitas) di setiap baris cache satu per satu untuk menemukan data.
+		- **3. Set-Associative Mapping:** Merupakan kompromi (gabungan) dari keduanya. Cache dibagi menjadi beberapa kelompok (Set). Sebuah blok Main Memory dipetakan ke Set tertentu (seperti Direct), tetapi di dalam Set tersebut, ia bebas ditempatkan di baris mana saja (seperti Associative).
+		-
+	- ## 4. [[Write Policy (Kebijakan Penulisan)]]
+	- **Konsep Inti:**
+		- Saat CPU mengubah (menulis ulang) data yang ada di dalam Cache, memori utama (RAM) menjadi "ketinggalan zaman" (*stale*). *Write policy* mengatur kapan data baru di Cache ini disalin kembali ke RAM.
+	- **1. Write Through:**
+		- Setiap kali CPU menulis data ke Cache, data tersebut **secara bersamaan (simultan)** juga ditulis ke Main Memory.
+		- *Kelebihan:* Aman. Main memory selalu memiliki data yang valid dan paling mutakhir.
+		- *Kekurangan:* Lambat. Menimbulkan kemacetan lalu lintas data (*memory traffic bottleneck*) karena memori utama sering diakses.
+	- **2. Write Back:**
+		- CPU hanya menulis data baru ke dalam Cache saja. Memori utama dibiarkan tidak sinkron. Cache menggunakan penanda yang disebut **DIRTY bit** atau **USE bit** untuk menandai blok mana yang datanya sudah diubah.
+		- Data baru akan disalin ke Main Memory HANYA JIKA blok cache tersebut mau diganti (*replaced*) oleh data blok lain.
+		- *Kelebihan:* Eksekusi sangat cepat karena meminimalisir penulisan ke memori utama yang lambat.
+		- *Kekurangan:* Berisiko. Modul lain (seperti DMA I/O) bisa saja tanpa sengaja membaca data lama yang salah dari Main Memory sebelum proses *write back* terjadi.
+	- ## 5. [[Masalah & Penyelesaian (Studi Kasus Matematis)]]
+	- **Masalah:** Menghitung arsitektur Set-Associative Mapping.
+		- Diketahui sebuah memori memiliki alamat bus 16-bit.
+		- Kapasitas Cache adalah 128 baris (*lines*).
+		- Ukuran 1 blok memori adalah 16 words ($K = 16$).
+		- Cache menggunakan metode 2-way set-associative mapping ($k = 2$).
+		- *Pertanyaan: Tentukan jumlah Blocks pada Main Memory, jumlah Sets pada Cache, dan jumlah bit Tag!*
+	- **Penyelesaian:**
+		- **Langkah 1: Menghitung total kapasitas memori dan jumlah Blocks ( $M$ )**
+			- Address bus = 16-bit, berarti total memori = $2^{16}$ words = $65.536$ words (atau 64K words).
+			- Karena 1 blok berisi 16 words, maka Total Blocks ($M$) = $\frac{2^{16}}{16} = \frac{65536}{16} = 4096$ blok.
+		- **Langkah 2: Menghitung jumlah Sets ($v$) pada Cache**
+			- Total baris cache = 128 baris. Karena ini adalah 2-way ($k=2$, yang berarti 1 set berisi 2 baris).
+			- Jumlah Sets ($v$) = $\frac{\text{Total Baris}}{k} = \frac{128}{2} = 64$ Set.
+		- **Langkah 3: Menghitung bit Tag**
+			- Karena ada 64 Set ($2^6$), maka panjang *Set bit* = 6 bit.
+			- Karena 1 blok berisi 16 words ($2^4$), maka panjang *Word/Offset bit* = 4 bit.
+			- Total alamat memori adalah 16-bit.
+			- Maka, panjang **Tag bit** = Total bit - (Set bit + Word bit) = $16 - (6 + 4) = 16 - 10 = 6$ bit.
+		- *Kesimpulan:* Arsitektur memori ini menggunakan 6-bit Tag, 6-bit identifikasi Set, dan 4-bit identifikasi Word untuk setiap alamat datanya.
