@@ -1,10 +1,10 @@
-## 1. Konsep Dasar Transformasi Linier
+## 1. [[Konsep Dasar Transformasi Linier]]
 	- **Definisi**: Transformasi linier adalah sebuah fungsi matematika yang memetakan (memindahkan/mengubah) vektor dari suatu ruang vektor ke ruang vektor lainnya sedemikian rupa sehingga operasi penjumlahan vektor dan perkalian skalar tetap dipertahankan.
 	- **Notasi**: Ditulis sebagai $T: R^n \rightarrow R^m$. Ini berarti transformasi $T$ mengambil vektor dari ruang berdimensi $n$ (domain) dan memetakannya ke ruang berdimensi $m$ (kodomain).
 	- **Operator Linier**: Jika ruang asal dan ruang tujuannya sama (misal dari $R^2$ ke $R^2$, atau $T: R^n \rightarrow R^n$), maka transformasi linier ini secara khusus disebut sebagai **Operator Linier**.
 	- **Matriks Standar**: Setiap transformasi linier dapat direpresentasikan oleh sebuah matriks. Jika inputnya adalah vektor $x$, maka hasil transformasinya (vektor $w$) didapat dengan mengalikan matriks standar $A$ dengan $x$.
 		- Rumus: $w = Ax$ atau $T(x) = Ax$.
-- ## 2. Jenis-jenis Operator Linier Dasar (Geometris)
+- ## 2. [[Jenis-jenis Operator Linier Dasar (Geometris)]]
 	- Transformasi linier sangat berguna dalam grafika komputer untuk memanipulasi objek. Berikut adalah operator dasar di $R^2$:
 	- ### A. Pencerminan (Reflection)
 		- Memetakan titik ke bayangan cerminnya terhadap suatu sumbu atau garis.
@@ -21,16 +21,16 @@
 		- Mengubah skala objek searah dengan sumbu koordinat berdasarkan faktor $k$.
 		- *Matriks Skala*: $\begin{pmatrix} k & 0 \\ 0 & k \end{pmatrix}$
 		- Jika $k > 1$ disebut Dilatasi (diperbesar), jika $0 < k < 1$ disebut Kontraksi (diperkecil).
-	- ## 3. Komposisi Transformasi Linier
-		- **Definisi**: Melakukan dua atau lebih transformasi secara berurutan pada satu objek. Dinotasikan dengan lingkaran kecil, misalnya $(T_2 \circ T_1)(x)$, yang dibaca "Transformasi 1 dilakukan lebih dulu, lalu dilanjutkan Transformasi 2".
-		- **Aturan Matriks Komposisi**: Jika $T_1$ memiliki matriks standar $A$ dan $T_2$ memiliki matriks standar $B$, maka matriks standar untuk komposisi $(T_2 \circ T_1)$ adalah hasil kali matriks **dari kanan ke kiri**.
-			- Rumus: $T(x) = BAx$.
-			- *Peringatan*: Perkalian matriks tidak komutatif ($BA \neq AB$). Urutan terbalik sangat fatal! Matriks dari transformasi pertama harus berada di paling kanan (paling dekat dengan vektor $x$).
-- ## 4. Invers Transformasi Linier
+- ## 3. [[Komposisi Transformasi Linier]]
+	- **Definisi**: Melakukan dua atau lebih transformasi secara berurutan pada satu objek. Dinotasikan dengan lingkaran kecil, misalnya $(T_2 \circ T_1)(x)$, yang dibaca "Transformasi 1 dilakukan lebih dulu, lalu dilanjutkan Transformasi 2".
+	- **Aturan Matriks Komposisi**: Jika $T_1$ memiliki matriks standar $A$ dan $T_2$ memiliki matriks standar $B$, maka matriks standar untuk komposisi $(T_2 \circ T_1)$ adalah hasil kali matriks **dari kanan ke kiri**.
+		- Rumus: $T(x) = BAx$.
+		- *Peringatan*: Perkalian matriks tidak komutatif ($BA \neq AB$). Urutan terbalik sangat fatal! Matriks dari transformasi pertama harus berada di paling kanan (paling dekat dengan vektor $x$).
+- ## 4. [[Invers Transformasi Linier]]
 	- Jika sebuah transformasi $T$ memetakan vektor $x$ ke vektor $w$ ($w = Ax$), maka **Invers Transformasi** (dinotasikan $T^{-1}$) memetakan kembali vektor $w$ ke vektor asalnya $x$.
 	- **Syarat Utama**: Transformasi memiliki invers jika dan hanya jika matriks standarnya ($A$) memiliki invers (yaitu $\det(A) \neq 0$).
 	- Rumus Invers: $T^{-1}(w) = A^{-1}w$.
-- ## 5. Bedah Kasus & Penyelesaian Masalah
+- ## 5. [[Bedah Kasus & Penyelesaian Masalah]]
 	- ### Kasus: Mencari Matriks Komposisi
 		- *Soal*: Tentukan matriks standar untuk operator linier $T: R^2 \rightarrow R^2$ yang pertama-tama memproyeksikan vektor secara ortogonal ke sumbu x, kemudian merotasikannya sejauh $90^\circ$ ($\pi/2$) berlawanan arah jarum jam!
 		- *Penyelesaian*:
