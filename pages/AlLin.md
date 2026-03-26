@@ -1,6 +1,6 @@
 # [[ALJABAR LINIER]]
 	- **Materi yang dipelajari**: matriks, sistem persamaan linier, determinan, vektor, ruang vektor, ruang hasil kali dalam, transformasi linier, nilai dan vektor eigen.
-	- **Tags:** #aljabarLinier #kuliah
+	- **Tags:** #aljabarLinier #kuliah #semester4
 	- ---
 	- ## [[Bab 1: Sistem Persamaan Linier (SPL)]]
 		- **Definisi Dasar**
