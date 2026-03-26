@@ -66,4 +66,15 @@
 				- `STORE Z` (Simpan hasil dari AC ke alamat memori Z)
 	- ## 8. [[Graphics Processing Unit (GPU)]]
 		- **Konsep Inti:**
-			- GPU didesain khusus untuk **Pemrosesan
+			- GPU didesain khusus untuk **Pemrosesan Paralel** (*Parallel Processing*).
+			- Berbeda dengan CPU yang memiliki sedikit *core* super cepat (CISC/x86), GPU memiliki ribuan *core* sederhana yang bekerja bersamaan. Sangat ideal untuk rendering visual 3D, *Machine Learning*, dan AI.
+	- ## 9. [[I/O Organization (Sistem Input/Output)]]
+		- **Konsep Inti:**
+			- **Mengapa butuh Modul I/O?** Karena ada perbedaan format data, kecepatan, dan voltase antara prosesor/memori dengan periferal (*keyboard, mouse, disk*). Modul I/O bertindak sebagai "Penerjemah" dan "Buffer".
+			- **Teknik I/O:**
+				- *Programmed I/O:* CPU memantau modul I/O terus-menerus (*polling*). Sangat tidak efisien.
+				- *Interrupt-driven I/O:* Modul I/O menginterupsi CPU hanya saat siap. CPU masih bertugas memindahkan data.
+				- *Direct Memory Access (DMA):* Modul I/O khusus yang mengambil alih bus sistem. Data mengalir langsung dari I/O ke Memori Utama tanpa membebani CPU. CPU hanya menginisiasi di awal dan menerima interrupt di akhir saat transfer blok data selesai.
+		- **Masalah & Penyelesaian:**
+			- **Masalah:** Mentransfer *file* ukuran 1GB dari Hardisk ke RAM membuat komputer membeku (CPU 100% *usage*) jika menggunakan *Interrupt-driven I/O*.
+			- **Penyelesaian:** Gunakan teknologi **DMA**. CPU mendelegasikan perintah, alamat awal, dan jumlah kata yang ditransfer ke *DMA Controller*. CPU bebas mengerjakan proses lain sementara DMA menyalin 1GB data tersebut ke RAM secara independen.
