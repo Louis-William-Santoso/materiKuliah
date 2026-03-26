@@ -1,4 +1,4 @@
-## 1. Konsep Dasar Hasil Kali Dalam
+## 1. Konsep Dasar Hasil Kali Dalam]]
 	- **Definisi**: Hasil kali dalam (Inner Product) adalah sebuah fungsi yang mengaitkan setiap pasang elemen di dalam suatu ruang vektor (misalnya vektor $\mathbf{u}$ dan $\mathbf{v}$) dengan sebuah bilangan real skalar. Notasi umumnya ditulis sebagai $\langle \mathbf{u}, \mathbf{v} \rangle$.
 	- Konsep ini merupakan **perluasan (generalisasi)** dari konsep *dot product* (hasil kali titik) pada vektor ruang Euclidian ($R^2$ atau $R^3$), sehingga dapat diaplikasikan pada ruang vektor yang lebih abstrak seperti ruang matriks atau ruang fungsi.
 	- **Empat Aksioma Utama**: Agar suatu fungsi bisa disebut "hasil kali dalam", ia harus memenuhi:

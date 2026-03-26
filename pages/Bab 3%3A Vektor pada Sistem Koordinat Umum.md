@@ -5,7 +5,7 @@
 		- Di $R^2$ (2 Dimensi): $\mathbf{u} = (u_1, u_2)$
 		- Di $R^3$ (3 Dimensi): $\mathbf{u} = (u_1, u_2, u_3)$
 		- Di $R^n$ ($n$ Dimensi): $\mathbf{u} = (u_1, u_2, \dots, u_n)$
-- ## 2. Operasi Aritmatika Vektor]]
+- ## 2. [[Operasi Aritmatika Vektor]]
 	- ### Penjumlahan dan Pengurangan Vektor
 		- Dilakukan dengan menjumlahkan atau mengurangkan komponen-komponen yang seletak posisinya.
 		- Jika $\mathbf{u} = (u_1, u_2, u_3)$ dan $\mathbf{v} = (v_1, v_2, v_3)$, maka:
@@ -18,20 +18,20 @@
 		- *Sifat Arah*:
 			- Jika $k > 0$, arah vektor tetap (hanya panjangnya yang berubah).
 			- Jika $k < 0$, arah vektor menjadi berlawanan 180 derajat.
-- ## 3. Membentuk Vektor dari Dua Titik Koordinat
+- ## 3. [[Membentuk Vektor dari Dua Titik Koordinat]]
 	- Sebuah vektor seringkali direpresentasikan dari titik pangkal $P_1$ menuju titik ujung $P_2$. Vektor ini dilambangkan dengan $\vec{P_1P_2}$.
 	- **Cara Menghitung**: Komponen vektor didapat dengan mengurangi koordinat titik ujung dengan koordinat titik pangkal (*Ujung kurangi Pangkal*).
 	- **Contoh Rumus di $R^3$**:
 		- Diketahui titik $P_1(x_1, y_1, z_1)$ dan $P_2(x_2, y_2, z_2)$.
 		- $\vec{P_1P_2} = (x_2 - x_1, y_2 - y_1, z_2 - z_1)$.
-- ## 4. Norm (Panjang Vektor)
+- ## 4. [[Norm (Panjang Vektor)]]
 	- **Definisi**: Norm atau panjang dari sebuah vektor $\mathbf{u}$ dinotasikan dengan $||\mathbf{u}||$. Rumus ini didasarkan pada Teorema Pythagoras.
 	- **Rumus Norm di $R^2$**:
 		- Jika $\mathbf{u} = (u_1, u_2)$, maka $||\mathbf{u}|| = \sqrt{u_1^2 + u_2^2}$
 	- **Rumus Norm di $R^3$**:
 		- Jika $\mathbf{u} = (u_1, u_2, u_3)$, maka $||\mathbf{u}|| = \sqrt{u_1^2 + u_2^2 + u_3^2}$
 	- **Vektor Satuan (Unit Vector)**: Vektor yang panjangnya (norm-nya) tepat sama dengan 1. Jika kita memiliki vektor $\mathbf{v}$ sembarang yang bukan nol, kita bisa mencari vektor satuan yang searah dengannya menggunakan rumus: $\hat{v} = \frac{\mathbf{v}}{||\mathbf{v}||}$.
-- ## 5. Sifat-sifat (Aksioma) Operasi Vektor
+- ## 5. [[Sifat-sifat (Aksioma) Operasi Vektor]]
 	- Jika $\mathbf{u}, \mathbf{v}, \mathbf{w}$ adalah vektor dan $k, l$ adalah skalar, maka berlaku sifat berikut yang mengizinkan kita melakukan manipulasi aljabar pada vektor:
 	  1. Komutatif Penjumlahan: $\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u}$
 	  2. Asosiatif Penjumlahan: $(\mathbf{u} + \mathbf{v}) + \mathbf{w} = \mathbf{u} + (\mathbf{v} + \mathbf{w})$
