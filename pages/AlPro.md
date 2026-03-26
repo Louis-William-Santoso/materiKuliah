@@ -1,6 +1,6 @@
 # [[Algorithm and Programming (C#)]]
 	- **Deskripsi:** Rangkuman materi Algoritma dan Pemrograman menggunakan bahasa C# (Console & GUI).
-	- **Tags:** #algoritma #programming #csharp #kuliah
+	- **Tags:** #algoritma #programming #csharp #kuliah #semester1
 	- ---
 	- ## 1. [[Algoritma dan Flowchart]]
 		- **Konsep Inti:**
