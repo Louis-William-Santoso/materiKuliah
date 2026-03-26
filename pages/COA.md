@@ -1,6 +1,6 @@
 # [[Computer Organization and Architecture (COA)]]
 	- **Deskripsi:** Rangkuman komprehensif materi Organisasi dan Arsitektur Komputer mulai dari konsep dasar, sistem memori, prosesor, set instruksi (MARIE), hingga sistem I/O.
-	- **Tags:** #coa #arsitekturkomputer #networking #kuliah #semester1
+	- **Tags:** #coa #arsitekturkomputer #networking #binary #kuliah #semester1
 	- ---
 	- ## 1. [[Pengantar Organisasi & Arsitektur Komputer]]
 		- **Konsep Inti:**

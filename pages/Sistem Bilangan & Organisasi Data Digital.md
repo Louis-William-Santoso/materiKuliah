@@ -1,0 +1,53 @@
+## 1. [[Sistem Analog vs Digital]]
+	- **Konsep Inti:**
+		- **Sistem Analog:** Memiliki nilai yang kontinu (terus-menerus) setiap saat. Sangat merepresentasikan kondisi alamiah. Contoh: suhu ruangan, tekanan darah, jarak, dan gelombang suara analog.
+		- **Sistem Digital:** Memiliki nilai diskret (terputus-putus/terukur pada titik tertentu). Komputer modern beroperasi menggunakan sistem digital dengan dua *state* dasar: 0 (Off/Low Voltage) dan 1 (On/High Voltage).
+	- **Perbandingan Karakteristik:**
+		- **Kelebihan Digital:** - Lebih efisien untuk diproses dan ditransmisikan.
+			- Lebih mudah disimpan (bisa dikompresi dan direproduksi tanpa kehilangan kualitas/ *lossless*).
+			- Mudah diprogram ulang (*programmable*).
+			- Lebih tahan terhadap *noise* (gangguan sinyal).
+		- **Kekurangan Digital:** - Membutuhkan energi ekstra untuk proses konversi dari analog ke digital (menggunakan ADC - *Analog-to-Digital Converter*) dan sebaliknya (DAC).
+			- Sistem digital sangat rapuh secara struktural; jika ada 1 bit krusial yang hilang atau rusak (*corrupt*), seluruh data bisa menjadi cacat atau tidak terbaca.
+	- ## 2. [[Gerbang Logika Dasar (Basic Logic Gates)]]
+	-
+	- **Konsep Inti:**
+		- Semua operasi komputasi di dalam CPU pada dasarnya dibangun dari miliaran gerbang logika berukuran nanometer.
+		- **Jenis-jenis Gerbang Utama:**
+			- **AND:** Menghasilkan nilai 1 HANYA JIKA semua inputnya 1.
+			- **OR:** Menghasilkan nilai 1 JIKA minimal salah satu inputnya 1.
+			- **Inverter (NOT):** Membalikkan nilai input (1 jadi 0, 0 jadi 1).
+			- **NAND (NOT-AND):** Kebalikan dari AND. Menghasilkan 0 hanya jika semua inputnya 1. (Merupakan gerbang universal yang bisa digunakan untuk membuat gerbang lain).
+			- **NOR (NOT-OR):** Kebalikan dari OR. Menghasilkan 1 hanya jika semua inputnya 0.
+			- **EXOR (Exclusive OR):** Menghasilkan 1 JIKA kedua input *berbeda* nilainya (contoh: 1 dan 0, atau 0 dan 1).
+	- ## 3. [[Sistem Bilangan (Number Systems)]]
+	-
+	- **Konsep Inti:**
+		- **Desimal (Basis 10):** Angka 0-9. Sistem yang digunakan manusia sehari-hari.
+		- **Biner (Basis 2):** Angka 0 dan 1. Bahasa asli mesin.
+		- **Oktal (Basis 8):** Angka 0-7. Mengelompokkan tiap 3 bit biner.
+		- **Heksadesimal (Basis 16):** Angka 0-9 dilanjutkan A-F (A=10, B=11, C=12, D=13, E=14, F=15). Sangat efisien untuk merepresentasikan data biner yang panjang (mengelompokkan tiap 4 bit biner). Sering disematkan huruf `0x` atau `h` di depan/belakangnya (contoh: `0xABCD`).
+	- **Masalah & Penyelesaian (Konversi Bilangan):**
+		- **Masalah:** Mesin menghasilkan output data biner `1110 0110`, namun *programmer* perlu membacanya dalam format yang lebih ringkas (Heksadesimal).
+		- **Penyelesaian:**
+			- Kelompokkan biner menjadi 4-bit dari kanan.
+			- `1110` (dalam biner) = 14 (dalam desimal) = **E** (dalam heksadesimal).
+			- `0110` (dalam biner) = 6 (dalam desimal) = **6** (dalam heksadesimal).
+			- Hasilnya: `0xE6`.
+	- ## 4. [[Organisasi Data Digital (Memory Units)]]
+	- **Konsep Inti:**
+		- Komputer menyimpan dan mentransfer data dalam blok-blok ukuran tertentu.
+		- **Bit:** Satuan terkecil (0 atau 1).
+		- **Byte:** Kumpulan 8 bit. Memori komputer umumnya *byte-addressable* (setiap alamat memori menyimpan 1 byte).
+		- **Word:** Kumpulan bit yang dapat diproses oleh CPU dalam satu kali instruksi. Ukuran *Word* bergantung pada arsitektur prosesor (misal: prosesor 16-bit memiliki ukuran *word* 16 bit atau 2 byte. Prosesor 64-bit modern memiliki ukuran *word* 64 bit atau 8 byte).
+		- **Double Word:** Setara dengan 2 buah *word*.
+	- ## 5. [[Representasi Karakter (ASCII Code)]]
+	-
+	- **Konsep Inti:**
+		- **ASCII (*American Standard Code for Information Interchange*):** Karena memori hanya menyimpan angka (biner), diciptakanlah standar pemetaan angka ke dalam karakter alfabet.
+		- Terdiri dari 128 karakter yang dibagi menjadi 4 grup utama:
+			- **Grup 1:** *Control Characters* (karakter non-cetak untuk pengaturan, misal: *Escape, Backspace*).
+			- **Grup 2:** Karakter cetak dasar (spasi hingga tanda tanya `?`).
+			- **Grup 3:** Karakter cetak (`@` hingga `_`), mencakup huruf kapital.
+			- **Grup 4:** Karakter cetak (`a` hingga karakter kontrol *DEL*), mencakup huruf kecil.
+	- **[Info Tambahan]:** Dalam ASCII, huruf kapital dan huruf kecil memiliki nilai numerik yang berbeda. Misalnya, huruf `A` adalah 65 (desimal) atau `01000001` (biner), sedangkan huruf `a` adalah 97 (desimal) atau `01100001` (biner). Hanya berbeda 1 bit di posisi ke-6!
