@@ -1,14 +1,14 @@
-## 1. Definisi Dasar
+## 1. [[Definisi Dasar]]
 	- **Persamaan Linier**: Persamaan yang melibatkan $n$ peubah (variabel) $x_1, x_2, \dots, x_n$ dan dapat dinyatakan dalam bentuk matematis:
 		- $a_1x_1 + a_2x_2 + \dots + a_nx_n = b$
 		- *Keterangan*: $a_1, a_2, \dots, a_n$ dan $b$ adalah konstanta bilangan real.
 	- **Sistem Persamaan Linier (SPL)**: Kumpulan dari beberapa persamaan linier. Solusi dari persamaan linier adalah urutan $n$ bilangan $s_1, s_2, \dots, s_n$ sehingga persamaan dipenuhi jika disubstitusikan terhadap $x_1 = s_1, x_2 = s_2, \dots, x_n = s_n$.
-- ## 2. Klasifikasi Solusi SPL
+- ## 2. [[Klasifikasi Solusi SPL]]
 	- Sebuah SPL tidak selalu memiliki satu jawaban tunggal. Terdapat 3 kemungkinan solusi untuk sebuah SPL:
 	  1. **Ada Satu Penyelesaian (Tunggal)**: Kondisi ini disebut sebagai **SPL Konsisten**.
 	  2. **Tak Hingga Banyaknya Penyelesaian**: Terdapat banyak solusi yang memungkinkan. Ini juga masuk kategori **SPL Konsisten**.
 	  3. **Tidak Ada Penyelesaian**: Kondisi di mana sistem saling berlawanan atau sejajar. Disebut sebagai **SPL Tak Konsisten**
-- ## 3. Representasi dan Penulisan SPL
+- ## 3. [[Representasi dan Penulisan SPL]]
 	- Ada tiga cara umum untuk merepresentasikan atau menuliskan Sistem Persamaan Linier:
 	- **a. Bentuk Persamaan**
 		- Merupakan bentuk aljabar seperti pada umumnya. Contoh penulisan:
@@ -20,7 +20,7 @@
 		- Matriks koefisien $A$ dikalikan dengan vektor variabel $x$, menghasilkan vektor konstanta $b$.
 	- **c. Matriks Augmented (Matriks Diperluas)**
 		- [cite_start]Menggabungkan matriks koefisien $A$ dan vektor konstanta $b$ ke dalam satu kesatuan matriks. Bentuk ini sangat memudahkan penyelesaian komputasi menggunakan metode eliminasi.
-- ## 4. Operasi Baris Elementer (OBE) & Ekivalensi Matriks
+- ## 4. [[Operasi Baris Elementer (OBE) & Ekivalensi Matriks]]
 	- **Operasi Baris Elementer (OBE)**: Dengan suatu aturan tertentu, elemen-elemen suatu baris dari suatu matriks dapat berubah. Aturan ini digunakan sebagai teknik untuk mencari solusi SPL.
 	- **Ekivalensi Dua Matriks**: Dua matriks $A$ dan $B$ di sebut ekivalen (ditulis $A \sim B$) jika matriks $B$ diperoleh dari matriks $A$ dengan cara operasi elementer[cite: 5, 12, 50].
 - ## 5. Sistem Persamaan Linier (SPL) Homogen [cite: 6, 13, 51]
