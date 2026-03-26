@@ -1,5 +1,7 @@
 # [[ALJABAR LINIER]]
-	- Materi yang dipelajari antara lain matriks, sistem persamaan linier, determinan, vektor, ruang vektor, ruang hasil kali dalam, transformasi linier, nilai dan vektor eigen.
+	- **Materi yang dipelajari**: matriks, sistem persamaan linier, determinan, vektor, ruang vektor, ruang hasil kali dalam, transformasi linier, nilai dan vektor eigen.
+	- **Tags:** #Alpro #C# #Console #GUI
+	-
 	- ## [[Bab 1: Sistem Persamaan Linier (SPL)]]
 		- **Definisi Dasar**
 			- Persamaan linier dalam $n$ peubah $x_1, x_2, \dots, x_n$ adalah persamaan yang dinyatakan dalam bentuk $a_1x_1 + a_2x_2 + \dots + a_nx_n = b$ di mana $a_i$ dan $b$ adalah konstanta real.
