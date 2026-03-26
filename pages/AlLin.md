@@ -1,11 +1,11 @@
 ## [[Bab 1: Sistem Persamaan Linier (SPL)]]
 	- **Definisi Dasar**
 		- [cite_start]Persamaan linier dalam $n$ peubah $x_1, x_2, \dots, x_n$ adalah persamaan yang dinyatakan dalam bentuk $a_1x_1 + a_2x_2 + \dots + a_nx_n = b$ di mana $a_i$ dan $b$ adalah konstanta real[cite: 1].
-	- [cite_start]**Bentuk Representasi SPL** [cite: 1, 2]
+	- **Bentuk Representasi SPL** [cite: 1, 2]
 		- *Bentuk Persamaan*: Menggunakan operasi aljabar biasa.
 		- *Bentuk Matriks*: Dapat direpresentasikan sebagai $Ax = b$.
 		- *Matriks Augmented (Diperluas)*: Menggabungkan matriks koefisien $A$ dan vektor konstanta $b$ ke dalam satu matriks untuk memudahkan perhitungan.
-	- [cite_start]**Macam-macam Solusi SPL** [cite: 2]
+	- **Macam-macam Solusi SPL** [cite: 2]
 		- Konsisten (Ada 1 penyelesaian).
 		- Konsisten (Tak hingga banyaknya penyelesaian / solusi banyak).
 		- Tak konsisten (Tidak ada penyelesaian).
