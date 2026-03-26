@@ -26,6 +26,6 @@
 - ## 5. Sistem Persamaan Linier (SPL) Homogen [cite: 6, 13, 51]
 	- **Definisi**: SPL disebut homogen jika seluruh persamaan menghasilkan nilai nol (ruas kanan bernilai $0$).
 		- [cite_start]Bentuk matematis: $a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = 0$.
-	- **Karakteristik Penyelesaian SPL Homogen**[cite: 6, 7, 13, 14, 51, 52]:
-		- [cite_start]**Penyelesaian Trivial**: Jika penyelesaian untuk semua variabel adalah nol ($x_1 = 0, x_2 = 0, \dots, x_n = 0$), maka penyelesaian SPL homogen ini disebut penyelesaian trivial[cite: 6, 13, 51].
-		- [cite_start]**Penyelesaian Nontrivial**: Jika tidak semua variabel bernilai nol ($x_i \neq 0$), maka penyelesaiannya disebut penyelesaian nontrivial[cite: 7, 14, 52].
+	- **Karakteristik Penyelesaian SPL Homogen**:
+		- **Penyelesaian Trivial**: Jika penyelesaian untuk semua variabel adalah nol ($x_1 = 0, x_2 = 0, \dots, x_n = 0$), maka penyelesaian SPL homogen ini disebut penyelesaian trivial[cite: 6, 13, 51].
+		- **Penyelesaian Nontrivial**: Jika tidak semua variabel bernilai nol ($x_i \neq 0$), maka penyelesaiannya disebut penyelesaian nontrivial.
