@@ -1,7 +1,7 @@
 ## 1. Definisi Dasar
 	- **Persamaan Linier**: Persamaan yang melibatkan $n$ peubah (variabel) $x_1, x_2, \dots, x_n$ dan dapat dinyatakan dalam bentuk matematis:
-		- $a_1x_1 + a_2x_2 + \dots + a_nx_n = b$ [
-		- [cite_start]*Keterangan*: $a_1, a_2, \dots, a_n$ dan $b$ adalah konstanta bilangan real[cite: 1, 8].
+		- $a_1x_1 + a_2x_2 + \dots + a_nx_n = b$
+		- *Keterangan*: $a_1, a_2, \dots, a_n$ dan $b$ adalah konstanta bilangan real.
 	- **Sistem Persamaan Linier (SPL)**: Kumpulan dari beberapa persamaan linier. [cite_start]Solusi dari persamaan linier adalah urutan $n$ bilangan $s_1, s_2, \dots, s_n$ sehingga persamaan dipenuhi jika disubstitusikan terhadap $x_1 = s_1, x_2 = s_2, \dots, x_n = s_n$[cite: 2, 9].
 - ## 2. Klasifikasi Solusi SPL [cite: 2, 9]
 	- Sebuah SPL tidak selalu memiliki satu jawaban tunggal. Terdapat 3 kemungkinan solusi untuk sebuah SPL:
