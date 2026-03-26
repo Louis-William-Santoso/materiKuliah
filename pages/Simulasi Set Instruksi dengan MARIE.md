@@ -1,0 +1,47 @@
+## 1. [[Pengenalan MARIE]]
+	- **Definisi Inti:**
+		- **MARIE** adalah singkatan dari *Machine Architecture that is Really Intuitive and Easy*.
+		- Ini adalah arsitektur mesin sederhana dan bahasa *assembly* yang dirancang khusus untuk tujuan edukasi (membantu mahasiswa memahami cara kerja prosesor dalam mengeksekusi instruksi).
+	- **Tujuan Penggunaan:**
+		- Membantu programmer/mahasiswa memahami bagaimana prosesor mengeksekusi instruksi dari bahasa tingkat rendah (*Assembly*).
+		- Menyimulasikan desain algoritma sederhana menjadi kode program dan melihat perubahan nilai memori serta register di tiap siklus *clock*.
+	- ## 2. [[Spesifikasi Arsitektur MARIE]]
+	- **Karakteristik Utama:**
+		- Menggunakan sistem bilangan biner berformat **Two's Complement** (untuk representasi bilangan positif dan negatif).
+		- Menggunakan konsep *Stored Program* dengan panjang *word* yang tetap (*Fixed word length*).
+		- Pengalamatan memori berbasis *Word* (*Word addressable*), bukan *Byte*.
+		-
+	- **Struktur Memori dan Bit:**
+		- **Memori Utama (Main Memory):** Berkapasitas **4K words** (4096 alamat). Karena $2^{12} = 4096$, maka dibutuhkan **12 bit** untuk merepresentasikan seluruh alamat memori.
+		- **Ukuran Data:** 1 *word* data berukuran **16-bit**.
+		- **Format Instruksi:** Setiap instruksi memiliki panjang **16-bit**, yang dipecah menjadi dua bagian:
+			- **4 bit** pertama digunakan untuk **Opcode** (*Operation Code*, kode perintah seperti LOAD, ADD, STORE). (Maksimal bisa memiliki $2^4 = 16$ jenis instruksi berbeda).
+			- **12 bit** sisanya digunakan untuk **Address** (alamat memori dari data yang akan diproses).
+	- ## 3. [[Register Utama pada MARIE]]
+	- Di dalam CPU MARIE, terdapat beberapa register krusial untuk mengeksekusi instruksi:
+		- **AC (Accumulator) - 16-bit:** Register data utama. Digunakan untuk menyimpan data sementara, menampung nilai *operand*, dan menyimpan hasil akhir dari operasi aritmatika (ALU).
+		- **PC (Program Counter) - 12-bit:** Register penunjuk alamat. Menyimpan alamat memori dari instruksi *selanjutnya* yang akan dieksekusi.
+		- **MAR (Memory Address Register) - 12-bit:** Menyimpan alamat memori spesifik yang datanya sedang di- *fetch* (diambil) atau di- *store* (ditulis) ke dalam memori utama.
+		- **MBR (Memory Buffer Register) - 16-bit:** Register *buffer*. Menyimpan data utuh yang baru saja diambil dari memori, atau data yang bersiap untuk disalin ke dalam memori.
+		- **IR (Instruction Register) - 16-bit:** Menahan/menyimpan instruksi lengkap (Opcode + Address) yang saat ini sedang dieksekusi oleh prosesor.
+	- ## 4. [[Siklus Instruksi Dasar (Instruction Cycle)]]
+	- **1. Fetch (Mengambil Instruksi):**
+		- Prosesor melihat nilai pada `PC` untuk mengetahui di mana letak instruksi.
+		- Alamat dari `PC` disalin ke `MAR`.
+		- Memori pada alamat `MAR` dibaca, lalu isi instruksinya disalin ke `MBR`.
+		- Dari `MBR`, instruksi tersebut dipindahkan ke `IR`.
+		- Nilai `PC` ditambahkan 1 (`PC = PC + 1`) agar menunjuk ke instruksi berikutnya.
+	- **2. Decode (Menerjemahkan Instruksi):**
+		- Prosesor memecah 16-bit di `IR` menjadi dua bagian: 4-bit *Opcode* dikirim ke unit kontrol (*Control Unit*) untuk diterjemahkan, dan 12-bit sisanya (alamat) dikirim ke `MAR` jika instruksi tersebut butuh mengambil data tambahan.
+	- **3. Execute (Mengeksekusi):**
+		- CPU menjalankan perintah sesuai terjemahan *Opcode* (misal: mengambil data dari memori dan menambahkannya dengan nilai di `AC`).
+	- ## 5. [[Masalah & Penyelesaian (Studi Kasus MARIE)]]
+	- ### Kasus: Mengeksekusi Operasi Matematika $Y = Y + Z$
+		- **Masalah:** Bagaimana kita menginstruksikan CPU MARIE untuk menyelesaikan persamaan aritmatika $Y = Y + Z$ menggunakan bahasa *Assembly*?
+		- **Penyelesaian Algoritma & Assembly:**
+			- Asumsikan nilai variabel `Y` dan `Z` sudah diinputkan oleh user dan tersimpan di memori.
+			- **Langkah 1:** `LOAD Y` -> Mengambil nilai variabel Y dari memori dan menyimpannya ke dalam Accumulator (`AC`).
+			- **Langkah 2:** `ADD Z` -> Mengambil nilai variabel Z dari memori, lalu menjumlahkannya dengan nilai yang ada di `AC`. Hasil penjumlahannya akan menimpa nilai lama di `AC`.
+			- **Langkah 3:** `STORE Y` -> Mengambil hasil penjumlahan yang saat ini berada di `AC`, lalu menyimpannya kembali ke alamat memori variabel `Y` (sehingga nilai Y ter- *update*).
+		- **[Info Tambahan]: Evaluasi Kondisional (SKIPCOND)**
+			- Jika program butuh operasi percabangan (misal: "Apakah A < B?"), MARIE tidak memiliki perintah `IF`. MARIE menggunakan perintah `SKIPCOND`. Perintah ini akan melompati satu baris instruksi di bawahnya (dengan cara menambahkan nilai `PC + 1`) apabila kondisi di dalam `AC` memenuhi syarat (misal `AC < 0`, `AC = 0`, atau `AC > 0`).
