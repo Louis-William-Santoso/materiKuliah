@@ -49,7 +49,7 @@
 		- Cache menggunakan metode 2-way set-associative mapping ($k = 2$).
 		- *Pertanyaan: Tentukan jumlah Blocks pada Main Memory, jumlah Sets pada Cache, dan jumlah bit Tag!*
 	- **Penyelesaian:**
-		- **Langkah 1: Menghitung total kapasitas memori dan jumlah Blocks ( $M$ )**
+		- **Langkah 1: Menghitung total kapasitas memori dan jumlah Blocks** ($M$)
 			- Address bus = 16-bit, berarti total memori = $2^{16}$ words = $65.536$ words (atau 64K words).
 			- Karena 1 blok berisi 16 words, maka Total Blocks ($M$) = $\frac{2^{16}}{16} = \frac{65536}{16} = 4096$ blok.
 		- **Langkah 2: Menghitung jumlah Sets ($v$) pada Cache**
