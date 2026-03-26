@@ -22,8 +22,8 @@
 		- [cite_start]Menggabungkan matriks koefisien $A$ dan vektor konstanta $b$ ke dalam satu kesatuan matriks. Bentuk ini sangat memudahkan penyelesaian komputasi menggunakan metode eliminasi.
 - ## 4. [[Operasi Baris Elementer (OBE) & Ekivalensi Matriks]]
 	- **Operasi Baris Elementer (OBE)**: Dengan suatu aturan tertentu, elemen-elemen suatu baris dari suatu matriks dapat berubah. Aturan ini digunakan sebagai teknik untuk mencari solusi SPL.
-	- **Ekivalensi Dua Matriks**: Dua matriks $A$ dan $B$ di sebut ekivalen (ditulis $A \sim B$) jika matriks $B$ diperoleh dari matriks $A$ dengan cara operasi elementer[cite: 5, 12, 50].
-- ## 5. Sistem Persamaan Linier (SPL) Homogen [cite: 6, 13, 51]
+	- **Ekivalensi Dua Matriks**: Dua matriks $A$ dan $B$ di sebut ekivalen (ditulis $A \sim B$) jika matriks $B$ diperoleh dari matriks $A$ dengan cara operasi elementer.
+- ## 5. [[Sistem Persamaan Linier (SPL) Homogen]]
 	- **Definisi**: SPL disebut homogen jika seluruh persamaan menghasilkan nilai nol (ruas kanan bernilai $0$).
 		- [cite_start]Bentuk matematis: $a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = 0$.
 	- **Karakteristik Penyelesaian SPL Homogen**:

@@ -1,8 +1,8 @@
-## 1. Definisi dan Konsep Dasar
+## 1.[[ Definisi dan Konsep Dasar]]
 	- **Determinan** adalah sebuah nilai skalar (bilangan real) yang secara unik dikaitkan dengan sebuah **matriks bujur sangkar** (jumlah baris dan kolom sama, misal 2x2, 3x3, dst.).
 	- Notasi determinan untuk matriks $A$ ditulis sebagai $\det(A)$ atau $|A|$.
 	- **Penting**: Matriks yang bukan bujur sangkar (misal 2x3 atau 3x4) **tidak memiliki determinan**.
-- ## 2. Metode Perhitungan Dasar (Orde 2x2 dan 3x3)
+- ## 2. [[Metode Perhitungan Dasar (Orde 2x2 dan 3x3)]]
 	- ### A. Matriks 2x2
 		- Untuk matriks $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$, determinannya dihitung dengan selisih hasil kali elemen diagonal utama dan diagonal samping.
 		- **Rumus**: $\det(A) = ad - bc$
@@ -15,7 +15,7 @@
 		  4. Kurangi jumlah hasil kali diagonal utama dengan diagonal samping.
 		-
 		- *Peringatan*: Aturan Sarrus **hanya berlaku** untuk matriks 3x3. Jangan gunakan untuk matriks 4x4 atau lebih besar.
-- ## 3. Ekspansi Kofaktor (Metode Laplace)
+- ## 3. [[Ekspansi Kofaktor (Metode Laplace)]]
 	- Digunakan untuk menghitung determinan matriks berukuran berapapun ($n \times n$), sangat direkomendasikan untuk matriks 4x4 ke atas.
 	- **Minor ($M_{ij}$)**: Determinan dari sub-matriks yang tersisa setelah baris ke-$i$ dan kolom ke-$j$ dihapus.
 	- **Kofaktor ($C_{ij}$)**: Nilai minor yang telah diberikan tanda positif atau negatif berdasarkan posisinya.
@@ -25,7 +25,7 @@
 		- Pilih satu baris atau satu kolom sembarang (pilih yang paling banyak angka nol-nya agar hitungan lebih cepat).
 		- Kalikan setiap elemen pada baris/kolom tersebut dengan kofaktornya, lalu jumlahkan.
 		- Contoh ekspansi sepanjang baris pertama: $\det(A) = a_{11}C_{11} + a_{12}C_{12} + a_{13}C_{13}$
-- ## 4. Sifat-sifat Penting Determinan
+- ## 4. [[Sifat-sifat Penting Determinan]]
 	- Memahami sifat ini bisa menghemat waktu perhitungan secara drastis:
 	- $\det(A) = \det(A^T)$ (Determinan matriks sama dengan determinan transposenya).
 	- Jika sebuah matriks memiliki satu baris atau kolom yang **semua elemennya nol**, maka $\det(A) = 0$.
@@ -33,7 +33,7 @@
 	- $\det(AB) = \det(A) \cdot \det(B)$
 	- Jika matriks $A$ memiliki invers, maka $\det(A^{-1}) = \frac{1}{\det(A)}$. Jika $\det(A) = 0$, matriks **tidak memiliki invers** (disebut matriks singular).
 	- Determinan dari matriks segitiga (atas/bawah) atau matriks diagonal adalah **hasil kali elemen-elemen diagonal utamanya**.
-- ## 5. Info Tambahan & Penjelasan Penyelesaian Masalah
+- ## 5. [[Info Tambahan & Penjelasan Penyelesaian Masalah]]
 	- ### Pengaruh Operasi Baris Elementer (OBE) pada Determinan
 		- Alih-alih langsung menggunakan kofaktor untuk matriks 4x4 yang rumit, kita bisa menggunakan OBE untuk menyederhanakan matriks menjadi matriks segitiga atas, lalu mengalikan diagonalnya. Tapi perhatikan aturan ini:
 		  1. **Menukar 2 baris**: Mengubah tanda determinan (kalikan dengan -1).
