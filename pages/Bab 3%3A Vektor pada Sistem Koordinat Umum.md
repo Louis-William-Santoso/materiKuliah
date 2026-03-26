@@ -1,11 +1,10 @@
-# Catatan Mendalam: Bab 3 - Vektor pada Sistem Koordinat Umum
-	- ## 1. Konsep Dasar Vektor
-		- **Definisi Vektor**: Besaran yang memiliki nilai (panjang/magnitudo) dan arah. Berbeda dengan *skalar* yang hanya memiliki nilai saja.
-		- **Notasi Vektor**: Biasanya dituliskan dengan huruf kecil yang dicetak tebal ($\mathbf{u}, \mathbf{v}$) atau dengan tanda panah di atasnya ($\vec{u}, \vec{v}$).
-		- **Komponen Vektor**: Vektor dapat direpresentasikan dalam ruang berdimensi $n$ (ditulis $R^n$).
-			- Di $R^2$ (2 Dimensi): $\mathbf{u} = (u_1, u_2)$
-			- Di $R^3$ (3 Dimensi): $\mathbf{u} = (u_1, u_2, u_3)$
-			- Di $R^n$ ($n$ Dimensi): $\mathbf{u} = (u_1, u_2, \dots, u_n)$
+## 1. Konsep Dasar Vektor
+	- **Definisi Vektor**: Besaran yang memiliki nilai (panjang/magnitudo) dan arah. Berbeda dengan *skalar* yang hanya memiliki nilai saja.
+	- **Notasi Vektor**: Biasanya dituliskan dengan huruf kecil yang dicetak tebal ($\mathbf{u}, \mathbf{v}$) atau dengan tanda panah di atasnya ($\vec{u}, \vec{v}$).
+	- **Komponen Vektor**: Vektor dapat direpresentasikan dalam ruang berdimensi $n$ (ditulis $R^n$).
+		- Di $R^2$ (2 Dimensi): $\mathbf{u} = (u_1, u_2)$
+		- Di $R^3$ (3 Dimensi): $\mathbf{u} = (u_1, u_2, u_3)$
+		- Di $R^n$ ($n$ Dimensi): $\mathbf{u} = (u_1, u_2, \dots, u_n)$
 	- ## 2. Operasi Aritmatika Vektor
 		- ### Penjumlahan dan Pengurangan Vektor
 			- Dilakukan dengan menjumlahkan atau mengurangkan komponen-komponen yang seletak posisinya.
