@@ -15,7 +15,7 @@
 			- $x + y + 2z = 9$
 			- $2x + 4y - 3z = 1$
 			- $3x + 6y - 5z = 0$
-	- **b. Bentuk Matriks ($A \vec{x} = b$)**
+	- **b. Bentuk Matriks ($A\ vec{x} = b$)**
 		- Memisahkan koefisien, variabel, dan hasil ke dalam matriks berbeda.
 		- [cite_start]Matriks koefisien $A$ dikalikan dengan vektor variabel $x$, menghasilkan vektor konstanta $b$[cite: 2, 9, 46].
 	- **c. [cite_start]Matriks Augmented (Matriks Diperluas)** [cite: 3, 10, 47]
