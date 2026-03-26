@@ -68,7 +68,7 @@
 		- **Konsep Inti:**
 			- GPU didesain khusus untuk **Pemrosesan Paralel** (*Parallel Processing*).
 			- Berbeda dengan CPU yang memiliki sedikit *core* super cepat (CISC/x86), GPU memiliki ribuan *core* sederhana yang bekerja bersamaan. Sangat ideal untuk rendering visual 3D, *Machine Learning*, dan AI.
-	- ## 9. [[I/O Organization (Sistem Input/Output)]]
+	- ## 9. [[IO Organization (Sistem InputOutput)]]
 		- **Konsep Inti:**
 			- **Mengapa butuh Modul I/O?** Karena ada perbedaan format data, kecepatan, dan voltase antara prosesor/memori dengan periferal (*keyboard, mouse, disk*). Modul I/O bertindak sebagai "Penerjemah" dan "Buffer".
 			- **Teknik I/O:**
