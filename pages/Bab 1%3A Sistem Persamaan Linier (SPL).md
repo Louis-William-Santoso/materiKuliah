@@ -2,8 +2,8 @@
 	- **Persamaan Linier**: Persamaan yang melibatkan $n$ peubah (variabel) $x_1, x_2, \dots, x_n$ dan dapat dinyatakan dalam bentuk matematis:
 		- $a_1x_1 + a_2x_2 + \dots + a_nx_n = b$
 		- *Keterangan*: $a_1, a_2, \dots, a_n$ dan $b$ adalah konstanta bilangan real.
-	- **Sistem Persamaan Linier (SPL)**: Kumpulan dari beberapa persamaan linier. [cite_start]Solusi dari persamaan linier adalah urutan $n$ bilangan $s_1, s_2, \dots, s_n$ sehingga persamaan dipenuhi jika disubstitusikan terhadap $x_1 = s_1, x_2 = s_2, \dots, x_n = s_n$[cite: 2, 9].
-- ## 2. Klasifikasi Solusi SPL [cite: 2, 9]
+	- **Sistem Persamaan Linier (SPL)**: Kumpulan dari beberapa persamaan linier. [cite_start]Solusi dari persamaan linier adalah urutan $n$ bilangan $s_1, s_2, \dots, s_n$ sehingga persamaan dipenuhi jika disubstitusikan terhadap $x_1 = s_1, x_2 = s_2, \dots, x_n = s_n$.
+- ## 2. Klasifikasi Solusi SPL
 	- Sebuah SPL tidak selalu memiliki satu jawaban tunggal. Terdapat 3 kemungkinan solusi untuk sebuah SPL:
 	  1. [cite_start]**Ada Satu Penyelesaian (Tunggal)**: Kondisi ini disebut sebagai **SPL Konsisten**[cite: 2, 9].
 	  2. **Tak Hingga Banyaknya Penyelesaian**: Terdapat banyak solusi yang memungkinkan. [cite_start]Ini juga masuk kategori **SPL Konsisten**[cite: 2, 9].
