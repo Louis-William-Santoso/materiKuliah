@@ -21,43 +21,43 @@
 			- **Info Tambahan & Penyelesaian Masalah**
 		- *Sifat Determinan*: $\det(AB) = \det(A)\det(B)$ dan $\det(A^T) = \det(A)$.
 		- *Penyelesaian Lanjutan*: Untuk matriks berukuran $4 \times 4$ atau lebih besar, metode Sarrus tidak berlaku. Gunakan **Ekspansi Kofaktor** (Ekspansi Laplace) pada baris atau kolom yang memiliki angka nol paling banyak agar perhitungan lebih cepat.
-	- ## [[Bab 3: Vektor pada Sistem Koordinat Umum]]
-		- [cite_start]**Operasi Dasar Vektor** [cite: 28, 29]
-			- Penjumlahan antar vektor: $u + v$ dilakukan dengan menjumlahkan setiap komponen yang seletak.
-			- Perkalian dengan skalar: $ku$, mengalikan setiap komponen vektor dengan skalar $k$.
-		- **Aksioma Vektor**
-			- [cite_start]Memenuhi sifat distributif skalar, misalnya: $(k + l)u = ku + lu$ dan $1u = u$[cite: 28].
-		- **Info Tambahan & Penyelesaian Masalah**
-			- *Norm Vektor (Panjang Vektor)*: Untuk vektor $u = (u_1, u_2, u_3)$, panjangnya dirumuskan dengan $||u|| = \sqrt{u_1^2 + u_2^2 + u_3^2}$.
-			- [cite_start]*Contoh Penyelesaian*: Diberikan $u = (-3, 1, 2)$ dan $v = (4, 0, -8)$[cite: 29]. Maka hasil $3v - u$ dapat dihitung dengan mengubah persamaan menjadi $3(4, 0, -8) - (-3, 1, 2) = (12, 0, -24) - (-3, 1, 2) = (15, -1, -26)$.
-	- ## [[Bab 4: Ruang Penyelesaian Sistem Homogen]]
-		- **Karakteristik SPL Homogen**
-			- [cite_start]Sistem dinyatakan dalam bentuk $Ax = 0$[cite: 66].
-			- [cite_start]Ruang penyelesaian (himpunan solusi) dengan $m$ persamaan dan $n$ variabel merupakan **subruang** dari $R^n$[cite: 66].
-		- [cite_start]**Langkah Mencari Basis dan Dimensi** [cite: 67]
-		  1. Tentukan penyelesaian umum untuk SPL homogen $Ax = 0$.
-		  2. Pisahkan variabel-variabel parametrik (misal $s, t$) untuk menentukan vektor-vektor yang merentang ruang solusi tersebut.
-		  3. Selidiki apakah vektor-vektor pembentuk tersebut saling bebas linier.
-		- **Info Tambahan & Penyelesaian Masalah**
-			- *Solusi Trivial*: Sistem homogen $Ax=0$ selalu konsisten karena minimal pasti memiliki solusi $x_1=0, x_2=0, \dots, x_n=0$ (disebut solusi trivial).
-			- *Nullity (Dimensi)*: Dimensi dari ruang penyelesaian sama dengan jumlah variabel bebas (parameter) yang muncul setelah dilakukan Eliminasi Gauss-Jordan.
-	- ## [[Bab 5: Hasil Kali Dalam (Inner Product Spaces)]]
-		- **Konsep Dasar**
-			- Hasil kali dalam dapat didefinisikan tidak hanya pada vektor berdimensi $n$, tapi juga pada ruang matriks, fungsi, dll.
-			- [cite_start]Pada matriks 2x2 sembarang dalam ruang $M_{22}$, contoh formula hasil kali dalamnya adalah $\langle U, V \rangle = u_1v_1 + u_2v_2 + u_3v_3 + u_4v_4$[cite: 71].
-		- **Info Tambahan & Penyelesaian Masalah**
-			- *Ortogonalitas*: Dua elemen (misalnya vektor $U$ dan $V$) dikatakan ortogonal jika $\langle U, V \rangle = 0$.
-			- *Menghitung Sudut*: Nilai kosinus sudut $\theta$ antara $U$ dan $V$ diselesaikan menggunakan rumus: $\cos \theta = \frac{\langle U, V \rangle}{||U|| \cdot ||V||}$. Jika $\cos \theta = 0$, maka kedua himpunan saling tegak lurus (ortogonal).
-	- ## [[Bab 6: Transformasi Linier (Operator Linier)]]
-		- **Definisi Operator Linier**
-			- [cite_start]Transformasi linier yang memetakan suatu ruang $R^n$ ke ruang vektor yang sama ($R^n$) disebut sebagai operator linier[cite: 70].
-		- [cite_start]**Jenis-jenis Operator Dasar** [cite: 70]
-		  1. **Operator Penyempitan (Contraction) & Pelebaran (Dilation)**: Memperbesar atau memperkecil skala titik dari titik asal.
-		  2. **Operator Proyeksi**: Memetakan titik ke sebuah garis atau bidang (membuat "bayangan" tegak lurus pada subruang target).
-		  3. **Operator Pencerminan (Reflection)**: Memetakan koordinat ke arah berlawanan berdasarkan sumbu/bidang cermin.
-		  4. **Operator Rotasi**: Memutar vektor atau titik terhadap suatu sumbu rotasi dengan sudut tertentu.
-		- **Info Tambahan & Penyelesaian Masalah**
-			- *Matriks Transformasi*: Semua operator ini memiliki bentuk matriks standar yang disimbolkan $[T]$. Cara mencari bayangan titik/vektor $v$ setelah ditransformasi adalah mengalikannya dengan matriks standar tersebut ($v_{baru} = [T]v$).
+- ## [[Bab 3: Vektor pada Sistem Koordinat Umum]]
+	- [cite_start]**Operasi Dasar Vektor** [cite: 28, 29]
+		- Penjumlahan antar vektor: $u + v$ dilakukan dengan menjumlahkan setiap komponen yang seletak.
+		- Perkalian dengan skalar: $ku$, mengalikan setiap komponen vektor dengan skalar $k$.
+	- **Aksioma Vektor**
+		- [cite_start]Memenuhi sifat distributif skalar, misalnya: $(k + l)u = ku + lu$ dan $1u = u$[cite: 28].
+	- **Info Tambahan & Penyelesaian Masalah**
+		- *Norm Vektor (Panjang Vektor)*: Untuk vektor $u = (u_1, u_2, u_3)$, panjangnya dirumuskan dengan $||u|| = \sqrt{u_1^2 + u_2^2 + u_3^2}$.
+		- [cite_start]*Contoh Penyelesaian*: Diberikan $u = (-3, 1, 2)$ dan $v = (4, 0, -8)$[cite: 29]. Maka hasil $3v - u$ dapat dihitung dengan mengubah persamaan menjadi $3(4, 0, -8) - (-3, 1, 2) = (12, 0, -24) - (-3, 1, 2) = (15, -1, -26)$.
+- ## [[Bab 4: Ruang Penyelesaian Sistem Homogen]]
+	- **Karakteristik SPL Homogen**
+		- [cite_start]Sistem dinyatakan dalam bentuk $Ax = 0$[cite: 66].
+		- [cite_start]Ruang penyelesaian (himpunan solusi) dengan $m$ persamaan dan $n$ variabel merupakan **subruang** dari $R^n$[cite: 66].
+	- [cite_start]**Langkah Mencari Basis dan Dimensi** [cite: 67]
+	  1. Tentukan penyelesaian umum untuk SPL homogen $Ax = 0$.
+	  2. Pisahkan variabel-variabel parametrik (misal $s, t$) untuk menentukan vektor-vektor yang merentang ruang solusi tersebut.
+	  3. Selidiki apakah vektor-vektor pembentuk tersebut saling bebas linier.
+	- **Info Tambahan & Penyelesaian Masalah**
+		- *Solusi Trivial*: Sistem homogen $Ax=0$ selalu konsisten karena minimal pasti memiliki solusi $x_1=0, x_2=0, \dots, x_n=0$ (disebut solusi trivial).
+		- *Nullity (Dimensi)*: Dimensi dari ruang penyelesaian sama dengan jumlah variabel bebas (parameter) yang muncul setelah dilakukan Eliminasi Gauss-Jordan.
+- ## [[Bab 5: Hasil Kali Dalam (Inner Product Spaces)]]
+	- **Konsep Dasar**
+		- Hasil kali dalam dapat didefinisikan tidak hanya pada vektor berdimensi $n$, tapi juga pada ruang matriks, fungsi, dll.
+		- [cite_start]Pada matriks 2x2 sembarang dalam ruang $M_{22}$, contoh formula hasil kali dalamnya adalah $\langle U, V \rangle = u_1v_1 + u_2v_2 + u_3v_3 + u_4v_4$[cite: 71].
+	- **Info Tambahan & Penyelesaian Masalah**
+		- *Ortogonalitas*: Dua elemen (misalnya vektor $U$ dan $V$) dikatakan ortogonal jika $\langle U, V \rangle = 0$.
+		- *Menghitung Sudut*: Nilai kosinus sudut $\theta$ antara $U$ dan $V$ diselesaikan menggunakan rumus: $\cos \theta = \frac{\langle U, V \rangle}{||U|| \cdot ||V||}$. Jika $\cos \theta = 0$, maka kedua himpunan saling tegak lurus (ortogonal).
+- ## [[Bab 6: Transformasi Linier (Operator Linier)]]
+	- **Definisi Operator Linier**
+		- [cite_start]Transformasi linier yang memetakan suatu ruang $R^n$ ke ruang vektor yang sama ($R^n$) disebut sebagai operator linier[cite: 70].
+	- [cite_start]**Jenis-jenis Operator Dasar** [cite: 70]
+	  1. **Operator Penyempitan (Contraction) & Pelebaran (Dilation)**: Memperbesar atau memperkecil skala titik dari titik asal.
+	  2. **Operator Proyeksi**: Memetakan titik ke sebuah garis atau bidang (membuat "bayangan" tegak lurus pada subruang target).
+	  3. **Operator Pencerminan (Reflection)**: Memetakan koordinat ke arah berlawanan berdasarkan sumbu/bidang cermin.
+	  4. **Operator Rotasi**: Memutar vektor atau titik terhadap suatu sumbu rotasi dengan sudut tertentu.
+	- **Info Tambahan & Penyelesaian Masalah**
+		- *Matriks Transformasi*: Semua operator ini memiliki bentuk matriks standar yang disimbolkan $[T]$. Cara mencari bayangan titik/vektor $v$ setelah ditransformasi adalah mengalikannya dengan matriks standar tersebut ($v_{baru} = [T]v$).
 	- ## [[Bab 7: Nilai Eigen dan Vektor Eigen]]
 		- **Konsep Nilai dan Vektor Eigen**
 			- Diketahui matriks $A$ berukuran $n \times n$. Sebuah vektor tak nol $x$ disebut **vektor eigen** jika terdapat persamaan $Ax = \lambda x$, di mana bilangan $\lambda$ (lambda) adalah **nilai eigen**[cite: 8, 9].
