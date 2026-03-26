@@ -15,10 +15,10 @@
 			- $x + y + 2z = 9$
 			- $2x + 4y - 3z = 1$
 			- $3x + 6y - 5z = 0$
-	- **b. Bentuk Matriks ($A\ vec{x} = b$)**
+	- **b. Bentuk Matriks** ($A \vec{x} = b$)
 		- Memisahkan koefisien, variabel, dan hasil ke dalam matriks berbeda.
-		- [cite_start]Matriks koefisien $A$ dikalikan dengan vektor variabel $x$, menghasilkan vektor konstanta $b$[cite: 2, 9, 46].
-	- **c. [cite_start]Matriks Augmented (Matriks Diperluas)** [cite: 3, 10, 47]
+		- Matriks koefisien $A$ dikalikan dengan vektor variabel $x$, menghasilkan vektor konstanta $b$.
+	- **c. [cite_start]Matriks Augmented (Matriks Diperluas)**
 		- [cite_start]Menggabungkan matriks koefisien $A$ dan vektor konstanta $b$ ke dalam satu kesatuan matriks[cite: 2, 9, 46]. Bentuk ini sangat memudahkan penyelesaian komputasi menggunakan metode eliminasi.
 - ## 4. Operasi Baris Elementer (OBE) & Ekivalensi Matriks [cite: 4, 5, 11, 12, 49, 50]
 	- **Operasi Baris Elementer (OBE)**: Dengan suatu aturan tertentu, elemen-elemen suatu baris dari suatu matriks dapat berubah[cite: 4, 11, 49]. Aturan ini digunakan sebagai teknik untuk mencari solusi SPL.
