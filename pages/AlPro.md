@@ -1,0 +1,79 @@
+# [[Algorithm and Programming (C#)]]
+	- **Deskripsi:** Rangkuman materi Algoritma dan Pemrograman menggunakan bahasa C# (Console & GUI).
+	- **Tags:** #algoritma #programming #csharp #kuliah
+	- ---
+	- ## 1. [[Algoritma dan Flowchart]]
+		- **Konsep Inti:**
+			- **Algoritma:** Urutan aktivitas atau langkah-langkah pemrosesan dari sebuah input untuk menghasilkan output guna menyelesaikan masalah. (Berasal dari nama ilmuwan Muhammad ibn Musa al-Khwarizmi).
+			- **Flowchart:** Representasi visual/grafis dari algoritma.
+			- **Simbol Flowchart:**
+				- *Terminal (Oval):* Menandakan awal (Start) dan akhir (End) program.
+				- *Input/Output (Jajargenjang):* Menandakan proses menerima data atau menampilkan hasil.
+				- *Process (Persegi Panjang):* Menandakan proses komputasi atau perhitungan nilai.
+				- *Decision (Belah Ketupat):* Evaluasi kondisi (Benar/Salah) untuk percabangan.
+				- *Connector (Lingkaran):* Penghubung alur di halaman yang sama.
+		- **Masalah & Penyelesaian:**
+			- **Masalah:** Bagaimana menstrukturkan perhitungan kompleks sebelum menulis kode?
+			- **Penyelesaian:** Buat algoritma dengan tahapan: 1) Tentukan Input, 2) Definisikan Variabel dengan nama yang jelas (misal: `panjang`, bukan sekadar `p`), 3) Tulis operasi langkah demi langkah.
+	- ## 2. [[Pengenalan C# Console, Variabel, dan Tipe Data]]
+		- **Konsep Inti:**
+			- **C# (C Sharp):** Bahasa pemrograman berbasis objek dari Microsoft yang harus dikompilasi (di-*build*) menjadi bahasa mesin (.exe) melalui Visual Studio.
+			- Setiap perintah dalam C# wajib diakhiri dengan titik koma (`;`).
+			- **Proses Kompilasi:** IDE akan mengecek *syntax error* (ditandai garis bawah merah). Kesalahan harus diperbaiki sebelum kode bisa dieksekusi.
+			- **Variabel:** Tempat di memori untuk menyimpan data. Harus dideklarasikan dengan tipe data spesifik.
+		- **Masalah & Penyelesaian:**
+			- **Masalah:** Komputer tidak memahami teks biasa atau angka desimal dalam format string.
+			- **Penyelesaian:** Gunakan deklarasi tipe data yang tepat (misal: `int` untuk bilangan bulat, `double` untuk desimal, `string` untuk teks). Lakukan *casting/parsing* saat mengambil input dari Console (contoh: `int.Parse(Console.ReadLine())`).
+	- ## 3. [[Percabangan (Conditional & Nested Conditional)]]
+		- **Konsep Inti:**
+			- Menjalankan aksi berdasarkan kondisi (Benar/Salah).
+			- **Operator Relasi:** `>`, `<`, `>=`, `<=`, `==`, `!=`. Tidak boleh ada spasi antar simbol (misal `< =` adalah salah).
+			- **Operator Logika (Multikondisi):**
+				- `&&` (AND): Keduanya harus True.
+				- `||` (OR): Minimal salah satu True.
+				- `!` (NOT): Membalikkan nilai logika.
+			- Hirarki: `&&` dieksekusi lebih dulu dari `||`. Gunakan tanda kurung `()` untuk memperjelas prioritas.
+			- **Nested Conditional (Bersarang):** Struktur IF di dalam IF. Digunakan ketika suatu kondisi baru bisa dievaluasi jika kondisi sebelumnya telah terpenuhi (contoh: diskon bertingkat berdasarkan jenis member dan jumlah belanja).
+	- ## 4. [[Perulangan (Looping & Nested Looping)]]
+		- **Konsep Inti:**
+			- Digunakan untuk mengulang perintah hingga syarat tertentu terpenuhi/berhenti.
+			- **For Loop:** Digunakan ketika jumlah perulangan sudah **pasti/diketahui** sejak awal (contoh: mengulang 500 kali).
+			- **While Loop:** Digunakan ketika jumlah perulangan **belum pasti** dan bergantung pada suatu kondisi yang bisa berubah sewaktu-waktu.
+			- **Bahaya dalam Looping:**
+				- *Zero Loop:* Loop tidak pernah berjalan karena syarat awal langsung salah (misal: `for(int i=0; i>10; i++)`).
+				- *Infinite Loop:* Loop tidak pernah berhenti karena kondisi selalu Benar (misal lupa meng-*update* nilai *counter*).
+			- **Nested Loop:** Loop di dalam loop. Loop bagian dalam harus selesai dieksekusi sepenuhnya sebelum loop luar berlanjut ke iterasi berikutnya. Sangat berguna untuk membuat pola matriks/tabel atau bintang.
+	- ## 5. [[Pengenalan C# GUI dan OOP Dasar]]
+		- **Konsep Inti:**
+			- Konsep OOP (Object Oriented Programming): Terdiri dari *Class* (cetakan) dan *Object* (wujud nyata). Sebuah class memiliki *Data Member*, *Property* (untuk akses data), dan *Method* (aksi).
+			- **GUI Controls Standar:**
+				- `Label`: Menampilkan teks.
+				- `TextBox`: Tempat input pengguna.
+				- `Button`: Tombol pemicu *Event*.
+				- `ComboBox`: Pilihan *drop-down*.
+				- `ListBox`: Menampilkan daftar data berkelompok (bisa diisi via properti `.Items.Add()`).
+				- `CheckBox` & `RadioButton`: Pilihan centang / opsi tunggal (diakses lewat properti `.Checked` yang mereturn nilai *Boolean*).
+			- **Event Handler:** `Form_Load` (berjalan saat aplikasi pertama kali dibuka, berguna untuk inisiasi awal atau menghapus label bawaan).
+	- ## 6. [[Array 1D dan 2D]]
+		- **Konsep Inti:**
+			- **Array:** Struktur data statis untuk menyimpan sekumpulan nilai bertipe data sama. Memori dialokasikan di awal (ukurannya tetap). Indeks selalu dimulai dari 0.
+			- Properti `.Length` pada Array 1D mengembalikan jumlah elemen.
+			- **Array 2D:** Mirip tabel/matriks (memiliki baris dan kolom).
+				- Deklarasi: `int[,] tabel = new int[baris, kolom];`
+				- Hati-hati menggunakan `.Length` di Array 2D karena ia mengembalikan *total cell* (baris x kolom). Untuk mendapatkan dimensi tertentu, gunakan `.GetLength(0)` untuk baris dan `.GetLength(1)` untuk kolom.
+		- **Masalah & Penyelesaian:**
+			- **Masalah:** Menghitung rata-rata nilai dari ratusan siswa, sangat tidak efisien jika membuat ratusan variabel tunggal.
+			- **Penyelesaian:** Simpan di dalam `int[] nilaiSiswa = new int[100];`, lalu gunakan perulangan (`for`) untuk menjumlahkan elemen dengan iterasi `nilaiSiswa[i]`.
+	- ## 7. [[List (Struktur Data Dinamis)]]
+		- **Konsep Inti:**
+			- Berbeda dengan Array yang ukurannya kaku, *List* bersifat dinamis. Ukurannya bisa bertambah atau berkurang secara otomatis saat program berjalan.
+			- Cocok digunakan jika sejak awal kita tidak tahu pasti berapa banyak data yang akan diinput (misal: "Unlimited Number Works").
+	- ## 8. [[Method (Fungsi dan Prosedur)]]
+		- **Konsep Inti:**
+			- Menyederhanakan kode yang diulang-ulang dengan membungkusnya dalam satu blok bernama.
+			- Bisa memiliki 0 hingga banyak parameter (*multi-parameter*).
+			- **Return Type:** Method yang mengembalikan nilai (menggunakan *keyword* `return`), tipe data pada nama method harus sama dengan nilai yang di-return. Method yang hanya menjalankan proses tanpa mengembalikan nilai menggunakan tipe `void`.
+			- **Tipe Passing Parameter:**
+				- *Pass by Value:* Hanya menyalin nilainya. Perubahan pada parameter di dalam method tidak mengubah variabel aslinya di luar.
+				- *Pass by Ref:* Mengirim "alamat" memori. Perubahan di dalam method akan langsung memengaruhi variabel aslinya.
+				- *Pass by Out:* Digunakan khusus saat kita ingin sebuah method mereturn/menghasilkan lebih dari satu nilai output. Variabel penampung diletakkan sebagai parameter dengan keyword `out`.
