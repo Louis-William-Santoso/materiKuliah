@@ -8,11 +8,11 @@
 	  1. **Ada Satu Penyelesaian (Tunggal)**: Kondisi ini disebut sebagai **SPL Konsisten**.
 	  2. **Tak Hingga Banyaknya Penyelesaian**: Terdapat banyak solusi yang memungkinkan. Ini juga masuk kategori **SPL Konsisten**.
 	  3. **Tidak Ada Penyelesaian**: Kondisi di mana sistem saling berlawanan atau sejajar. Disebut sebagai **SPL Tak Konsisten**
-- ## 3. Representasi dan Penulisan SPL [cite: 3, 10, 47]
-	- Ada tiga cara umum untuk merepresentasikan atau menuliskan Sistem Persamaan Linier[cite: 3, 10, 47]:
-	- **a. [cite_start]Bentuk Persamaan** [cite: 3, 10, 47]
+- ## 3. Representasi dan Penulisan SPL
+	- Ada tiga cara umum untuk merepresentasikan atau menuliskan Sistem Persamaan Linier:
+	- **a. Bentuk Persamaan**
 		- Merupakan bentuk aljabar seperti pada umumnya. [cite_start]Contoh penulisan[cite: 3, 10]:
-			- [cite_start]$x + y + 2z = 9$ [cite: 3, 10, 48]
+			- $x + y + 2z = 9$
 			- [cite_start]$2x + 4y - 3z = 1$ [cite: 3, 10, 48]
 			- [cite_start]$3x + 6y - 5z = 0$ [cite: 3, 10, 48]
 	- **b. [cite_start]Bentuk Matriks ($A \vec{x} = b$)** [cite: 2, 9]
