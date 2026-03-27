@@ -1,0 +1,66 @@
+# Week 2: Sistem Bilangan Kompleks
+	- ## 1. [[Konsep Dasar Bilangan Kompleks]]
+		- **Definisi**: Bilangan kompleks adalah bilangan yang terdiri dari bagian riil dan bagian imajiner. Bentuk umumnya ditulis sebagai:
+			- $z = x + iy$
+			- Di mana $x, y \in \mathbb{R}$ (bilangan riil) dan $i$ adalah unit imajiner dengan sifat $i = \sqrt{-1}$ atau $i^2 = -1$.
+		- **Unsur-unsur**:
+			- $x$ disebut sebagai **Bagian Riil**, dinotasikan dengan $Re(z)$.
+			- $y$ disebut sebagai **Bagian Imajiner**, dinotasikan dengan $Im(z)$.
+		- **Kesamaan Dua Bilangan Kompleks**:
+			- Dua bilangan kompleks $z_1 = x_1 + iy_1$ dan $z_2 = x_2 + iy_2$ dikatakan **sama** ($z_1 = z_2$) jika dan hanya jika $x_1 = x_2$ (bagian riil sama) dan $y_1 = y_2$ (bagian imajiner sama).
+	- ## 2. [[Operasi Aljabar Bilangan Kompleks]]
+		- **Penjumlahan dan Pengurangan**:
+			- Menjumlahkan atau mengurangkan bagian riil dengan bagian riil, dan bagian imajiner dengan bagian imajiner.
+			- $(x_1 + iy_1) + (x_2 + iy_2) = (x_1 + x_2) + i(y_1 + y_2)$
+			- $(x_1 + iy_1) - (x_2 + iy_2) = (x_1 - x_2) + i(y_1 - y_2)$
+		- **Perkalian**:
+			- Dikalikan seperti perkalian aljabar biasa (distributif), dengan mengingat bahwa $i^2 = -1$.
+			- $(x_1 + iy_1)(x_2 + iy_2) = x_1 x_2 + ix_1 y_2 + ix_2 y_1 + i^2 y_1 y_2$
+			- Hasil: $(x_1 x_2 - y_1 y_2) + i(x_1 y_2 + x_2 y_1)$
+		- **Konjugat (Sekawan) Bilangan Kompleks**:
+			- Jika $z = x + iy$, maka konjugat dari $z$, dinotasikan dengan $\bar{z}$, adalah $\bar{z} = x - iy$.
+			- Sifat penting: $z \cdot \bar{z} = (x + iy)(x - iy) = x^2 + y^2$ (hasilnya selalu bilangan riil positif).
+		- **Pembagian**:
+			- Untuk membagi bilangan kompleks, kalikan pembilang dan penyebut dengan konjugat dari penyebutnya.
+			- $\frac{z_1}{z_2} = \frac{z_1}{z_2} \cdot \frac{\bar{z}_2}{\bar{z}_2} = \frac{(x_1 + iy_1)(x_2 - iy_2)}{x_2^2 + y_2^2}$
+	- ## 3. [[Geometri Bilangan Kompleks (Bidang Argand)]]
+		- Bilangan kompleks $z = x + iy$ dapat dipetakan secara geometris sebagai sebuah **titik** $(x, y)$ pada bidang dua dimensi, atau sebagai sebuah **vektor** yang berpangkal di titik asal $(0,0)$ dan berujung di titik $(x, y)$. 
+		  
+		  [Image of Argand diagram for complex numbers]
+		- Sumbu mendatar (Sumbu-X) disebut **Sumbu Riil**.
+		- Sumbu vertikal (Sumbu-Y) disebut **Sumbu Imajiner**.
+	- ## 4. [[Modulus dan Argumen]]
+		- ### Modulus (Nilai Mutlak)
+			- Modulus dari bilangan kompleks $z$, dinotasikan dengan $|z|$ atau $r$, adalah panjang vektor dari titik asal ke titik $(x,y)$.
+			- Rumus: $r = |z| = \sqrt{x^2 + y^2}$
+			- **Sifat-sifat Modulus**:
+				- $|z| = |\bar{z}|$
+				- $|z|^2 = z \cdot \bar{z}$
+				- $|z_1 \cdot z_2| = |z_1| \cdot |z_2|$
+				- $\left|\frac{z_1}{z_2}\right| = \frac{|z_1|}{|z_2|}$ (dengan syarat $z_2 \neq 0$)
+		- ### Argumen
+			- Argumen dari $z$, dinotasikan $\arg(z)$ atau $\theta$, adalah sudut yang dibentuk oleh vektor $z$ dengan sumbu riil positif (berlawanan arah jarum jam).
+			- Rumus: $\tan \theta = \frac{y}{x} \implies \theta = \arctan(\frac{y}{x})$
+			- **Nilai Utama Argumen** ($Arg(z)$): Biasanya dibatasi pada interval $-\pi < \theta \le \pi$ atau $0 \le \theta < 2\pi$. Kuadran dari titik $(x,y)$ sangat penting untuk menentukan sudut yang tepat.
+	- ## 5. [[Bentuk Kutub (Polar) dan Bentuk Euler]]
+		- **Bentuk Kutub (Polar)**: 
+		  
+		  [Image of polar representation of complex numbers]
+			- Dari konsep trigonometri pada segitiga siku-siku di Bidang Argand, kita tahu bahwa $x = r \cos \theta$ dan $y = r \sin \theta$.
+			- Maka bilangan kompleks dapat ditulis sebagai: $z = r(\cos \theta + i \sin \theta)$
+		- **Bentuk Euler**:
+			- Berdasarkan formula Euler ($e^{i\theta} = \cos \theta + i \sin \theta$), bilangan kompleks dapat ditulis secara ringkas dalam bentuk eksponensial.
+			- Rumus: $z = r \cdot e^{i\theta}$
+	- ## 6. [[Operasi dalam Bentuk Kutub atau Euler]]
+		- Melakukan operasi perkalian dan pembagian jauh lebih mudah menggunakan bentuk Euler/Kutub dibandingkan bentuk aljabar standar.
+		- Misal $z_1 = r_1 e^{i\theta_1}$ dan $z_2 = r_2 e^{i\theta_2}$:
+		- **Perkalian**:
+			- $z_1 \cdot z_2 = r_1 \cdot r_2 \cdot e^{i(\theta_1 + \theta_2)}$
+			- (Kalikan modulusnya, jumlahkan sudutnya).
+		- **Pembagian**:
+			- $\frac{z_1}{z_2} = \frac{r_1}{r_2} e^{i(\theta_1 - \theta_2)}$
+			- (Bagikan modulusnya, kurangkan sudutnya).
+		- **Perpangkatan (Teorema De Moivre)**:
+			- Untuk memangkatkan bilangan kompleks, gunakan bentuk polarnya:
+			- $z^n = (r \cdot e^{i\theta})^n = r^n \cdot e^{in\theta}$
+			- Atau dalam bentuk trigonometri: $z^n = r^n(\cos(n\theta) + i \sin(n\theta))$

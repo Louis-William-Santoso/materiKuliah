@@ -1,0 +1,116 @@
+# [[Mathematics]]
+	- **Capaian Pembelajaran**:
+		- Mampu memahami konsep bilangan riil dan bilangan kompleks, menyelesaikan pertidaksamaan, memahami konsep fungsi satu variabel bebas, memahami dan menerapkan konsep turunan dan integral fungsi satu variabel, memahami konsep fungsi multivariabel, memahami dan menerapkan konsep turunan fungsi multivariabel.
+	- *Tags :* #Math #kuliah #semester2
+	- ## Bagian 1: Materi Sebelum UTS
+		- ### 1. [[Sistem Bilangan Riil & Pertidaksamaan]]
+			- **Konsep Dasar**:
+				- Himpunan bilangan riil bersama-sama dengan operasi penambahan dan perkalian membentuk suatu sistem bilangan riil.
+				- Memiliki sifat-sifat dasar seperti komutatif, asosiatif, distributif, elemen identitas, dan invers.
+			- **Penyelesaian Pertidaksamaan Rasional**:
+				- **Langkah Umum**:
+				  1. Jadikan ruas kanan sama dengan nol (0).
+				  2. Samakan penyebut pada ruas kiri.
+				  3. Cari nilai pembuat nol untuk pembilang dan penyebut.
+				  4. Buat garis bilangan dan uji titik pada setiap interval untuk menentukan tanda (+ atau -).
+				  5. Tentukan himpunan penyelesaian berdasarkan tanda pertidaksamaan ($\ge, \le, >, <$).
+				- **Contoh Soal**: Tentukan himpunan penyelesaian dari $\frac{2x+7}{x-1} \ge -3$
+					- **Penyelesaian**:
+						- $\frac{2x+7}{x-1} + 3 \ge 0$
+						- $\frac{2x+7 + 3(x-1)}{x-1} \ge 0$
+						- $\frac{5x+4}{x-1} \ge 0$
+						- Pembuat nol pembilang: $x = -4/5$. Pembuat nol penyebut: $x = 1$.
+						- Uji garis bilangan: $(-\infty, -4/5] \cup (1, \infty)$.
+		- ### 2. [[Sistem Bilangan Kompleks]]
+			- **Bentuk Umum**: $z = x + iy$, di mana $x$ adalah bagian riil $Re(z)$ dan $y$ adalah bagian imajiner $Im(z)$, dengan $i^2 = -1$.
+			- **Bidang Argand**: Bilangan kompleks dapat direpresentasikan sebagai titik $(x, y)$ pada koordinat Kartesius.
+			- **Modulus dan Argumen**:
+				- **Modulus** (jarak dari titik asal): $|z| = r = \sqrt{x^2 + y^2}$
+				- **Argumen** (sudut dengan sumbu riil positif): $\theta = \arctan(\frac{y}{x})$
+			- **Bentuk Kutub (Polar) dan Euler**:
+				- Bentuk Kutub: $z = r(\cos\theta + i\sin\theta)$
+				- Bentuk Euler: $z = r e^{i\theta}$
+			- **Contoh Soal**: Jika $z = -2e^{i\pi/4}$, tentukan bagian riil dan imajiner!
+				- **Penyelesaian**:
+					- $z = -2(\cos(\frac{\pi}{4}) + i\sin(\frac{\pi}{4}))$
+					- $z = -2(\frac{1}{2}\sqrt{2} + i\frac{1}{2}\sqrt{2}) = -\sqrt{2} - i\sqrt{2}$
+					- $Re(z) = -\sqrt{2}$, $Im(z) = -\sqrt{2}$
+		- ### 3. [[Fungsi]]
+			- **Definisi Domain dan Range**:
+				- **Domain**: Himpunan semua nilai input (x) yang membuat fungsi terdefinisi.
+				- **Range**: Himpunan semua nilai output (y) yang mungkin dihasilkan oleh fungsi.
+			- **Aturan Domain Dasar**:
+				- Fungsi pecahan: Penyebut $\neq 0$.
+				- Fungsi akar genap: Di dalam akar $\ge 0$.
+				- Fungsi logaritma: Argumen logaritma $> 0$.
+			- **Contoh Soal**: Tentukan domain dari $f(x) = \frac{\sqrt{9-x^2}}{x^2-x-12}$
+				- **Penyelesaian**:
+					- Syarat 1 (Akar): $9-x^2 \ge 0 \implies (3-x)(3+x) \ge 0 \implies -3 \le x \le 3$.
+					- Syarat 2 (Penyebut): $x^2-x-12 \neq 0 \implies (x-4)(x+3) \neq 0 \implies x \neq 4$ dan $x \neq -3$.
+					- Irisan dari kedua syarat: Domain $= (-3, 3]$.
+		- ### 5. [[Turunan dan Aplikasi Turunan]]
+			- **Sifat-sifat Turunan**:
+				- Aturan Pangkat: $\frac{d}{dx} x^n = nx^{n-1}$
+				- Aturan Hasil Kali: $(uv)' = u'v + uv'$
+				- Aturan Hasil Bagi: $(\frac{u}{v})' = \frac{u'v - uv'}{v^2}$
+				- Aturan Rantai: $\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$
+			- **Turunan Fungsi Khusus**:
+				- Logaritma Natural: $\frac{d}{dx}(\ln x) = \frac{1}{x}$
+				- Eksponensial: $\frac{d}{dx}(e^x) = e^x$
+				- Trigonometri: $\frac{d}{dx}(\sin x) = \cos x$, $\frac{d}{dx}(\cos x) = -\sin x$
+			- **Aplikasi Turunan**:
+				- Garis Singgung: Gradien $m = f'(x_1)$ pada titik $(x_1, y_1)$. Persamaan: $y - y_1 = m(x - x_1)$.
+				- Maksimum/Minimum lokal: Terjadi saat $f'(x) = 0$ (titik kritis).
+	- ## Bagian 2: Materi Sesudah UTS (UAS)
+		- ### 1. [[Integral dan Teknik Integrasi]]
+			- **Integral sebagai Anti Turunan**:
+				- $\int x^n dx = \frac{1}{n+1}x^{n+1} + C$ (untuk $n \neq -1$)
+			- **Teknik Substitusi**: Digunakan jika ada bagian dari integran yang merupakan turunan dari bagian lainnya. $\int f(g(x))g'(x) dx$.
+			- **Fungsi Pecahan Parsial**:
+				- Digunakan jika derajat pembilang $P(x)$ lebih kecil dari penyebut $Q(x)$.
+				- Faktorkan $Q(x)$, lalu pecah menjadi bentuk $\frac{A}{x-a} + \frac{B}{x-b}$, dst.
+		- ### 2. [[Integral Parsial & Integral Tertentu]]
+			- **Integral Parsial**:
+				- Rumus: $\int u \, dv = uv - \int v \, du$
+				- **Aturan Pemilihan 'u' (LIPET)**: Logs (Logaritma), Invers trig, Polinomial, Eksponensial, Trig (Trigonometri). Prioritas 'u' dari kiri ke kanan.
+			- **Integral Tertentu**:
+				- $\int_a^b f(x) dx = F(b) - F(a)$
+				- Menghitung luas bidang datar di bawah kurva: $L = \int_a^b (f(x) - g(x)) dx$ (Kurva atas dikurangi kurva bawah).
+		- ### 3. [[Fungsi Multivariabel & Geometri Ruang]]
+			- **Persamaan Geometri Ruang**:
+				- Garis Lurus: Membutuhkan satu titik $(x_0, y_0, z_0)$ dan vektor arah $\mathbf{v} = \langle a, b, c \rangle$. Persamaan simetrik: $\frac{x-x_0}{a} = \frac{y-y_0}{b} = \frac{z-z_0}{c}$.
+				- Bidang Datar: Membutuhkan satu titik dan vektor normal $\mathbf{n} = \langle A, B, C \rangle$. Persamaan: $A(x-x_0) + B(y-y_0) + C(z-z_0) = 0$.
+			- **Bidang Kuadrik**:
+				- Contoh persamaan: Elipsoida ($\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1$), Paraboloida, Hiperboloida.
+		- ### 4. [[Turunan Fungsi Multivariabel]]
+			- **Turunan Parsial Pertama**:
+				- $f_x(x,y) = \frac{\partial f}{\partial x}$ (turunkan terhadap x, anggap y konstan).
+				- $f_y(x,y) = \frac{\partial f}{\partial y}$ (turunkan terhadap y, anggap x konstan).
+			- **Turunan Parsial Kedua**:
+				- $f_{xx}$ (turunkan terhadap x, lalu x lagi).
+				- $f_{xy}$ (turunkan terhadap x, lalu terhadap y).
+			- **Contoh Soal**: Tentukan $f_x$ dan $f_y$ dari $f(x, y) = 2x^3 + 3xy - y$
+				- **Penyelesaian**:
+					- $f_x = \frac{\partial}{\partial x}(2x^3 + 3xy - y) = 6x^2 + 3y$
+					- $f_y = \frac{\partial}{\partial y}(2x^3 + 3xy - y) = 3x - 1$
+		- ### 5. [[Maksimum dan Minimum Multivariabel & Pengali Lagrange]]
+			- **Uji Turunan Kedua (Titik Kritis)**:
+				- Tentukan titik kritis dari persamaan $f_x = 0$ dan $f_y = 0$.
+				- Hitung Diskriminan: $D = f_{xx}f_{yy} - (f_{xy})^2$
+				- Jika $D > 0$ dan $f_{xx} < 0 \implies$ Maksimum Lokal.
+				- Jika $D > 0$ dan $f_{xx} > 0 \implies$ Minimum Lokal.
+				- Jika $D < 0 \implies$ Titik Pelana (Saddle point).
+			- **Metode Pengali Lagrange (Maks/Min dengan Kendala)**:
+				- Fungsi Tujuan: $f(x,y,z)$
+				- Fungsi Kendala: $g(x,y,z) = 0$
+				- Bentuk fungsi baru: $G(x,y,z,\lambda) = f(x,y,z) + \lambda \cdot g(x,y,z)$
+				- Cari nilai ekstrem dengan mengatur turunan parsial $G$ terhadap $x, y, z,$ dan $\lambda$ sama dengan nol.
+			- **Contoh Soal**: Hitung nilai maksimum/minimum dari $f(x, y) = xy$ dengan kendala $x^2 + y^2 = 1$
+				- **Penyelesaian**:
+					- $G(x,y,\lambda) = xy + \lambda(x^2 + y^2 - 1)$
+					- $G_x = y + 2\lambda x = 0 \implies y = -2\lambda x$
+					- $G_y = x + 2\lambda y = 0 \implies x = -2\lambda y$
+					- $G_\lambda = x^2 + y^2 - 1 = 0 \implies x^2 + y^2 = 1$
+					- Dari persamaan 1 & 2: $y = -2\lambda(-2\lambda y) = 4\lambda^2 y \implies 4\lambda^2 = 1 \implies \lambda = \pm \frac{1}{2}$
+					- Jika $\lambda = -1/2 \implies y = x \implies x^2+x^2=1 \implies x = \pm 1/\sqrt{2}$. (Maksimum: $1/2$)
+					- Jika $\lambda = 1/2 \implies y = -x \implies x^2+(-x)^2=1 \implies x = \pm 1/\sqrt{2}$. (Minimum: $-1/2$)
