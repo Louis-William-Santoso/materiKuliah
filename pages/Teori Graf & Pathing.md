@@ -1,0 +1,40 @@
+- Teori graf adalah cabang matematika diskrit yang digunakan untuk memodelkan hubungan antar objek. Teori ini sangat esensial dalam ilmu komputer, terutama untuk jaringan komputer, kecerdasan buatan, pemetaan rute (GPS), hingga penjadwalan.
+- ## 1. [[Definisi dan Konsep Dasar]]
+	- **Definisi Graf:** Graf dinotasikan sebagai $G = (V, E)$, di mana:
+		- $V$ (Vertex/Simpul/Titik): Himpunan entitas atau objek (tidak boleh kosong).
+		- $E$ (Edge/Sisi/Garis): Himpunan garis yang menghubungkan sepasang simpul.
+	- **Derajat (Degree):** Jumlah sisi/garis yang terhubung pada suatu simpul tertentu.
+	- **Isomorfisma Graf:** Dua buah graf dikatakan isomorfik jika keduanya memiliki struktur relasi yang persis sama, meskipun secara visual (gambar) bentuknya terlihat sangat berbeda. Syarat utamanya adalah jumlah simpul, jumlah sisi, dan derajat masing-masing simpul harus sama persis.
+- ## 2. [[Jenis-Jenis Graf]]
+	- **Berdasarkan Arah:**
+		- **Graf Tak Berarah (Undirected Graph):** Sisi tidak memiliki arah. Jika simpul $A$ terhubung ke $B$, maka bisa dilewati dari $A \rightarrow B$ maupun $B \rightarrow A$.
+		- **Graf Berarah (Directed Graph / Digraph):** Sisi memiliki arah (biasanya digambarkan dengan panah). Koneksi $A \rightarrow B$ belum tentu berarti $B \rightarrow A$.
+	- **Berdasarkan Bobot:**
+		- **Graf Tak Terboboti (Unweighted Graph):** Semua sisi dianggap memiliki nilai/jarak yang sama.
+		- **Graf Terboboti (Weighted Graph):** Setiap sisi memiliki nilai numerik (bobot), yang bisa merepresentasikan jarak, biaya, atau waktu tempuh antarsimpul.
+- ## 3. [[Lintasan (Path) dan Sirkuit (Circuit)]]
+	- **Lintasan (Path):** Perjalanan dari simpul awal ke simpul tujuan melalui serangkaian simpul dan sisi yang saling berselang-seling ($v_0, e_1, v_1, e_2, \dots, v_n$).
+	- **Lintasan Sederhana:** Lintasan yang semua simpulnya berbeda (tidak ada simpul yang dikunjungi lebih dari satu kali).
+	- **Sirkuit / Siklus (Circuit / Cycle):** Sebuah lintasan yang berawal dan berakhir pada simpul yang persis sama ($v_0 = v_n$).
+- ## 4. [[Lintasan Euler (Fokus pada Sisi/Garis)]]
+	- **Lintasan Euler:** Sebuah lintasan yang melewati **setiap sisi (edge)** di dalam graf tepat satu kali. (Analogi: Permainan menggambar pola tanpa mengangkat pena atau menebalkan garis).
+	- **Sirkuit Euler:** Lintasan Euler yang kembali ke simpul awalnya.
+	- **Syarat Mutlak Teorema Euler:**
+		- Graf memiliki *Sirkuit Euler* jika dan hanya jika **semua** simpulnya memiliki derajat genap.
+		- Graf memiliki *Lintasan Euler* (tapi bukan sirkuit) jika dan hanya jika memiliki **tepat dua** simpul berderajat ganjil (simpul ganjil ini pasti menjadi titik awal dan titik akhir).
+- ## 5. [[Lintasan Hamilton (Fokus pada Simpul/Titik)]]
+	- **Lintasan Hamilton:** Sebuah lintasan yang mengunjungi **setiap simpul (vertex)** di dalam graf tepat satu kali.
+	- **Sirkuit Hamilton:** Lintasan Hamilton yang kembali ke simpul awal.
+	- *Info Tambahan:* Berbeda dengan Euler yang aturannya pasti (hanya melihat ganjil/genap), belum ada rumus matematika sederhana untuk memastikan sebuah graf memiliki sirkuit Hamilton. Mencari rute ini pada graf yang kompleks adalah masalah komputasi yang berat (NP-Complete).
+- ## 6. [[Traveling Salesman Problem (TSP) dan Shortest Path]]
+	- **Masalah TSP:** Jika seorang penjaja (salesman) harus mengunjungi sejumlah kota (simpul) dengan jarak/biaya tertentu (graf terboboti) masing-masing tepat satu kali dan harus kembali ke kota awal, rute manakah yang total biayanya paling murah?
+	- Konsep TSP pada dasarnya adalah mencari **Sirkuit Hamilton dengan total bobot minimum**.
+	- **Metode Penyelesaian (Heuristik Tetangga Terdekat / Nearest Neighbor):**
+		- Ini adalah cara cepat (meski tidak selalu menghasilkan nilai paling optimal) untuk memecahkan TSP.
+		- *Langkah:* Dari titik awal, selalu pilih sisi menuju kota berikutnya yang memiliki bobot/jarak **terkecil** (terdekat) dan belum pernah dikunjungi. Ulangi terus sampai semua kota terkunjungi, lalu kembali ke titik asal.
+- ## 7. [[Pewarnaan Graf (Graph Coloring)]]
+	- **Konsep Pewarnaan Simpul:** Memberikan warna pada simpul-simpul graf sedemikian rupa sehingga tidak ada dua simpul yang bertetangga (terhubung langsung oleh sebuah sisi) memiliki warna yang sama.
+	- **Bilangan Kromatik** ($\chi(G)$): Jumlah warna *minimum* yang diperlukan untuk mewarnai graf tersebut.
+	- **Aplikasi Nyata:**
+		- **Penjadwalan Ujian:** Simpul = Mata kuliah, Sisi = Ada mahasiswa yang mengambil kedua mata kuliah tersebut (bertabrakan). Warna berbeda = Slot waktu/hari ujian yang berbeda.
+		- **Alokasi Frekuensi Radio:** Simpul = Stasiun radio, Sisi = Jarak antar stasiun di bawah batas interferensi (< 150 mil). Warna = Frekuensi saluran yang berbeda agar siaran tidak saling mengganggu.
