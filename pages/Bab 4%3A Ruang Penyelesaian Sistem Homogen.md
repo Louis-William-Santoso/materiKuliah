@@ -4,7 +4,7 @@
 	- **Sifat Solusi**: SPL homogen **tidak pernah tak konsisten**. Artinya, sistem ini pasti memiliki minimal satu solusi.
 		- **Solusi Trivial**: Solusi di mana semua variabel bernilai nol ($x_1=0, x_2=0, \dots, x_n=0$).
 		- **Solusi Nontrivial**: Solusi di mana ada variabel yang bernilai selain nol. Ini terjadi jika sistem memiliki tak hingga banyaknya penyelesaian (biasanya jika jumlah variabel lebih banyak dari jumlah persamaan atau determinan matriks koefisiennya 0).
-- ## 2. [[Ruang Penyelesaian (Ruang Solusi / Ruang Nol)]]
+- ## 2. [[Ruang Penyelesaian (Ruang Solusi atau Ruang Nol)]]
 	- Jika $Ax = 0$ adalah SPL homogen dengan $m$ persamaan dan $n$ variabel, maka himpunan semua penyelesaiannya membentuk sebuah subruang dari ruang vektor $R^n$.
 	- Subruang penyelesaian ini sering juga disebut sebagai **Ruang Nol (Null Space)** dari matriks $A$.
 - ## 3. [[Basis dan Dimensi]]
