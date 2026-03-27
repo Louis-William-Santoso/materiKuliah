@@ -1,0 +1,92 @@
+# [[Matematika Diskrit (Discrete Mathematics)]]
+	- Mata kuliah ini membahas dasar-dasar logika, struktur diskrit, teori graf, serta metode pembuktian yang esensial sebagai fondasi dalam ilmu komputer dan pemrograman.
+	- **Tags :** #DisMath #semester1 #kuliah
+	- ## 1. [[Logika Proposisi]]
+		- **Definisi:** Logika berasal dari kata Yunani "logos" yang berarti hasil pertimbangan akal pikiran. Proposisi adalah kalimat pernyataan deklaratif yang dapat dinyatakan nilai kebenarannya dengan pasti (hanya bernilai Benar atau Salah, tidak bisa keduanya).
+		- **Bukan Proposisi:** Kalimat perintah ("Tutup pintu itu!"), kalimat tanya ("Jam berapa sekarang?"), atau kalimat terbuka yang masih mengandung variabel tak diketahui (contoh: $x + 2 = 5$).
+		- **Proposisi Kompleks & Operator Logika:**
+			- **Negasi** (NOT / $\neg$ atau $\sim$): Membalikkan nilai kebenaran. Jika $P$ Benar, maka $\neg P$ Salah.
+			- **Konjungsi** (AND / $\wedge$): Bernilai Benar (B) *hanya* jika kedua sub-proposisi bernilai Benar.
+			- **Disjungsi** (OR / $\vee$): Bernilai Salah (S) *hanya* jika kedua sub-proposisi bernilai Salah.
+			- **Implikasi** (Jika... maka... / $\rightarrow$): Bernilai Salah *hanya* jika anteseden (depan) Benar namun konsekuen (belakang) Salah. Ini ibarat janji yang diingkari.
+			- **Bi-implikasi** (Jika dan hanya jika / $\leftrightarrow$): Bernilai Benar jika kedua sub-proposisi memiliki nilai kebenaran yang kembar/sama (B dengan B, atau S dengan S).
+		- **Penyelesaian Masalah (Evaluasi Tabel Kebenaran):**
+			- **Masalah:** Tentukan apakah proposisi majemuk $(P \vee Q) \rightarrow ((P \wedge Q) \vee Q)$ bernilai selalu benar.
+			- **Penyelesaian:**
+				- Buat matriks 4 baris untuk kombinasi $P$ dan $Q$: (B,B), (B,S), (S,B), (S,S).
+				- Kolom 1 $(P \vee Q)$: B, B, B, S.
+				- Kolom 2 $(P \wedge Q)$: B, S, S, S.
+				- Kolom 3 $((P \wedge Q) \vee Q)$: B, S, B, S.
+				- Kolom Akhir (Kolom 1 $\rightarrow$ Kolom 3):
+					- B $\rightarrow$ B = B
+					- B $\rightarrow$ S = **S**
+					- B $\rightarrow$ B = B
+					- S $\rightarrow$ S = B
+				- **Kesimpulan:** Terdapat nilai Salah (S) pada baris kedua, sehingga proposisi ini bukan sebuah kepastian mutlak (bukan tautologi).
+	- ## 2. [[Tautologi, Kontradiksi, dan Inferensi Logika]]
+		- **Tautologi:** Sebuah proposisi majemuk yang selalu bernilai **Benar (B)** dalam semua keadaan (seluruh baris akhir pada tabel kebenaran bernilai B). Contoh: $P \vee \neg P$.
+		- **Kontradiksi:** Sebuah proposisi majemuk yang selalu bernilai **Salah (S)** dalam semua keadaan. Contoh: $P \wedge \neg P$.
+		- **Ekivalensi Logis** ($\equiv$): Dua proposisi berbeda secara sintaks namun memiliki nilai kebenaran akhir yang persis sama di setiap barisnya.
+		- **Kaidah Inferensi (Penarikan Kesimpulan Valid):**
+			- **Modus Ponens:** - Premis 1: $p \rightarrow q$
+				- Premis 2: $p$
+				- Kesimpulan: $q$
+			- **Modus Tollens:** Berdasarkan prinsip kontraposisi.
+				- Premis 1: $p \rightarrow q$ (Jika kangen, saya lihat fotomu)
+				- Premis 2: $\neg q$ (Saya tidak lihat fotomu)
+				- Kesimpulan: $\neg p$ (Berarti saya tidak kangen)
+			- **Silogisme Hipotesis:** Aturan rantai. Jika $p \rightarrow q$ dan $q \rightarrow r$, maka kesimpulannya $p \rightarrow r$.
+			- **Silogisme Disjungsi:** Jika $p \vee q$ (pilih p atau q), dan ternyata $\neg p$ (bukan p), maka kesimpulannya pasti $q$.
+	- ## 3. [[Teori Himpunan (Set Theory)]]
+		- **Definisi Himpunan:** Kumpulan objek/elemen yang terdefinisi dengan jelas dan dapat dibedakan. Urutan tidak penting, dan elemen duplikat dianggap sebagai satu elemen (contoh: $\{1, 1, 2\} \equiv \{1, 2\}$).
+		- **Operasi Dasar:**
+			- **Gabungan** ($\cup$): Elemen yang ada di himpunan $A$ ATAU $B$.
+			- **Irisan** ($\cap$): Elemen yang sama-sama ada di himpunan $A$ DAN $B$.
+			- **Selisih** ($-$): Elemen di $A$ yang *tidak* ada di $B$.
+			- **Beda Setangkup** ($\oplus$): Elemen yang ada di $A$ atau $B$, tetapi *bukan* irisan keduanya (Eksklusif OR).
+			- **Komplemen** ($A^c$): Semua elemen dalam semesta yang bukan anggota $A$.
+		- **Info Tambahan:** Teori himpunan adalah dasar dari basis data relasional (SQL). Perintah `JOIN` di SQL berakar langsung dari operasi irisan dan Cartesian product himpunan.
+		- **Penyelesaian Masalah (Prinsip Inklusi-Eksklusi):**
+			- **Masalah:** Dari survei 270 orang, 64 suka apel, 94 brokoli, 58 kembang kol. 26 suka apel & brokoli, 28 apel & kembang kol, 22 brokoli & kembang kol, dan 14 suka ketiganya. Berapa yang tidak suka satupun?
+			- **Penyelesaian:**
+				- Gunakan rumus: $|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|$
+				- Substitusi: $64 + 94 + 58 - 26 - 28 - 22 + 14 = 154$ (Ini total orang yang suka setidaknya satu jenis).
+				- Yang tidak suka satupun: Total orang - yang suka setidaknya satu = $270 - 154 = 116$ orang.
+	- ## 4. [[Relasi dan Fungsi]]
+		- **Cartesian Product**($A \times B$): Himpunan semua pasangan terurut $(a, b)$ dari elemen $a \in A$ dan $b \in B$. Jika $A$ punya 3 elemen dan $B$ punya 4 elemen, Cartesian product-nya punya 12 elemen.
+		- **Relasi Biner:** Subset dari Cartesian product. Relasi menghubungkan elemen antar himpunan.
+		- **Sifat Relasi Ekivalen:** Sebuah relasi memecah himpunan menjadi kelompok-kelompok yang setara jika memenuhi 3 syarat absolut:
+		  1. **Refleksif:** Setiap elemen harus berelasi dengan dirinya sendiri.
+		  2. **Simetris:** Jika A berelasi dengan B, maka B wajib berelasi dengan A.
+		  3. **Transitif:** Jika A berelasi dengan B, dan B berelasi dengan C, maka A wajib berelasi dengan C.
+		- **Fungsi:** Jenis relasi yang amat ketat, di mana **setiap** elemen di Domain asal dipetakan ke **tepat satu** elemen di Kodomain (tidak boleh bercabang dan tidak boleh ada elemen domain yang tidak memiliki pasangan).
+	- ## 5.[[ Induksi Matematis & Pigeon Hole Principle]]
+		- **Induksi Matematis:** Teknik pembuktian layaknya "Efek Domino" untuk membuktikan rumus yang berlaku bagi semua bilangan bulat positif tak hingga.
+		- **Penyelesaian Masalah (Langkah Induksi):**
+			- **Masalah:** Buktikan jumlah $n$ bilangan ganjil pertama adalah $n^2$ ($1 + 3 + 5 + ... + (2n-1) = n^2$).
+			- **Penyelesaian:**
+				- **Basis Induksi:** Uji untuk $n=1$. Angka ganjil pertama adalah 1. Rumus: $1^2 = 1$. (Benar).
+				- **Hipotesis Induksi:** Asumsikan rumus benar untuk $n=k$, yaitu $1 + 3 + ... + (2k-1) = k^2$.
+				- **Langkah Induksi:** Buktikan untuk $n=k+1$. 
+				  Deretnya menjadi: $[1 + 3 + ... + (2k-1)] + (2(k+1)-1)$.
+				  Substitusi hipotesis: $k^2 + (2k + 1)$.
+				  Faktorkan: $k^2 + 2k + 1 = (k+1)^2$. (Terbukti berkesinambungan).
+		- **Pigeon Hole Principle (Prinsip Sarang Merpati):** Jika ada $n+1$ objek dimasukkan ke dalam $n$ wadah, secara logis pasti ada minimal 1 wadah yang berisi $\geq 2$ objek.
+			- *Info Tambahan:* Prinsip ini digunakan di ilmu komputer untuk membuktikan bahwa *Hash Collision* (tabrakan data pada kriptografi atau hash table) adalah sesuatu yang pasti terjadi dan tidak bisa dihindari jika data yang masuk lebih besar dari kapasitas memori/hash.
+	- ## 6. [[Teori Graf & Pathing]]
+		- **Definisi:** Model matematika yang merepresentasikan jaringan. Terdiri dari Vertex/Node (titik) dan Edge (garis penghubung).
+		- **Terminologi Lintasan (Path) & Sirkuit:**
+			- **Lintasan Euler:** Rute yang harus melewati *setiap edge (garis)* tepat satu kali (seperti game menggambar pola tanpa mengangkat pena).
+			- **Sirkuit Euler:** Lintasan Euler yang ujungnya kembali ke titik awal. Hanya eksis jika *semua* vertex berderajat genap.
+			- **Sirkuit Hamilton:** Rute keliling yang mengunjungi *setiap vertex (titik)* tepat satu kali sebelum kembali ke asal.
+		- **Penyelesaian Masalah (Pewarnaan Graf/Bilangan Kromatik):**
+			- **Masalah:** Tentukan jumlah frekuensi saluran berbeda untuk 6 stasiun radio jika stasiun berjarak < 150 mil tidak boleh pakai saluran sama.
+			- **Penyelesaian:** Buat graf di mana tiap stasiun adalah titik. Tarik garis (edge) antar stasiun yang jaraknya < 150 mil (artinya mereka bertabrakan). Warnai graf tersebut sedemikian rupa sehingga tidak ada dua titik terhubung yang warnanya sama. Jumlah warna minimum yang dipakai (Bilangan Kromatik) = jumlah frekuensi yang dibutuhkan.
+	- ## 7. [[Tree (Pohon) dan Aplikasinya]]
+		- **Definisi:** Tree adalah sebuah graf khusus yang sepenuhnya terhubung (connected) dan sama sekali tidak memiliki putaran/sirkuit (acyclic). Jika ada $n$ vertex, tree wajib punya $n-1$ edge.
+		- **Aplikasi (Huffman Coding & Prefix Code):**
+			- **Konsep:** Untuk mengkompres data teks menjadi biner, karakter yang sering muncul diberi kode biner sangat pendek, karakter jarang diberi biner panjang.
+			- **Syarat Prefix:** Agar komputer tidak bingung saat membaca deretan biner mampat (tanpa spasi), tidak boleh ada kode karakter yang menjadi "awalan" (prefix) dari karakter lain. (Contoh: Jika 'A' = `00`, maka 'B' tidak boleh `001`).
+			- **Penyelesaian Masalah (Membuat Huffman Tree):** - Hitung frekuensi tiap karakter dari string.
+				- Buat node untuk tiap karakter. Gabungkan dua node dengan frekuensi terkecil secara berulang membentuk pohon hirarki ke atas (Root).
+				- Beri nilai '0' untuk cabang ke kiri, '1' untuk cabang ke kanan. Baca dari Root ke daun untuk mendapatkan biner optimal tiap karakter.
