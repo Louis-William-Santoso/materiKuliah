@@ -1,6 +1,7 @@
 # [[Matematika Diskrit (Discrete Mathematics)]]
 	- Mata kuliah ini membahas dasar-dasar logika, struktur diskrit, teori graf, serta metode pembuktian yang esensial sebagai fondasi dalam ilmu komputer dan pemrograman.
 	- **Tags :** #DisMath #semester1 #kuliah
+	- ---
 	- ## 1. [[Logika Proposisi]]
 		- **Definisi:** Logika berasal dari kata Yunani "logos" yang berarti hasil pertimbangan akal pikiran. Proposisi adalah kalimat pernyataan deklaratif yang dapat dinyatakan nilai kebenarannya dengan pasti (hanya bernilai Benar atau Salah, tidak bisa keduanya).
 		- **Bukan Proposisi:** Kalimat perintah ("Tutup pintu itu!"), kalimat tanya ("Jam berapa sekarang?"), atau kalimat terbuka yang masih mengandung variabel tak diketahui (contoh: $x + 2 = 5$).

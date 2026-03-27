@@ -2,6 +2,7 @@
 	- **Capaian Pembelajaran**:
 		- Mampu memahami konsep bilangan riil dan bilangan kompleks, menyelesaikan pertidaksamaan, memahami konsep fungsi satu variabel bebas, memahami dan menerapkan konsep turunan dan integral fungsi satu variabel, memahami konsep fungsi multivariabel, memahami dan menerapkan konsep turunan fungsi multivariabel.
 	- *Tags :* #Math #kuliah #semester2
+	- ---
 	- ## Bagian 1: Materi Sebelum UTS
 		- ### 1. [[Sistem Bilangan Riil & Pertidaksamaan]]
 			- **Konsep Dasar**:

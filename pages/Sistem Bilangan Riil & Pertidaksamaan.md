@@ -1,12 +1,13 @@
 # Week 1: Sistem Bilangan Riil & Pertidaksamaan
 	- ## 1. [[Sistem Bilangan Riil]]
 		- ### A. Hierarki Himpunan Bilangan
-			- Pemahaman dasar kalkulus dimulai dari pengenalan sistem bilangan. Bilangan riil adalah gabungan dari beberapa himpunan bilangan yang lebih kecil.       - **Bilangan Asli ($\mathbb{N}$)**: Himpunan bilangan bulat positif yang dimulai dari 1. Contoh: $1, 2, 3, 4, \dots$
-			- **Bilangan Cacah ($\mathbb{W}$)**: Bilangan asli ditambah nol. Contoh: $0, 1, 2, 3, \dots$
-			- **Bilangan Bulat ($\mathbb{Z}$)**: Gabungan bilangan cacah dan bilangan negatifnya. Contoh: $\dots, -2, -1, 0, 1, 2, \dots$
-			- **Bilangan Rasional ($\mathbb{Q}$)**: Bilangan yang dapat dinyatakan dalam bentuk pecahan $\frac{p}{q}$, di mana $p$ dan $q$ adalah bilangan bulat dan $q \neq 0$. Desimalnya berhenti atau berulang teratur. Contoh: $\frac{1}{2}, -\frac{3}{4}, 0.75, 0.333\dots$
+			- Pemahaman dasar kalkulus dimulai dari pengenalan sistem bilangan. Bilangan riil adalah gabungan dari beberapa himpunan bilangan yang lebih kecil.
+			- **Bilangan Asli**($\mathbb{N}$): Himpunan bilangan bulat positif yang dimulai dari 1. Contoh: $1, 2, 3, 4, \dots$
+			- **Bilangan Cacah**($\mathbb{W}$): Bilangan asli ditambah nol. Contoh: $0, 1, 2, 3, \dots$
+			- **Bilangan Bulat**($\mathbb{Z}$): Gabungan bilangan cacah dan bilangan negatifnya. Contoh: $\dots, -2, -1, 0, 1, 2, \dots$
+			- **Bilangan Rasional**($\mathbb{Q}$): Bilangan yang dapat dinyatakan dalam bentuk pecahan $\frac{p}{q}$, di mana $p$ dan $q$ adalah bilangan bulat dan $q \neq 0$. Desimalnya berhenti atau berulang teratur. Contoh: $\frac{1}{2}, -\frac{3}{4}, 0.75, 0.333\dots$
 			- **Bilangan Irasional**: Bilangan yang tidak dapat dinyatakan dalam bentuk pecahan $\frac{p}{q}$. Desimalnya tidak pernah berhenti dan tidak berulang. Contoh: $\sqrt{2}, \pi, e$.
-			- **Bilangan Riil ($\mathbb{R}$)**: Gabungan dari semua bilangan rasional dan irasional. Semua bilangan ini dapat diletakkan pada sebuah garis bilangan tak hingga.
+			- **Bilangan Riil**($\mathbb{R}$): Gabungan dari semua bilangan rasional dan irasional. Semua bilangan ini dapat diletakkan pada sebuah garis bilangan tak hingga.
 		- ### B. Sifat-Sifat Operasi Bilangan Riil
 			- Jika $a, b,$ dan $c$ adalah elemen dari himpunan bilangan riil ($\mathbb{R}$), maka berlaku sifat-sifat berikut:
 			- **Komutatif**: Berlaku untuk penjumlahan ($a+b = b+a$) dan perkalian ($a \cdot b = b \cdot a$).
@@ -15,7 +16,8 @@
 			- **Elemen Identitas**: Angka $0$ untuk penjumlahan ($a+0 = a$) dan angka $1$ untuk perkalian ($a \cdot 1 = a$).
 			- **Invers**: Invers aditif/penjumlahan ($-a$) sehingga $a + (-a) = 0$. Invers perkalian ($\frac{1}{a}$ untuk $a \neq 0$) sehingga $a \cdot \frac{1}{a} = 1$.
 	- ## 2. [[Notasi Interval]]
-		- Dalam pertidaksamaan, himpunan penyelesaian sering ditulis menggunakan notasi interval.     - **Interval Terbuka** $(a, b)$: Titik ujung tidak termasuk. Ekuivalen dengan $a < x < b$. Pada garis bilangan digambar dengan "bulatan kosong".
+		- Dalam pertidaksamaan, himpunan penyelesaian sering ditulis menggunakan notasi interval.
+		- **Interval Terbuka** $(a, b)$: Titik ujung tidak termasuk. Ekuivalen dengan $a < x < b$. Pada garis bilangan digambar dengan "bulatan kosong".
 		- **Interval Tertutup** $[a, b]$: Titik ujung termasuk. Ekuivalen dengan $a \le x \le b$. Pada garis bilangan digambar dengan "bulatan penuh".
 		- **Interval Setengah Terbuka** $[a, b)$: $a$ termasuk, $b$ tidak. Ekuivalen dengan $a \le x < b$.
 		- **Tak Hingga** ($\infty$): Selalu menggunakan kurung buka/tutup biasa, bukan kurung siku. Contoh: $(-\infty, a]$ berarti $x \le a$.
@@ -31,7 +33,8 @@
 					- Bagi kedua ruas dengan $-2$ (ingat, tanda dibalik!): $x > -6$
 					- **Himpunan Penyelesaian (HP)**: $(-6, \infty)$
 		- ### B. Pertidaksamaan Kuadrat
-			- Variabel memiliki pangkat tertinggi dua.       - **Langkah penyelesaian**:
+			- Variabel memiliki pangkat tertinggi dua.
+			- **Langkah penyelesaian**:
 			  1. Jadikan salah satu ruas sama dengan nol (0).
 			  2. Faktorkan persamaan kuadrat tersebut untuk mencari akar-akarnya (pembuat nol).
 			  3. Buat garis bilangan dan letakkan akar-akar tersebut.

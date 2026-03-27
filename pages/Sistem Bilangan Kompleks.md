@@ -24,9 +24,7 @@
 			- Untuk membagi bilangan kompleks, kalikan pembilang dan penyebut dengan konjugat dari penyebutnya.
 			- $\frac{z_1}{z_2} = \frac{z_1}{z_2} \cdot \frac{\bar{z}_2}{\bar{z}_2} = \frac{(x_1 + iy_1)(x_2 - iy_2)}{x_2^2 + y_2^2}$
 	- ## 3. [[Geometri Bilangan Kompleks (Bidang Argand)]]
-		- Bilangan kompleks $z = x + iy$ dapat dipetakan secara geometris sebagai sebuah **titik** $(x, y)$ pada bidang dua dimensi, atau sebagai sebuah **vektor** yang berpangkal di titik asal $(0,0)$ dan berujung di titik $(x, y)$. 
-		  
-		  [Image of Argand diagram for complex numbers]
+		- Bilangan kompleks $z = x + iy$ dapat dipetakan secara geometris sebagai sebuah **titik** $(x, y)$ pada bidang dua dimensi, atau sebagai sebuah **vektor** yang berpangkal di titik asal $(0,0)$ dan berujung di titik $(x, y)$.
 		- Sumbu mendatar (Sumbu-X) disebut **Sumbu Riil**.
 		- Sumbu vertikal (Sumbu-Y) disebut **Sumbu Imajiner**.
 	- ## 4. [[Modulus dan Argumen]]

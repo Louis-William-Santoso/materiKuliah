@@ -1,0 +1,72 @@
+# Week 4-7: Turunan dan Aplikasi Turunan
+	- ## 1. [[Konsep Dasar Turunan]]
+		- **Definisi**: Turunan dari suatu fungsi $y = f(x)$ mengukur seberapa cepat nilai fungsi berubah terhadap perubahan variabel inputnya. Secara geometris, turunan di suatu titik mewakili **gradien (kemiringan) garis singgung** kurva di titik tersebut. 
+		  
+		  [Image of Derivative as the slope of a tangent line]
+		- **Definisi Limit**: Secara formal, turunan $f'(x)$ didefinisikan menggunakan limit:
+			- $f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$
+		- **Notasi Turunan**: Ada beberapa cara penulisan turunan yang umum digunakan:
+			- Notasi Newton/Lagrange: $f'(x)$ atau $y'$
+			- Notasi Leibniz: $\frac{dy}{dx}$ atau $\frac{d}{dx}[f(x)]$
+	- ## 2. [[Sifat-Sifat dan Aturan Turunan]]
+		- Misalkan $u$ dan $v$ adalah fungsi dari $x$ yang dapat diturunkan, dan $c$ adalah konstanta:
+		- **Aturan Konstanta & Pangkat**:
+			- $\frac{d}{dx}(c) = 0$
+			- $\frac{d}{dx}(cx) = c$
+			- $\frac{d}{dx}(x^n) = nx^{n-1}$ (Aturan Pangkat / *Power Rule*)
+		- **Penjumlahan dan Pengurangan**:
+			- $(u \pm v)' = u' \pm v'$
+		- **Aturan Perkalian (Product Rule)**:
+			- $(u \cdot v)' = u'v + uv'$
+		- **Aturan Pembagian (Quotient Rule)**:
+			- $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$
+		- **Aturan Rantai (Chain Rule)**:
+			- Digunakan untuk menurunkan fungsi komposisi $y = f(g(x))$.
+			- $\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$
+			- Contoh: Jika $y = (2x+1)^3$, misal $u = 2x+1 \implies y = u^3$. Maka $y' = 3u^2 \cdot u' = 3(2x+1)^2 \cdot 2 = 6(2x+1)^2$.
+	- ## 3. [[Rumus Turunan Fungsi Khusus]]
+		- ### A. Fungsi Trigonometri
+			- $\frac{d}{dx}(\sin x) = \cos x$
+			- $\frac{d}{dx}(\cos x) = -\sin x$
+			- $\frac{d}{dx}(\tan x) = \sec^2 x$
+			- $\frac{d}{dx}(\cot x) = -\csc^2 x$
+			- $\frac{d}{dx}(\sec x) = \sec x \tan x$
+			- $\frac{d}{dx}(\csc x) = -\csc x \cot x$
+		- ### B. Fungsi Eksponensial dan Logaritma
+			- $\frac{d}{dx}(e^x) = e^x$
+			- $\frac{d}{dx}(a^x) = a^x \ln a$ (untuk $a > 0$)
+			- $\frac{d}{dx}(\ln x) = \frac{1}{x}$
+			- $\frac{d}{dx}(^a\log x) = \frac{1}{x \ln a}$
+	- ## 4. [[Teknik Diferensiasi Lanjutan]]
+		- ### A. Turunan Tingkat Tinggi
+			- Turunan dapat diturunkan lagi untuk mendapatkan turunan kedua, ketiga, dan seterusnya.
+			- **Turunan Kedua**: Notasinya $f''(x), y'', \frac{d^2y}{dx^2}$. (Banyak digunakan untuk uji kecekungan dan percepatan dalam fisika).
+			- **Turunan ke-n**: Notasinya $f^{(n)}(x)$ atau $\frac{d^ny}{dx^n}$.
+		- ### B. Turunan Fungsi Implisit
+			- Digunakan ketika variabel $y$ tidak dapat dinyatakan secara eksplisit dalam bentuk $y = f(x)$ (misalnya $x^2 + y^2 = 25$).
+			- **Langkah penyelesaian**:
+			  1. Turunkan kedua ruas persamaan terhadap $x$.
+			  2. Ingat bahwa setiap kali menurunkan suku yang mengandung $y$, Anda harus mengalikannya dengan $\frac{dy}{dx}$ atau $y'$ (karena Aturan Rantai).
+			  3. Pindahkan semua suku yang memiliki $\frac{dy}{dx}$ ke satu sisi, dan suku lainnya ke sisi yang berlawanan.
+			  4. Faktorkan dan selesaikan untuk $\frac{dy}{dx}$.
+	- ## 5. [[Aplikasi Turunan]]
+		- ### A. Garis Singgung dan Garis Normal
+			- Turunan pertama $f'(x)$ di titik $x = x_1$ adalah **gradien** ($m$) **garis singgung** kurva di titik $(x_1, y_1)$.
+			- **Persamaan Garis Singgung**:
+				- $y - y_1 = m(x - x_1)$ di mana $m = f'(x_1)$
+			- **Persamaan Garis Normal**:
+				- Garis normal adalah garis yang tegak lurus dengan garis singgung di titik yang sama.
+				- Syarat tegak lurus: $m_{normal} = -\frac{1}{m_{singgung}}$
+				- Persamaan: $y - y_1 = -\frac{1}{f'(x_1)}(x - x_1)$
+		- ### B. Nilai Maksimum dan Minimum Fungsi
+			- Turunan digunakan untuk mencari titik ekstrim (puncak atau lembah) dari sebuah kurva.
+			- **Titik Kritis**: Terjadi pada nilai $x$ (disebut titik stasioner) di mana kurva mendatar, yaitu saat:
+				- $f'(x) = 0$
+			- **Uji Turunan Pertama** (Melihat perubahan tanda gradien):
+				- Jika $f'(x)$ berubah dari positif ($+$) ke negatif ($-$) melewati titik kritis $\implies$ **Maksimum Lokal**.
+				- Jika $f'(x)$ berubah dari negatif ($-$) ke positif ($+$) melewati titik kritis $\implies$ **Minimum Lokal**.
+			- **Uji Turunan Kedua** (Melihat kecekungan kurva):
+				- Substitusikan titik kritis $x=c$ (di mana $f'(c)=0$) ke turunan kedua $f''(x)$.
+				- Jika $f''(c) < 0$ (kurva cekung ke bawah) $\implies$ Titik $(c, f(c))$ adalah **Maksimum Lokal**.
+				- Jika $f''(c) > 0$ (kurva cekung ke atas) $\implies$ Titik $(c, f(c))$ adalah **Minimum Lokal**.
+				- Jika $f''(c) = 0$, uji ini gagal dan harus kembali menggunakan Uji Turunan Pertama.

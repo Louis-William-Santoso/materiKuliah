@@ -1,0 +1,57 @@
+# [[Operating System]]
+	- Deskripsi:: Catatan komprehensif materi Sistem Operasi, mulai dari konsep dasar, manajemen proses, penjadwalan, thread, hingga implementasi Web Server dan Red Hat Enterprise Linux.
+	- **Tags** #OS #networking #Linux #kuliah #semester2
+	- ---
+	- ## 1. [[Pengantar Sistem Operasi]]
+		- ### Apa itu Sistem Komputer?
+			- Kumpulan perangkat elektronik yang bekerja sama untuk menerima input, memproses data, dan menghasilkan output.
+			- **Komponen Utama:** Pengguna (Users), Aplikasi (Software), Sistem Operasi, dan Perangkat Keras (Hardware).
+		- ### Definisi Sistem Operasi (OS)
+			- Program atau sistem yang bertindak sebagai perantara (*intermediary*) antara pengguna/aplikasi dengan perangkat keras komputer.
+			- **Tujuan:** Membuat komputer mudah digunakan (nyaman) dan memanfaatkan perangkat keras secara efisien.
+		- ### Tugas Utama OS
+			- Mengelola memori, prosesor (CPU), sistem file, dan perangkat I/O.
+			- Menangani interaksi *hardware* dan *software*.
+			- Menyediakan antarmuka untuk keamanan sistem dan penanganan *error*.
+		- ### BIOS (Basic Input/Output System)
+			- Program pertama yang diakses prosesor saat komputer dinyalakan (*booting*).
+			- Melakukan POST (*Power On Self Test*) untuk memastikan perangkat keras (HDD, RAM, CPU) berfungsi baik sebelum OS dimuat ke memori.
+		- ### 💡 Info Tambahan & Penyelesaian Masalah:
+			- **Masalah:** Mengapa OS memisahkan Mode Pengguna (*User Mode*) dan Mode Kernel (*Kernel Mode*)?
+			- **Penyelesaian:** Untuk mencegah aplikasi pengguna secara tidak sengaja (atau sengaja) merusak memori atau perangkat keras secara langsung. Jika aplikasi butuh akses ke *hardware*, ia harus melakukan *System Call* ke Kernel, yang kemudian mengeksekusinya dengan aman.
+	- ## 2. [[Virtualization]]
+		- ### Konsep Virtualisasi
+			- Simulasi perangkat lunak atau perangkat keras di atas platform fisik. Lingkungan yang disimulasikan ini disebut **Virtual Machine (VM)**.
+			- Memungkinkan eksekusi beberapa OS berbeda di atas satu perangkat keras secara bersamaan.
+		- ### Platform Virtualization (Virtualisasi Perangkat Keras)
+			- **Host Software:** Perangkat lunak yang dipasang di mesin fisik utama.
+			- **Guest Software:** Perangkat lunak (OS) yang dipasang di dalam Virtual Machine.
+		- ### Hypervisor / Virtual Machine Monitor (VMM)
+			- Perangkat lunak atau *firmware* yang memfasilitasi virtualisasi dan mengelola komunikasi antara OS *Guest* dengan *hardware* fisik.
+			- **Hypervisor Tipe 1 (Bare-metal):** Berjalan langsung di atas perangkat keras fisik (Contoh: VMware ESXi, Proxmox, Microsoft Hyper-V). Performa lebih tinggi.
+			- **Hypervisor Tipe 2 (Hosted):** Berjalan di atas Sistem Operasi Host (Contoh: VirtualBox, VMware Workstation). Mudah diatur untuk pengguna biasa.
+		- ### Direktori Dasar Linux (File System)
+			- `/` : *Root directory*.
+			- `/dev/` : Perangkat fisik (*device*).
+			- `/home/` : Direktori utama pengguna (*user*).
+		- ### 💡 Info Tambahan & Penyelesaian Masalah:
+			- **Studi Kasus:** Bagaimana cara mengubah direktori dan membuat file identitas di Linux sesuai penugasan?
+			- **Penyelesaian:** 1. Buka terminal.
+			  2. Ketik `cd /home/username/Desktop` untuk masuk ke Desktop.
+			  3. Ketik `mkdir NRP_Nama` untuk membuat folder.
+			  4. Masuk ke folder: `cd NRP_Nama`.
+			  5. Buat dan edit file: `nano NRP_Nama.txt`. Ketik identitas, lalu simpan (`Ctrl+O`, `Enter`, `Ctrl+X`).
+	- ## 3. [[Perintah Dasar Linux (Basic Commands)]]
+		- ### Command Line Interface (CLI)
+			- Antarmuka OS yang menggunakan baris teks untuk menerima perintah.
+			- **Keunggulan CLI:** Sangat efisien untuk administrasi sistem, lebih cepat dari GUI, ideal untuk otomasi (*scripting*), dan hemat *resource* (cocok untuk server).
+		- ### Terminal Prompt
+			- Format umum: `username@hostname:~$`
+			- Simbol `$` menandakan pengguna biasa (*regular user*).
+			- Simbol `#` menandakan *superuser* (root/admin).
+		- ### Perintah Dasar (Basic Commands)
+			- `cd` (Change Directory): Pindah direktori.
+			- `ls`: Menampilkan daftar file dan folder di direktori saat ini.
+			- `mkdir`: Membuat direktori/folder baru.
+			- `sudo`: Menjalankan perintah dengan hak akses *root*.
+			- `nano`: Teks editor bawaan terminal. (Shortcut: `Ctrl+
