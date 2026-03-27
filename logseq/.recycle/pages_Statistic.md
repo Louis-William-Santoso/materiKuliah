@@ -1,0 +1,116 @@
+# Mata Kuliah: Statistika (Statistics)
+	- Deskripsi:: Catatan komprehensif materi Statistika mulai dari Statistika Deskriptif, Probabilitas, Variabel Acak, Distribusi Diskrit & Kontinu, hingga Pengujian Hipotesis (Mean, Varians, Proporsi).
+	- tags #Statistics #DataScience
+	- ## Pertemuan 1: Pendahuluan, Jenis Variabel, dan Skala Pengukuran
+		- ### Apa itu Statistika?
+			- Sebuah disiplin ilmu yang menyediakan teknik-teknik analitik untuk membantu merancang pengumpulan data, meringkas, menginterpretasikan data, serta menarik kesimpulan atau generalisasi berdasarkan sampel.
+			- **Populasi:** Keseluruhan objek/individu yang ingin diteliti. Parameternya dilambangkan dengan huruf Yunani ($\mu, \sigma$).
+			- **Sampel:** Sebagian dari populasi yang diambil untuk diobservasi. Statistiknya dilambangkan dengan abjad Latin ($\bar{x}, s$).
+		- ### Klasifikasi Statistika
+			- **Statistika Deskriptif:** Mengorganisasi, meringkas, dan menyajikan data dalam bentuk yang informatif (Tabel, Grafik, Mean, Median).
+			- **Statistika Inferensia:** Menarik kesimpulan mengenai populasi berdasarkan data dari sampel (Estimasi, Uji Hipotesis).
+		- ### Jenis Variabel
+			- **Kualitatif (Kategorik):** Data yang tidak berbentuk angka secara maknawi (contoh: Gender, Warna, Merek).
+			- **Kuantitatif (Numerik):** Data berupa angka. Terbagi dua:
+				- **Diskrit:** Hasil penghitungan/cacah, nilainya bulat (contoh: Jumlah anak, jumlah mobil).
+				- **Kontinu:** Hasil pengukuran, bisa berupa nilai pecahan/desimal dalam suatu interval (contoh: Berat badan, Suhu, Waktu).
+		- ### Skala Pengukuran
+			- **Nominal:** Hanya membedakan kategori, urutan tidak bermakna (contoh: Agama, Golongan darah).
+			- **Ordinal:** Kategori yang memiliki tingkatan/urutan logis (contoh: Tingkat kepuasan, Jenjang pendidikan).
+			- **Interval:** Memiliki jarak yang sama antar angka, tetapi *tidak memiliki nol mutlak* (contoh: Suhu Celcius).
+			- **Rasio:** Memiliki rasio yang bermakna dan *memiliki titik nol mutlak* yang berarti ketiadaan (contoh: Berat badan, Gaji, Umur).
+	- ## Pertemuan 2 & 3: Statistika Deskriptif (Tabular dan Grafik)
+		- ### Penyajian Data Tabular
+			- **Tabel Distribusi Frekuensi Data Tunggal:** Untuk data dengan rentang nilai yang kecil (contoh: jumlah anak 0, 1, 2, 3).
+			- **Tabel Distribusi Frekuensi Berkelompok:** Untuk data berentang lebar. Dikelompokkan ke dalam interval/kelas (contoh: Nilai 50-59, 60-69).
+			- **Komponen Tabel:** Kelas, Frekuensi (Absolut, Relatif, Kumulatif).
+		- ### Penyajian Data Grafik
+			- **Histogram:** Mirip *bar chart* tetapi batangnya berdempetan (tidak ada jarak). Digunakan untuk data distribusi frekuensi dari variabel kontinu.
+			- **Tujuan Grafik:** Memperlihatkan secara visual pusat data, penyebaran (spread), ekor distribusi (skewness), dan keberadaan nilai ekstrem (*outlier*).
+	- ## Pertemuan 4: Ringkasan Data (Ukuran Pemusatan dan Penyebaran)
+		- ### Ukuran Pemusatan Data (Central Tendency)
+			- **Mean (Rata-rata):** Nilai pusat yang dipengaruhi oleh semua data. Paling sensitif terhadap *outlier*.
+				- Rumus Populasi ($\mu$) = $\frac{\Sigma X}{N}$ | Rumus Sampel ($\bar{x}$) = $\frac{\Sigma x}{n}$
+			- **Median:** Nilai tengah setelah data diurutkan. Tahan terhadap *outlier*.
+			- **Modus:** Nilai yang paling sering muncul. Bisa lebih dari satu (bimodal/multimodal) atau tidak ada sama sekali.
+		- ### Ukuran Penyebaran (Dispersion)
+			- Mengukur seberapa jauh data menyimpang dari nilai pusatnya.
+			- **Varians (Variance):** Rata-rata jarak kuadrat tiap titik data terhadap Mean.
+				- Varians Populasi ($\sigma^2$) dibagi $N$.
+				- Varians Sampel ($s^2$) dibagi $n-1$ (disebut *Degree of Freedom* agar tidak bias).
+			- **Standar Deviasi (Simpangan Baku):** Akar kuadrat dari Varians ($\sigma$ atau $s$). Memiliki satuan yang sama dengan data aslinya.
+	- ## Pertemuan 5: Konsep Variabel Acak (Random Variable)
+		- ### Dasar Percobaan
+			- **Percobaan Acak:** Percobaan yang memiliki minimal 2 kemungkinan hasil yang tidak dapat dipastikan di awal.
+			- **Ruang Sampel ($S$):** Himpunan semua kemungkinan *output* (Contoh Dadu: $S = \{1, 2, 3, 4, 5, 6\}$).
+			- **Event/Kejadian ($A$):** Himpunan bagian dari ruang sampel.
+		- ### Variabel Acak
+			- Fungsi yang memetakan hasil dari ruang sampel ke bilangan riil.
+			- **Variabel Acak Diskrit:** Nilainya terbatas atau dapat dihitung (*countable*).
+			- **Variabel Acak Kontinu:** Nilainya berupa interval (luasan kurva).
+		- ### Expected Value & Variance (Diskrit)
+			- **Expected Value $E(X)$:** $\mu = \Sigma [X \cdot P(X)]$. Rata-rata jangka panjang.
+			- **Variance $V(X)$:** $\sigma^2 = \Sigma [(X - \mu)^2 \cdot P(X)]$.
+	- ## Pertemuan 6 & 7: Distribusi Probabilitas Diskrit
+		- ### Distribusi Uniform Diskrit
+			- Semua kemungkinan hasil memiliki probabilitas yang sama persis.
+			- Probabilitas: $f(x; k) = \frac{1}{k}$, di mana $k$ adalah banyaknya anggota.
+		- ### Distribusi Bernoulli & Binomial
+			- **Bernoulli:** Percobaan hanya dilakukan *satu kali* dengan dua hasil (Sukses/Gagal).
+			- **Binomial:** Percobaan Bernoulli diulang sebanyak $n$ kali secara independen dengan probabilitas sukses ($p$) yang tetap.
+			- Rumus Binomial: $P(X=x) = C(n, x) \cdot p^x \cdot q^{(n-x)}$.
+		- ### Distribusi Poisson
+			- Digunakan untuk menghitung probabilitas kejadian diskrit dalam suatu *interval waktu atau ruang tertentu*. (contoh: jumlah pasien yang datang per jam).
+			- Rumus: $P(X=x) = \frac{\lambda^x \cdot e^{-\lambda}}{x!}$, di mana $\lambda$ adalah rata-rata kejadian.
+		- ### Distribusi Hipergeometrik
+			- Pengambilan sampel *tanpa pengembalian* (not independent) dari populasi berukuran $N$ yang mengandung $k$ sukses.
+	- ## Pertemuan 8: Probabilitas Gabungan (Joint Probability) 2 Variabel Diskrit
+		- ### Konsep Probabilitas Gabungan
+			- Menyatakan peluang kejadian di mana variabel $X = x$ dan variabel $Y = y$ terjadi secara bersamaan: $f(x,y) = P(X=x, Y=y)$.
+		- ### Distribusi Marginal
+			- Total probabilitas baris atau kolom dari tabel probabilitas gabungan. Menunjukkan distribusi $X$ atau $Y$ secara independen.
+		- ### Covariance dan Korelasi
+			- Mengukur hubungan linier antara dua variabel acak.
+			- Jika independen mutlak, covarians pasti nol.
+	- ## Pertemuan 9 & 10: Distribusi Probabilitas Kontinu
+		- ### Uniform Kontinu
+			- Probabilitas tersebar merata sepanjang interval $[a, b]$. Bentuknya persegi panjang.
+			- Luas area (probabilitas) dihitung: $\frac{1}{b-a}$ dikali panjang interval yang dicari.
+		- ### Distribusi Eksponensial
+			- Berhubungan dengan Poisson. Digunakan untuk memodelkan *waktu tunggu* (jarak antar kejadian) atau masa hidup suatu benda.
+		- ### Distribusi Normal & Normal Standar (Z)
+			- **Karakteristik Normal:** Berbentuk lonceng simetris, mean = median = modus letaknya persis di tengah. Luas total = 1.
+			- **Normal Standar (Z-Score):** Variabel normal $X$ yang telah diubah agar $\mu=0$ dan $\sigma=1$.
+			- **Rumus Z:** $Z = \frac{X - \mu}{\sigma}$. Digunakan untuk mencari probabilitas melalui Tabel Z.
+	- ## Pertemuan 11: Konsep Uji Hipotesis
+		- ### Hipotesis Statistik
+			- **$H_0$ (Null Hypothesis):** Asumsi awal, status quo, biasa mengandung tanda sama dengan ($=, \ge, \le$).
+			- **$H_1$ (Alternative Hypothesis):** Klaim yang ingin dibuktikan oleh peneliti ($<, >, \ne$).
+		- ### Tipe Kesalahan (Error)
+			- **Tipe I ($\alpha$):** Menolak $H_0$ padahal $H_0$ benar (Tingkat signifikansi).
+			- **Tipe II ($\beta$):** Gagal menolak $H_0$ padahal $H_1$ benar.
+		- ### Prosedur Pengujian
+			- 1. Tentukan H0 dan H1.
+			- 2. Tentukan tingkat signifikansi $\alpha$.
+			- 3. Tentukan uji statistik yang sesuai (Z, T, Chi-Square).
+			- 4. Cari nilai kritis (batas penolakan).
+			- 5. Hitung statistik uji. Jika jatuh di daerah penolakan $\rightarrow$ Tolak $H_0$.
+	- ## Pertemuan 12 & 13: Uji Rata-rata (Mean) 1 dan 2 Populasi
+		- ### Uji Rata-rata 1 Populasi
+			- **Sampel Besar ($n \ge 30$) atau $\sigma$ populasi diketahui:** Gunakan **Z-Test**.
+			- **Sampel Kecil ($n < 30$) dan $\sigma$ tidak diketahui:** Gunakan **t-Test** (dengan *degree of freedom* $df = n - 1$).
+		- ### Uji Rata-rata 2 Populasi
+			- **Independen (Bebas):** Dua sampel tidak saling berkaitan (contoh: Karyawan Divisi 1 vs Divisi 2).
+				- Jika varians sama: Gunakan *Pooled Variance t-test*.
+				- Jika varians beda: Gunakan t-test biasa dengan penyesuaian $df$.
+			- **Berpasangan (Paired):** Diukur dari objek yang sama sebelum dan sesudah perlakuan (contoh: Nilai Pre-test vs Post-test).
+				- Mencari selisih ($d$) dari kedua pengukuran terlebih dahulu, lalu diuji dengan *Paired t-test*.
+	- ## Pertemuan 14: Uji Varians dan Proporsi
+		- ### Uji Varians
+			- **1 Populasi:** Menggunakan distribusi **Chi-Square** ($\chi^2$). Sangat sensitif terhadap asumsi normalitas data.
+				- Rumus Uji: $\chi^2 = \frac{(n-1)s^2}{\sigma_0^2}$
+			- **2 Populasi:** Menggunakan distribusi **F-Test**. Menghitung perbandingan antara dua varians sampel ($s_1^2 / s_2^2$).
+		- ### Uji Proporsi
+			- Proporsi menguji *persentase* kejadian sukses dalam kategori tertentu (contoh: persentase produk cacat).
+			- Selalu menggunakan asumsi **Z-Test** (karena umumnya dilakukan pada sampel besar berdasarkan pendekatan binomial ke normal).
+			- Perlu dihitung proporsi gabungan (*pooled proportion* $\bar{p}$) saat menguji 2 populasi independen.
