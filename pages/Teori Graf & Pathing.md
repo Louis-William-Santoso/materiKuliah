@@ -22,7 +22,7 @@
 	- **Syarat Mutlak Teorema Euler:**
 		- Graf memiliki *Sirkuit Euler* jika dan hanya jika **semua** simpulnya memiliki derajat genap.
 		- Graf memiliki *Lintasan Euler* (tapi bukan sirkuit) jika dan hanya jika memiliki **tepat dua** simpul berderajat ganjil (simpul ganjil ini pasti menjadi titik awal dan titik akhir).
-- ## 5. [[Lintasan Hamilton (Fokus pada Simpul/Titik)]]
+- ## 5. [[Lintasan Hamilton (Fokus pada Simpul atau Titik)]]
 	- **Lintasan Hamilton:** Sebuah lintasan yang mengunjungi **setiap simpul (vertex)** di dalam graf tepat satu kali.
 	- **Sirkuit Hamilton:** Lintasan Hamilton yang kembali ke simpul awal.
 	- *Info Tambahan:* Berbeda dengan Euler yang aturannya pasti (hanya melihat ganjil/genap), belum ada rumus matematika sederhana untuk memastikan sebuah graf memiliki sirkuit Hamilton. Mencari rute ini pada graf yang kompleks adalah masalah komputasi yang berat (NP-Complete).
