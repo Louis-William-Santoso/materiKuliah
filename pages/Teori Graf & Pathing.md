@@ -16,7 +16,7 @@
 	- **Lintasan (Path):** Perjalanan dari simpul awal ke simpul tujuan melalui serangkaian simpul dan sisi yang saling berselang-seling ($v_0, e_1, v_1, e_2, \dots, v_n$).
 	- **Lintasan Sederhana:** Lintasan yang semua simpulnya berbeda (tidak ada simpul yang dikunjungi lebih dari satu kali).
 	- **Sirkuit / Siklus (Circuit / Cycle):** Sebuah lintasan yang berawal dan berakhir pada simpul yang persis sama ($v_0 = v_n$).
-- ## 4. [[Lintasan Euler (Fokus pada Sisi/Garis)]]
+- ## 4. [[Lintasan Euler (Fokus pada Sisi atau Garis)]]
 	- **Lintasan Euler:** Sebuah lintasan yang melewati **setiap sisi (edge)** di dalam graf tepat satu kali. (Analogi: Permainan menggambar pola tanpa mengangkat pena atau menebalkan garis).
 	- **Sirkuit Euler:** Lintasan Euler yang kembali ke simpul awalnya.
 	- **Syarat Mutlak Teorema Euler:**
