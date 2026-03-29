@@ -1,0 +1,50 @@
+## 1. [[Konsep Dasar Statistika Deskriptif]]
+	- **Definisi:** Statistika deskriptif merupakan sebuah metode untuk mengorganisasi, meringkas, dan menyajikan data dalam bentuk yang informatif.
+	- **Tujuan:** Memberikan gambaran serta kemudahan dalam hal pembacaan atau pemahaman data, sehingga dapat memberikan informasi yang sebelumnya tidak terlihat dari sekumpulan data mentah.
+	- Penyajian data ini bisa berupa narasi (cerita), tabel, dan / atau diagram/grafik.
+- ## 2. [[Penyajian Data Tabular (Tabel)]]
+	- Tabel distribusi frekuensi adalah tabel yang di dalamnya berisi variabel yang diamati beserta frekuensinya.
+	- Tabel ini digunakan untuk merangkum data kuantitatif maupun kualitatif (untuk data kualitatif sering disebut sebagai tabel ringkasan).
+	- Terdapat **2 jenis** tabel distribusi frekuensi untuk data kuantitatif:
+		- ### Tabel Distribusi Frekuensi Data Tunggal
+			- Digunakan untuk variabel berskala interval atau rasio dengan **rentang nilai yang tidak terlalu besar**.
+			- Contoh: Hasil survei jumlah anak dari 25 keluarga (nilainya berkisar 0, 1, 2, 3, 4, 5).
+		- ### Tabel Distribusi Frekuensi Berkelompok
+			- Digunakan untuk variabel berskala interval atau rasio dengan **rentang nilai yang besar**.
+			- Data dikelompokkan ke dalam interval atau kelas tertentu secara terstruktur.
+- ## 3. [[Penyajian Data Grafis (Grafik)]]
+	- Grafik digunakan untuk mempresentasikan data secara visual dan informatif.
+	- Pemilihan jenis grafik bergantung pada tujuan pembuatan grafik, informasi yang ingin diperoleh, dan jenis variabel yang digunakan.
+	- ### Histogram
+		- Histogram merupakan bentuk penyajian grafis khusus dari distribusi frekuensi.
+		- **Fungsi Histogram:**
+			- Menunjukkan bentuk distribusi data (seperti apakah memiliki ekor panjang/skewness di salah satu ujung).
+			- Mendeteksi adanya nilai ekstrem (*outlier*).
+			- Menunjukkan secara cepat di mana sebagian besar pengamatan terpusat.
+			- Menunjukkan tingkat penyebaran data di sekitar pusat data.
+		- **Karakteristik Visual:**
+			- Variabel yang diamati diletakkan di sumbu horizontal (X).
+			- Setiap batang digambar di atas interval nilai setiap kelompok.
+			- **Tidak ada gap (jarak)** antar batang pada histogram (berbeda dengan *bar chart* biasa) karena merepresentasikan variabel kontinu.
+- ## 4. [[Peringkasan Data (Ukuran Statistik)]]
+	- Penyajian tabel dan grafik memberikan gambaran umum, namun dalam analisis dibutuhkan ukuran numerik (statistik) yang dapat merepresentasikan karakteristik kelompok data secara tepat.
+	- ### A. Ukuran Pemusatan (Central Tendency)
+		- Merupakan ukuran statistik yang menyatakan pusat data atau tempat sebagian besar data berada.
+		- **1. Mean (Rata-rata)**
+			- Ukuran yang paling banyak digunakan. Menunjukkan nilai pusat data.
+			- Rumus Populasi ($\mu$): Jumlah seluruh observasi dibagi ukuran populasi ($N$).
+			- Sangat sensitif terhadap nilai ekstrem (*outlier*).
+		- **2. Median**
+			- Nilai pengamatan yang membagi data menjadi dua bagian yang sama (50% di atas dan 50% di bawah) **setelah data diurutkan**.
+			- Seringkali lebih akurat merepresentasikan pusat data jika data memiliki *outlier* yang signifikan, karena sifatnya yang resisten (kebal) terhadap pencilan.
+		- **3. Modus**
+			- Nilai pengamatan yang paling sering muncul (frekuensi tertinggi) di dalam suatu kumpulan data.
+	- ### B. Ukuran Penyebaran (Dispersion)
+		- Mengukur keragaman dan seberapa menyimpang data dari pusatnya.
+		- **1. Varians (Variance)**
+			- Rata-rata dari kuadrat selisih setiap titik data terhadap rata-ratanya.
+			- **Varians Populasi** ($\sigma^2$): Penyebutnya adalah $N$.
+			- **Varians Sampel** ($s^2$): Penyebutnya adalah $n-1$ (*Degree of freedom* / derajat kebebasan, ditujukan agar ukuran tersebut tidak bias terhadap varians populasi).
+		- **2. Standar Deviasi (Simpangan Baku)**
+			- Merupakan akar kuadrat dari varians.
+			- Memiliki keunggulan berupa satuan ukur yang **sama persis** dengan satuan asalnya (tidak dalam bentuk kuadrat), sehingga lebih mudah untuk diinterpretasikan dalam analisis.
