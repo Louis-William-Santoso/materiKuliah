@@ -17,13 +17,42 @@
 			- $3x + 6y - 5z = 0$
 	- **b. Bentuk Matriks** ($A \vec{x} = b$)
 		- Memisahkan koefisien, variabel, dan hasil ke dalam matriks berbeda.
+		  $\begin{pmatrix} 1 & 1 & 2 & 9 \\ 2 & 4 & 3 & 1\\ 3 & 6 & 5 & 0 \end{pmatrix} \begin{pmatrix} x\\ y \\ z\end{pmatrix}$
 		- Matriks koefisien $A$ dikalikan dengan vektor variabel $x$, menghasilkan vektor konstanta $b$.
 	- **c. Matriks Augmented (Matriks Diperluas)**
-		- [cite_start]Menggabungkan matriks koefisien $A$ dan vektor konstanta $b$ ke dalam satu kesatuan matriks. Bentuk ini sangat memudahkan penyelesaian komputasi menggunakan metode eliminasi.
-- ## 4. [[Operasi Baris Elementer (OBE) & Ekivalensi Matriks]]
+		- Menggabungkan matriks koefisien $A$ dan vektor konstanta $b$ ke dalam satu kesatuan matriks. Bentuk ini sangat memudahkan penyelesaian komputasi menggunakan metode eliminasi.
+- ## 4. [[Macam-macam matriks]]
+	- **a. Matriks Diagonal**
+		- Matriks bujursangkar dengan elemen $a_{ij} =0, i \ne j$
+		  $\begin{pmatrix} -1&0&0\\ 0&5&0 \\ 0&0&4\end{pmatrix}$
+	- **b. Matriks Skalar**
+		- Matriks diagonal dimana elemen-elemen pada diagonal utama sama besarnya
+		  $\begin{pmatrix} C&0&0\\ 0&C&0 \\ 0&0&C\end{pmatrix}$
+	- **c. Matriks Satuan**
+		- Matriks skalar dengan elemen-elemen pada diagonal utama adalah 1
+		  $\begin{pmatrix} 1&0&0\\ 0&1&0 \\ 0&0&1\end{pmatrix}$
+	- **d. Matriks Segitiga atas/bawah**
+		- matriks bujur sangkar yang semua anggota di atas/bawah diagonal utamanya nol disebut matriks segitiga bawah/atas
+		  $\begin{pmatrix} 6&0&0\\ 1&5&0 \\ 0&3&1\end{pmatrix} \begin{pmatrix} 1&2&3\\ 0&5&0 \\ 0&0&1\end{pmatrix}$
+	- **e. Matriks Transpose**
+		- Jika A adalah sebarang matriks $m\text{ x }n$, maka $A^{T}$, didefinisikan sebagai matriks $n\text{ x }m$ yang didapatkan dengan mempertukarkan baris dan kolom dari $A$, yaitu kolom pertama dari $A^{T}$ adalah baris pertama dari A, kolom kedua dari $A^{T}$ adalah baris kedua dari A, dan seterusnya.
+		  $$A = \begin{pmatrix} 1&2&3&2 \\ 1&5&4&-9 \\ -2&3&1&4 \end{pmatrix} \to A^{T} = \begin{pmatrix}1&1&-2\\2&5&3\\3&4&1\\2&-9&4\end{pmatrix}$$
+		- **Sifat2 transpose Matriks**
+			- $(A^{T})^{T} = A$
+			- $(A + B)^{T} = A^{T} + B^{T}$
+			- $(AB)^{T} = B^{T}A^{T}$
+			- $(rA)^{T} = rA^{T}$
+	- **f. Matriks Simetri**
+		- Suatu matriks disebut simetri jika untuk setiap $i$ dan $j$ berlaku $a_{ij} = a_{ji}$ jadi A simetri dg $A^T$
+		  $$B = \begin{pmatrix} 1&2&3 \\ 2&5&4 \\ 3&4&1\end{pmatrix} \to B^{T} = \begin{pmatrix} 1&2&3 \\ 2&5&4 \\ 3&4&1\end{pmatrix}$$
+- ## 5. [[Operasi Matriks]]
+	- **a. Penjumlahan Matriks**
+		- Dua matriks dapat dijumlahkan jika ukuran sama dan elemen sama dengan jumlah elemen yang bersesuaian
+		  $$(c_{ij} = (a_{ij})_{mn} + (b_{ij})_{mn}$$
+- ## 7. [[Operasi Baris Elementer (OBE) & Ekivalensi Matriks]]
 	- **Operasi Baris Elementer (OBE)**: Dengan suatu aturan tertentu, elemen-elemen suatu baris dari suatu matriks dapat berubah. Aturan ini digunakan sebagai teknik untuk mencari solusi SPL.
 	- **Ekivalensi Dua Matriks**: Dua matriks $A$ dan $B$ di sebut ekivalen (ditulis $A \sim B$) jika matriks $B$ diperoleh dari matriks $A$ dengan cara operasi elementer.
-- ## 5. [[Sistem Persamaan Linier (SPL) Homogen]]
+- ## 8. [[Sistem Persamaan Linier (SPL) Homogen]]
 	- **Definisi**: SPL disebut homogen jika seluruh persamaan menghasilkan nilai nol (ruas kanan bernilai $0$).
 		- [cite_start]Bentuk matematis: $a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = 0$.
 	- **Karakteristik Penyelesaian SPL Homogen**:
